@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55B62743B0D09E80B3629FC /* libPods-PeiziJinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
-		D86C63AE24D79D2C004AD677 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AD24D79D2C004AD677 /* SceneDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
 		D86C63B624D79D30004AD677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B524D79D30004AD677 /* Assets.xcassets */; };
@@ -16,6 +16,15 @@
 		D86C63BC24D79D30004AD677 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63BB24D79D30004AD677 /* main.m */; };
 		D86C63C624D79D31004AD677 /* PeiziJindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63C524D79D31004AD677 /* PeiziJindingTests.m */; };
 		D86C63D124D79D31004AD677 /* PeiziJindingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63D024D79D31004AD677 /* PeiziJindingUITests.m */; };
+		D86C63E724D7A34C004AD677 /* NSArray+Adpa.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63E024D7A34B004AD677 /* NSArray+Adpa.m */; };
+		D86C63E824D7A34C004AD677 /* UIImage+QCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63E124D7A34B004AD677 /* UIImage+QCategory.m */; };
+		D86C63E924D7A34C004AD677 /* UINavigationBar+DD_Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63E324D7A34C004AD677 /* UINavigationBar+DD_Alpha.m */; };
+		D86C63EA24D7A34C004AD677 /* UIColor+QCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63E424D7A34C004AD677 /* UIColor+QCategory.m */; };
+		D86C63F924D7A475004AD677 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63F224D7A475004AD677 /* MainViewController.m */; };
+		D86C63FA24D7A475004AD677 /* StockRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63F324D7A475004AD677 /* StockRootViewController.m */; };
+		D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63F524D7A475004AD677 /* StorkSectionController.m */; };
+		D86C63FC24D7A475004AD677 /* MBProgressHUD+dxhud.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63F624D7A475004AD677 /* MBProgressHUD+dxhud.m */; };
+		D86C63FD24D7A475004AD677 /* PSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63F824D7A475004AD677 /* PSRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89CA60AB772B1744C74AC73D /* Pods-PeiziJinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.release.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.release.xcconfig"; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D86C63AC24D79D2C004AD677 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		D86C63AD24D79D2C004AD677 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		D86C63AF24D79D2C004AD677 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D86C63B024D79D2C004AD677 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D86C63B324D79D2C004AD677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +62,28 @@
 		D86C63CC24D79D31004AD677 /* PeiziJindingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeiziJindingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63D024D79D31004AD677 /* PeiziJindingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeiziJindingUITests.m; sourceTree = "<group>"; };
 		D86C63D224D79D31004AD677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86C63DF24D7A34B004AD677 /* UIImage+QCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QCategory.h"; sourceTree = "<group>"; };
+		D86C63E024D7A34B004AD677 /* NSArray+Adpa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Adpa.m"; sourceTree = "<group>"; };
+		D86C63E124D7A34B004AD677 /* UIImage+QCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QCategory.m"; sourceTree = "<group>"; };
+		D86C63E224D7A34C004AD677 /* UINavigationBar+DD_Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DD_Alpha.h"; sourceTree = "<group>"; };
+		D86C63E324D7A34C004AD677 /* UINavigationBar+DD_Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DD_Alpha.m"; sourceTree = "<group>"; };
+		D86C63E424D7A34C004AD677 /* UIColor+QCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QCategory.m"; sourceTree = "<group>"; };
+		D86C63E524D7A34C004AD677 /* NSArray+Adpa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Adpa.h"; sourceTree = "<group>"; };
+		D86C63E624D7A34C004AD677 /* UIColor+QCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QCategory.h"; sourceTree = "<group>"; };
+		D86C63EC24D7A393004AD677 /* PeiziJi.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeiziJi.pch; sourceTree = "<group>"; };
+		D86C63EE24D7A475004AD677 /* StockRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockRootViewController.h; sourceTree = "<group>"; };
+		D86C63EF24D7A475004AD677 /* StorkSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorkSectionController.h; sourceTree = "<group>"; };
+		D86C63F024D7A475004AD677 /* PSRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRequestManager.h; sourceTree = "<group>"; };
+		D86C63F124D7A475004AD677 /* MBProgressHUD+dxhud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+dxhud.h"; sourceTree = "<group>"; };
+		D86C63F224D7A475004AD677 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D86C63F324D7A475004AD677 /* StockRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockRootViewController.m; sourceTree = "<group>"; };
+		D86C63F424D7A475004AD677 /* MainCellModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCellModelProtocol.h; sourceTree = "<group>"; };
+		D86C63F524D7A475004AD677 /* StorkSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorkSectionController.m; sourceTree = "<group>"; };
+		D86C63F624D7A475004AD677 /* MBProgressHUD+dxhud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+dxhud.m"; sourceTree = "<group>"; };
+		D86C63F724D7A475004AD677 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D86C63F824D7A475004AD677 /* PSRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRequestManager.m; sourceTree = "<group>"; };
+		DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeiziJinding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.debug.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55B62743B0D09E80B3629FC /* libPods-PeiziJinding.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +112,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E282BCD215F2197F497E110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */,
+				89CA60AB772B1744C74AC73D /* Pods-PeiziJinding.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B25723C9D941638CF5EB5724 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D86C639D24D79D2C004AD677 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +137,8 @@
 				D86C63C424D79D31004AD677 /* PeiziJindingTests */,
 				D86C63CF24D79D31004AD677 /* PeiziJindingUITests */,
 				D86C63A724D79D2C004AD677 /* Products */,
+				1E282BCD215F2197F497E110 /* Pods */,
+				B25723C9D941638CF5EB5724 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,10 +157,11 @@
 			children = (
 				D86C63A924D79D2C004AD677 /* AppDelegate.h */,
 				D86C63AA24D79D2C004AD677 /* AppDelegate.m */,
-				D86C63AC24D79D2C004AD677 /* SceneDelegate.h */,
-				D86C63AD24D79D2C004AD677 /* SceneDelegate.m */,
 				D86C63AF24D79D2C004AD677 /* ViewController.h */,
+				D86C63ED24D7A475004AD677 /* Base */,
+				D86C63EB24D7A358004AD677 /* category */,
 				D86C63B024D79D2C004AD677 /* ViewController.m */,
+				D86C63EC24D7A393004AD677 /* PeiziJi.pch */,
 				D86C63B224D79D2C004AD677 /* Main.storyboard */,
 				D86C63B524D79D30004AD677 /* Assets.xcassets */,
 				D86C63B724D79D30004AD677 /* LaunchScreen.storyboard */,
@@ -137,6 +189,39 @@
 			path = PeiziJindingUITests;
 			sourceTree = "<group>";
 		};
+		D86C63EB24D7A358004AD677 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				D86C63E524D7A34C004AD677 /* NSArray+Adpa.h */,
+				D86C63E024D7A34B004AD677 /* NSArray+Adpa.m */,
+				D86C63E624D7A34C004AD677 /* UIColor+QCategory.h */,
+				D86C63E424D7A34C004AD677 /* UIColor+QCategory.m */,
+				D86C63DF24D7A34B004AD677 /* UIImage+QCategory.h */,
+				D86C63E124D7A34B004AD677 /* UIImage+QCategory.m */,
+				D86C63E224D7A34C004AD677 /* UINavigationBar+DD_Alpha.h */,
+				D86C63E324D7A34C004AD677 /* UINavigationBar+DD_Alpha.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		D86C63ED24D7A475004AD677 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D86C63EE24D7A475004AD677 /* StockRootViewController.h */,
+				D86C63EF24D7A475004AD677 /* StorkSectionController.h */,
+				D86C63F024D7A475004AD677 /* PSRequestManager.h */,
+				D86C63F124D7A475004AD677 /* MBProgressHUD+dxhud.h */,
+				D86C63F224D7A475004AD677 /* MainViewController.m */,
+				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
+				D86C63F424D7A475004AD677 /* MainCellModelProtocol.h */,
+				D86C63F524D7A475004AD677 /* StorkSectionController.m */,
+				D86C63F624D7A475004AD677 /* MBProgressHUD+dxhud.m */,
+				D86C63F724D7A475004AD677 /* MainViewController.h */,
+				D86C63F824D7A475004AD677 /* PSRequestManager.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D86C63D524D79D31004AD677 /* Build configuration list for PBXNativeTarget "PeiziJinding" */;
 			buildPhases = (
+				C71CB67659F4B1CF4B661216 /* [CP] Check Pods Manifest.lock */,
 				D86C63A224D79D2C004AD677 /* Sources */,
 				D86C63A324D79D2C004AD677 /* Frameworks */,
 				D86C63A424D79D2C004AD677 /* Resources */,
+				8A15CE0B87A2031FD959688C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,15 +349,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A15CE0B87A2031FD959688C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C71CB67659F4B1CF4B661216 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeiziJinding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D86C63A224D79D2C004AD677 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86C63FD24D7A475004AD677 /* PSRequestManager.m in Sources */,
+				D86C63E924D7A34C004AD677 /* UINavigationBar+DD_Alpha.m in Sources */,
+				D86C63E824D7A34C004AD677 /* UIImage+QCategory.m in Sources */,
+				D86C63EA24D7A34C004AD677 /* UIColor+QCategory.m in Sources */,
+				D86C63F924D7A475004AD677 /* MainViewController.m in Sources */,
 				D86C63B124D79D2C004AD677 /* ViewController.m in Sources */,
+				D86C63FC24D7A475004AD677 /* MBProgressHUD+dxhud.m in Sources */,
 				D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */,
+				D86C63E724D7A34C004AD677 /* NSArray+Adpa.m in Sources */,
 				D86C63BC24D79D30004AD677 /* main.m in Sources */,
-				D86C63AE24D79D2C004AD677 /* SceneDelegate.m in Sources */,
+				D86C63FA24D7A475004AD677 /* StockRootViewController.m in Sources */,
+				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +574,12 @@
 		};
 		D86C63D624D79D31004AD677 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X5XSAZMKZ;
+				GCC_PREFIX_HEADER = "$SRCROOT/PeiziJinding/PeiziJi.pch";
 				INFOPLIST_FILE = PeiziJinding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,10 +593,12 @@
 		};
 		D86C63D724D79D31004AD677 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CA60AB772B1744C74AC73D /* Pods-PeiziJinding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5X5XSAZMKZ;
+				GCC_PREFIX_HEADER = "$SRCROOT/PeiziJinding/PeiziJi.pch";
 				INFOPLIST_FILE = PeiziJinding/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
