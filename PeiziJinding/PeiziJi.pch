@@ -15,4 +15,16 @@
 #import "NSArray+Adpa.h"
 #import "UIImage+QCategory.h"
 #import "UINavigationBar+DD_Alpha.h"
+#import "StorkSectionController.h"
+#import "StockRootViewController.h"
+#import "MainViewController.h"
+#import "MBProgressHUD+dxhud.h"
+#import "MainViewController.h"
+#import "PSRequestManager.h"
+#import "MainCollectionViewCell.h"
+#import <IGListKit/IGListKit.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import "AFNetworking.h"
+
+#define MainColor [UIColor colorWithHexString:@"FF4C41"]
 #endif /* PeiziJi_pch */

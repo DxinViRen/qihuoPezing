@@ -8,10 +8,11 @@
 
 #import "StockRootViewController.h"
 #import "UserViewController.h"
-#import "NewsViewController.h"
+#import "ShopViewController.h"
 #import "HomeViewController.h"
 #import "LoginManager.h"
 #import "LoginViewController.h"
+#import "DxRubNavigationVC.h"
 @interface StockRootViewController ()
 
 @end
@@ -45,7 +46,7 @@
     HomeViewController *home  = [[HomeViewController alloc]init];
     [self addChildViewController:home title:@"首页" image:@"stock_news_homeIcon" selectImg:@"stock_news_homeIcon_select"];
     
-    NewsViewController *news  = [[NewsViewController alloc]init];
+    ShopViewController *news  = [[ShopViewController alloc]init];
     [self addChildViewController:news title:@"资讯" image:@"stock_tabIcon_news" selectImg:@"stock_tabIcon_news_select"];
     
     UserViewController *user  = [[UserViewController alloc]init];
