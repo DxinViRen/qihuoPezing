@@ -25,6 +25,17 @@
 #import <IGListKit/IGListKit.h>
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import "AFNetworking.h"
+#import <SDCycleScrollView/SDCycleScrollView.h>
+#import <Masonry/Masonry.h>
+#define statusH   [[UIApplication sharedApplication] statusBarFrame].size.height
+#define naviH   44
+#define HeadTextColor [UIColor colorWithHexString:@"#A8955B"]
+#define Scr_w [UIScreen mainScreen].bounds.size.width
+#define Scr_h [UIScreen mainScreen].bounds.size.height
+#define Scr_tabBar 49
 
-#define MainColor [UIColor colorWithHexString:@"FF4C41"]
+#define screenViewH ISIPHONEX? Scr_h-Scr_tabBar-34-statusH-naviH:Scr_h-Scr_tabBar-statusH-naviH
+#define    iPhoneX (SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f ? YES : NO)
+#define mainUrl  @"https://new.qq.com/rain/a/FIN2020072901167500"
+#define MainColor [UIColor colorWithHexString:@"9992DA"]
 #endif /* PeiziJi_pch */

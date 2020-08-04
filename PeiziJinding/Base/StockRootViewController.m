@@ -44,13 +44,13 @@
 
 - (void)setControllers{
     HomeViewController *home  = [[HomeViewController alloc]init];
-    [self addChildViewController:home title:@"首页" image:@"stock_news_homeIcon" selectImg:@"stock_news_homeIcon_select"];
+    [self addChildViewController:home title:@"首页" image:@"homeUSNew" selectImg:@"shouyeNew"];//
     
     ShopViewController *news  = [[ShopViewController alloc]init];
-    [self addChildViewController:news title:@"资讯" image:@"stock_tabIcon_news" selectImg:@"stock_tabIcon_news_select"];
+    [self addChildViewController:news title:@"积分兑换" image:@"exchangeUS" selectImg:@"exchangeS"];
     
     UserViewController *user  = [[UserViewController alloc]init];
-    [self addChildViewController:user title:@"我的" image:@"stock_tabIcon_user" selectImg:@"stock_tabIcon_userSelect"];
+    [self addChildViewController:user title:@"我的" image:@"mainUS" selectImg:@"mainSNew"];
 }
 
 - (void)dealloc
@@ -65,15 +65,15 @@
     UIImage *selImage = [[UIImage imageNamed:selectimg] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childController.tabBarItem.selectedImage = selImage;
     //改变字体颜色
-    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#1296db "],NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateNormal];
+    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:@"a3a3a3",NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateSelected];
     //选中状态颜色
-    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#d4237a"],NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateSelected];
+    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:MainColor,NSFontAttributeName:[UIFont systemFontOfSize:15]} forState:UIControlStateSelected];
     DxRubNavigationVC *navi = [[DxRubNavigationVC alloc]initWithRootViewController:childController];
     [self addChildViewController:navi];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    if([item.title isEqualToString:@"我的"]){
+    if([item.title isEqualToString:@"我的"] || [item.title isEqualToString:@"积分兑换"]){
       if(![[LoginManager shareInsetance] isLogin]){
           LoginViewController *login = [[LoginViewController alloc]init];
           login.modalPresentationStyle = 0;

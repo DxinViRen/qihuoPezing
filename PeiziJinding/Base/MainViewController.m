@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
-    self.view.backgroundColor = [UIColor colorWithHexString:@"#f5f5f5"];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#f0f0f0"];
 }
 
 - (void)viewWillLayoutSubviews{

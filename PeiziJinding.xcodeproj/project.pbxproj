@@ -50,6 +50,11 @@
 		D86C644A24D7A9EC004AD677 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C643724D7A9EC004AD677 /* AFURLRequestSerialization.m */; };
 		D86C644B24D7A9EC004AD677 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C643924D7A9EC004AD677 /* AFNetworkReachabilityManager.m */; };
 		D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C643A24D7A9EC004AD677 /* AFSecurityPolicy.m */; };
+		D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */; };
+		D86C645224D7D8F8004AD677 /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C645124D7D8F8004AD677 /* HomeModel.m */; };
+		D86C645524D7DCDA004AD677 /* HomeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C645424D7DCDA004AD677 /* HomeItemCell.m */; };
+		D86C645824D7E165004AD677 /* HomeHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C645724D7E165004AD677 /* HomeHeadCell.m */; };
+		D86C645A24D7E472004AD677 /* NewsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D86C645924D7E472004AD677 /* NewsList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +163,15 @@
 		D86C643A24D7A9EC004AD677 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		D86C643B24D7A9EC004AD677 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		D86C643C24D7A9EC004AD677 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		D86C644D24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderModelCellCollectionViewCell.h; sourceTree = "<group>"; };
+		D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderModelCellCollectionViewCell.m; sourceTree = "<group>"; };
+		D86C645024D7D8F8004AD677 /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		D86C645124D7D8F8004AD677 /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		D86C645324D7DCDA004AD677 /* HomeItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeItemCell.h; sourceTree = "<group>"; };
+		D86C645424D7DCDA004AD677 /* HomeItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeItemCell.m; sourceTree = "<group>"; };
+		D86C645624D7E165004AD677 /* HomeHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeadCell.h; sourceTree = "<group>"; };
+		D86C645724D7E165004AD677 /* HomeHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeadCell.m; sourceTree = "<group>"; };
+		D86C645924D7E472004AD677 /* NewsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsList.plist; sourceTree = "<group>"; };
 		DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeiziJinding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.debug.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +244,7 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
+				D86C645924D7E472004AD677 /* NewsList.plist */,
 				D86C63A924D79D2C004AD677 /* AppDelegate.h */,
 				D86C63AA24D79D2C004AD677 /* AppDelegate.m */,
 				D86C63AF24D79D2C004AD677 /* ViewController.h */,
@@ -247,8 +262,14 @@
 				D86C640524D7A7B7004AD677 /* UserViewController.m */,
 				D86C640724D7A807004AD677 /* HomeViewController.h */,
 				D86C640824D7A807004AD677 /* HomeViewController.m */,
+				D86C645624D7E165004AD677 /* HomeHeadCell.h */,
+				D86C645724D7E165004AD677 /* HomeHeadCell.m */,
 				D86C640A24D7A817004AD677 /* ShopViewController.h */,
 				D86C640B24D7A818004AD677 /* ShopViewController.m */,
+				D86C645024D7D8F8004AD677 /* HomeModel.h */,
+				D86C645124D7D8F8004AD677 /* HomeModel.m */,
+				D86C645324D7DCDA004AD677 /* HomeItemCell.h */,
+				D86C645424D7DCDA004AD677 /* HomeItemCell.m */,
 			);
 			path = PeiziJinding;
 			sourceTree = "<group>";
@@ -289,6 +310,8 @@
 		D86C63ED24D7A475004AD677 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D86C644D24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.h */,
+				D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */,
 				D86C640D24D7A87E004AD677 /* LoginManager.h */,
 				D86C641024D7A87E004AD677 /* LoginManager.m */,
 				D86C640F24D7A87E004AD677 /* LoginViewController.h */,
@@ -479,6 +502,7 @@
 			files = (
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
 				D86C641424D7A87E004AD677 /* LoginViewController.xib in Resources */,
+				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
 				D86C63B924D79D30004AD677 /* LaunchScreen.storyboard in Resources */,
 				D86C63B624D79D30004AD677 /* Assets.xcassets in Resources */,
 				D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */,
@@ -554,13 +578,17 @@
 				D86C63FD24D7A475004AD677 /* PSRequestManager.m in Sources */,
 				D86C63E924D7A34C004AD677 /* UINavigationBar+DD_Alpha.m in Sources */,
 				D86C63E824D7A34C004AD677 /* UIImage+QCategory.m in Sources */,
+				D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */,
 				D86C63EA24D7A34C004AD677 /* UIColor+QCategory.m in Sources */,
 				D86C63F924D7A475004AD677 /* MainViewController.m in Sources */,
+				D86C645224D7D8F8004AD677 /* HomeModel.m in Sources */,
 				D86C63B124D79D2C004AD677 /* ViewController.m in Sources */,
 				D86C643F24D7A9EC004AD677 /* UIProgressView+AFNetworking.m in Sources */,
 				D86C640624D7A7B7004AD677 /* UserViewController.m in Sources */,
+				D86C645824D7E165004AD677 /* HomeHeadCell.m in Sources */,
 				D86C640C24D7A818004AD677 /* ShopViewController.m in Sources */,
 				D86C644624D7A9EC004AD677 /* AFImageDownloader.m in Sources */,
+				D86C645524D7DCDA004AD677 /* HomeItemCell.m in Sources */,
 				D86C640924D7A807004AD677 /* HomeViewController.m in Sources */,
 				D86C644924D7A9EC004AD677 /* AFURLSessionManager.m in Sources */,
 				D86C644424D7A9EC004AD677 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
