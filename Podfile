@@ -1,6 +1,6 @@
 platform:ios,'10.0'
 target 'PeiziJinding' do
-pod 'YYKit'
+
 pod 'Masonry'
 pod 'SDWebImage'
 pod 'IGListKit'
@@ -10,6 +10,7 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
+pod 'YYText'
 
 
 end

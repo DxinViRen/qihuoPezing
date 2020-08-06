@@ -15,9 +15,7 @@ PODS:
   - SDWebImage (5.2.3):
     - SDWebImage/Core (= 5.2.3)
   - SDWebImage/Core (5.2.3)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
@@ -29,7 +27,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDCycleScrollView (>= 1.80)
   - SDWebImage
-  - YYKit
+  - YYText
 
 SPEC REPOS:
   trunk:
@@ -42,7 +40,7 @@ SPEC REPOS:
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
-    - YYKit
+    - YYText
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -54,8 +52,8 @@ SPEC CHECKSUMS:
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 0d369310ab01f8a86b0912fb4bc4291c649930c5
+PODFILE CHECKSUM: 6df329a10b82b38a8eead12f93d2b5f4108826c3
 
 COCOAPODS: 1.9.3

@@ -39,7 +39,7 @@
 //    NSArray *labelArr = @[self.signLabel,self.ingolLabel,self.collectLabel,self.exchangeLabel];
     
     
-    [viewArr mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:20 leadSpacing:10 tailSpacing:10];
+    [viewArr mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:70 leadSpacing:40 tailSpacing:40];
     
     [viewArr mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(self.daySign.mas_width);
@@ -84,7 +84,8 @@
 - (UIImageView *)myIngolView{
     if(!_myIngolView){
         _myIngolView = [[UIImageView alloc]init];
-        _myIngolView.backgroundColor = [UIColor greenColor];
+        //_myIngolView.backgroundColor = [UIColor greenColor];
+        _myIngolView.image = [UIImage imageNamed:@"hangqingIc"];
     }
     return _myIngolView;
 }
@@ -92,7 +93,8 @@
 - (UIImageView *)myCollected{
     if (!_myCollected) {
         _myCollected = [[UIImageView alloc]init];
-        _myCollected.backgroundColor = [UIColor redColor];
+        _myCollected.image = [UIImage imageNamed:@"NewsIcon"];
+        //_myCollected.backgroundColor = [UIColor redColor];
     }
     return _myCollected;
 }
@@ -101,7 +103,7 @@
     if(!_ingolLabel){
         _ingolLabel = [[UILabel alloc]init];
         _ingolLabel.font  =[UIFont systemFontOfSize:15];
-        _ingolLabel.text = @"我的积分";
+        _ingolLabel.text = @"期货行情";
         _ingolLabel.textColor = MainColor;
         [_ingolLabel sizeToFit];
     }
@@ -112,7 +114,7 @@
     if(!_collectLabel){
         _collectLabel = [[UILabel alloc]init];
         _collectLabel.font  =[UIFont systemFontOfSize:15];
-        _collectLabel.text = @"我的收藏";
+        _collectLabel.text = @"热门资讯";
         _collectLabel.textColor = MainColor;
         [_collectLabel sizeToFit];
     }
@@ -124,7 +126,7 @@
         _signLabel = [[UILabel alloc]init];
         _signLabel.textColor =MainColor;
         _signLabel.font = [UIFont systemFontOfSize:15];
-        _signLabel.text = @"今日签到";
+        _signLabel.text = @"每日签到";
         _signLabel.textColor = MainColor;
         _signLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -135,8 +137,9 @@
     if(!_daySign){
         
         _daySign = [[UIImageView alloc]init];
-        _daySign.backgroundColor = [UIColor
-                                    orangeColor];
+        _daySign.image  = [UIImage imageNamed:@"daySignIc"];
+        //_daySign.backgroundColor = [UIColor
+                                   // orangeColor];
     }
     return _daySign;
 }
@@ -146,7 +149,7 @@
         _exchangeLabel = [[UILabel alloc]init];
         _exchangeLabel.textColor = MainColor;
         _exchangeLabel.font = [UIFont systemFontOfSize:15];
-        _exchangeLabel.text = @"兑换记录";
+        _exchangeLabel.text = @"我的收藏";
         _exchangeLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _exchangeLabel;
@@ -156,7 +159,8 @@
 {
     if(!_exchangeImgView){
         _exchangeImgView = [[UIImageView alloc]init];
-        _exchangeImgView.backgroundColor = [UIColor cyanColor];
+        _exchangeImgView.image = [UIImage imageNamed:@"mycolectIc"];
+        //_exchangeImgView.backgroundColor = [UIColor cyanColor];
     }
     return _exchangeImgView;
 }
