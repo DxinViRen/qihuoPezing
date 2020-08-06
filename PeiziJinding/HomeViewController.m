@@ -39,7 +39,7 @@
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(cycleClickAction:) name:@"cycleClick" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(moreNews:) name:@"more" object:nil];
     self.bannerUrlArr = @[@"https://new.qq.com/omn/20200805/20200805A07UEH00.html",@"https://finance.sina.com.cn/money/nmetal/hjzx/2020-08-06/doc-iivhvpwx9534532.shtml",@"https://finance.sina.com.cn/money/future/agri/2020-08-06/doc-iivhuipn7164156.shtml"];
-    self.cycleUrlArr = @[@"https://baijiahao.baidu.com/s?id=1674113437711834373&wfr=spider&for=pc",@"http://finance.sina.com.cn/money/future/fmnews/2020-08-05/doc-iivhvpwx9276091.shtml",@"http://finance.sina.com.cn/money/future/fmnews/2020-08-05/doc-iivhuipn6875437.shtml"];
+    self.cycleUrlArr = @[@"https://baijiahao.baidu.com/s?id=1674113437711834373&wfr=spider&for=pc",@"http://futures.eastmoney.com/a/202008061584630776.html",@"http://futures.eastmoney.com/a/202008061584161598.html"];
   
 }
 
@@ -161,7 +161,14 @@
     };
     
     stpct.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
-        
+        if([model.cellName isEqualToString:NSStringFromClass([NewsCell class])]){
+            NewsNewModel *newModel = (NewsNewModel *)model;
+            NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
+            newDetai.model = model; 
+            NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
+            [newDetai loadHtmlWithUrl:detaiUrl];
+            [self.navigationController pushViewController:newDetai animated:YES];
+        }
     };
     
     return stpct;;

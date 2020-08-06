@@ -31,7 +31,7 @@
 }
 
 - (void)configDataSource{
-    NSArray *titA = @[@"以史为鉴，黄金牛市到哪里算结束？",@"恐慌心理主导市场，豆一再现暴跌",@"原油快学学人家！黄金强势突破2000美元！"];
+    NSArray *titA = @[@"以史为鉴，黄金牛市到哪里算结束？",@"根本停不下来，黄金爆拉超30美元",@"期市收盘：商品期货多数下跌 鸡蛋主力跌近3%"];
     NSArray *imgA = @[@"WeChatc7d157474124087b4f3ea04a23c8967c",@"home_roll_A",@"home_roll_zhong"];
     NSArray *colA = @[@"#876543",@"#567844",@"#123432"];
     for (int i = 0; i<3; i++) {

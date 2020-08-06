@@ -48,15 +48,15 @@
      config.applicationNameForUserAgent = @"ChinaDailyForiPad";
       //自定义的WKScriptMessageHandler 是为了解决内存不释放的问题
    
-     UIButton *collectBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-     [collectBtn setImage:[UIImage imageNamed:@"collect"] forState:UIControlStateNormal];
+     UIButton *collectBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+     [collectBtn setImage:[UIImage imageNamed:@"myColectNewIconS"] forState:UIControlStateNormal];
      isCollected = NO;
     if(self.model){
         NSArray *collA = [[NSUserDefaults standardUserDefaults]objectForKey:@"collectList"];
         if(collA){
             for (NSDictionary *dic in collA) {
                 if([dic[@"title"] isEqualToString:self.model.title]){
-                    [collectBtn setImage:[UIImage imageNamed:@"haveCollected"] forState:UIControlStateNormal];
+                    [collectBtn setImage:[UIImage imageNamed:@"haveNewColectS"] forState:UIControlStateNormal];
                     isCollected = YES;
                 }
             }
@@ -76,7 +76,7 @@
     
     //点击收藏
     if(!isCollected){
-        [btn setImage:[UIImage imageNamed:@"haveCollected"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"haveNewColectS"] forState:UIControlStateNormal];
         NSDictionary *dic  = self.model.mj_keyValues;
         NSArray  *collectList = [[NSUserDefaults standardUserDefaults]objectForKey:@"collectList"];
         NSMutableArray *collArr = [collectList  mutableCopy];
@@ -93,9 +93,9 @@
         [MBProgressHUD show:@"已经收藏" icon:nil view:self.view];
         
     }else{
-         [btn setImage:[UIImage imageNamed:@"collect"] forState:UIControlStateNormal];
+         [btn setImage:[UIImage imageNamed:@"myColectNewIconS"] forState:UIControlStateNormal];
         //显示取消收藏
-        NSArray  *collectList = [[NSUserDefaults standardUserDefaults]objectForKey:@"collectList"];
+        NSArray  *collectList = [[NSUserDefaults standardUserDefaults]objectForKey:@"haveNewColectS"];
         NSMutableArray *muColl = [collectList mutableCopy];
               if(collectList){
                   for (NSDictionary *dic in collectList) {
@@ -156,13 +156,12 @@
     // 页面开始加载时调用
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     
-   [MBProgressHUD showMessage:@"请稍等" toView:self.view];
+    self.hud = [MBProgressHUD showMessage:@"请稍等" toView:self.view];
     
 }
     // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-   [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [MBProgressHUD showMessage:@"加载失败" toView:self.view];
+    [MBProgressHUD showMessage:@"加载失败"];
      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
          [MBProgressHUD hideHUDForView:self.view animated:YES];
         // [MBProgressHUD show:@"提交成功" icon:nil view:self.view];
@@ -237,6 +236,24 @@
         _hud = [[MBProgressHUD alloc]initWithFrame:CGRectMake(Scr_w*0.5, Scr_h*0.5, 100, 50)];
     }
     return _hud;
+}
+
+
+- (void)loadHtmlWithUrl:(NSString *)url{
+
+//    "news":{
+//          "content":
+    self.hud = [MBProgressHUD showMessage:@"请稍等"];
+    [[PSRequestManager shareInstance] netRequestWithUrl:url method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [self.hud hideAnimated:YES];
+        if(responseObject){
+            NSDictionary *dic = [responseObject objectForKey:@"news"];
+            NSString *content = [dic objectForKey:@"content"];
+            [self.webView loadHTMLString:content baseURL:nil];
+        }
+    } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+         [self.hud hideAnimated:YES];
+    }];
 }
 
 @end

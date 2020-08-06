@@ -46,4 +46,5 @@
 #define MainColor [UIColor colorWithHexString:@"#9992DA"]
 
 #define NewsListUrl @"https://dl.xyxyj999.com/api/news/newsList.htm?type=0&date=2020-%@-%@"
+#define DetailUrl   @"https://dl.xyxyj999.com/api/news/newsDetail.htm?id=%@"
 #endif /* PeiziJi_pch */

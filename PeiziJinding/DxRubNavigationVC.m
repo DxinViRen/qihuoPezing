@@ -36,7 +36,7 @@
          //  backItem.imageInsets = UIEdgeInsetsMake(0, -10, 0, 0);
             UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
       
-            [btn setBackgroundImage:[UIImage imageNamed:@"stock_back32"] forState:UIControlStateNormal];
+            [btn setBackgroundImage:[UIImage imageNamed:@"backWhateIcon"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
         //

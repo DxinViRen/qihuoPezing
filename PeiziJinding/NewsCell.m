@@ -12,8 +12,8 @@
 #import <YYText.h>
 @interface NewsCell ()
 @property(nonatomic,strong)UIView *lineView;
-@property(nonatomic,strong)YYLabel *dxtitlelabel;
-@property(nonatomic,strong)YYLabel *timeLabel;
+@property(nonatomic,strong)UILabel *dxtitlelabel;
+@property(nonatomic,strong)UILabel *timeLabel;
 @property(nonatomic,strong)UIImageView *mainImgView;
 @end
 
@@ -65,10 +65,6 @@
 
 - (void)setModel:(id<MainCellModelProtocol>)model{
     NewsNewModel *newModel =(NewsNewModel *) model;
-    NSMutableAttributedString *atStr = [[NSMutableAttributedString alloc]initWithString:newModel.title];
-    atStr.yy_lineSpacing = 6;
-    self.dxtitlelabel.attributedText = atStr;
-    
     self.dxtitlelabel.text = newModel.title;
     [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.thumb] placeholderImage:[UIImage imageNamed:@""]];
     self.timeLabel.text = newModel.date;
@@ -83,30 +79,31 @@
     return _lineView;
 }
 
-- (YYLabel *)dxtitlelabel{
+- (UILabel *)dxtitlelabel{
     if(!_dxtitlelabel){
         
-        _dxtitlelabel = [[YYLabel alloc]init];
+        _dxtitlelabel = [[UILabel alloc]init];
         _dxtitlelabel.textColor = MainColor;
         _dxtitlelabel.textAlignment = NSTextAlignmentLeft;
         _dxtitlelabel.font = [UIFont systemFontOfSize:15];
+       // _dxtitlelabel.preferredMaxLayoutWidth =Scr_w - 20 - Scr_w * (160/375.0);
         _dxtitlelabel.numberOfLines = 0;
         _dxtitlelabel.lineBreakMode = NSLineBreakByWordWrapping;
-        _dxtitlelabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
-        [_dxtitlelabel sizeToFit];
+        //_dxtitlelabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
+        //[_dxtitlelabel sizeToFit];
     }
     return _dxtitlelabel;
 }
 
 - (YYLabel *)timeLabel{
     if(!_timeLabel){
-        _timeLabel = [[YYLabel alloc]init];
+        _timeLabel = [[UILabel alloc]init];
         _timeLabel.textColor = MainColor;
         _timeLabel.textAlignment = NSTextAlignmentLeft;
         _timeLabel.font = [UIFont systemFontOfSize:15];
         _timeLabel.numberOfLines = 0;
         _timeLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        _timeLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
+        //_timeLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
     }
     return _timeLabel;
 }
