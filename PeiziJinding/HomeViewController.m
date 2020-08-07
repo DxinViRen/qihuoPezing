@@ -15,6 +15,10 @@
 #import "NewDetailsViewController.h"
 #import "NewsCell.h"
 #import "NewsListDataModel.h"
+#import "AppDelegate.h"
+#import "FinCalViewController.h"
+#import "NewsListViewController.h"
+
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *bannerUrlArr;
 @property(nonatomic,strong)NSArray *cycleUrlArr;
@@ -34,17 +38,51 @@
     self.page = 1;
     self.month =  4;
     [self configDataSource];
-   
+    //NSArray *arr = [DateTool getWeekArr];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clickBanAction:) name:@"clickBanner" object:nil];
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(cycleClickAction:) name:@"cycleClick" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(moreNews:) name:@"more" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(itemClick:) name:@"itemClick" object:nil];
     self.bannerUrlArr = @[@"https://new.qq.com/omn/20200805/20200805A07UEH00.html",@"https://finance.sina.com.cn/money/nmetal/hjzx/2020-08-06/doc-iivhvpwx9534532.shtml",@"https://finance.sina.com.cn/money/future/agri/2020-08-06/doc-iivhuipn7164156.shtml"];
     self.cycleUrlArr = @[@"https://baijiahao.baidu.com/s?id=1674113437711834373&wfr=spider&for=pc",@"http://futures.eastmoney.com/a/202008061584630776.html",@"http://futures.eastmoney.com/a/202008061584161598.html"];
-  
+    
+    self.mainCollectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
+    }];
+}
+
+
+
+- (void)itemClick:(NSNotification *)noti{
+    NSInteger  tag = [noti.userInfo[@"tag"] intValue];
+    if(tag == 100|| tag == 1000){
+        //财经日历
+        FinCalViewController  *finc = [[FinCalViewController alloc]init];
+        [self.navigationController pushViewController:finc animated:YES];
+    }else if (tag == 200 || tag == 2000){
+        //期货行情
+        
+    }else if (tag  == 300 || tag == 3000){
+        //热门资讯
+        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+        UIWindow *win  = delegate.window;
+        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+        [root setSelectedIndex:2];
+        
+    }else if (tag == 400 || tag == 4000){
+        //我的收藏
+    }
+    
 }
 
 - (void)moreNews:(NSNotification *)noti{
     //more
+    AppDelegate *delegate  =(AppDelegate *) [UIApplication sharedApplication].delegate;
+    
+    StockRootViewController *strt = (StockRootViewController *)delegate.window.rootViewController;
+    NSInteger rcount = strt.viewControllers.count;
+    [strt setSelectedIndex:rcount - 2];
+    
 }
 
 - (void)loadData{
@@ -54,8 +92,8 @@
         [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
         return;
     }
-    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,@"4",[NSString stringWithFormat:@"%ld",self.page]];
-    [[PSRequestManager shareInstance] netRequestWithUrl:newurlStr method:HttpRequestMethodPOST param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
+    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,@"8",[NSString stringWithFormat:@"%ld",self.page]];
+    [[PSRequestManager shareInstance] netRequestWithUrl:newurlStr method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
         [self.hud hideAnimated:YES];
         [self.mainCollectionView.mj_header endRefreshing];
         if(responseObject){

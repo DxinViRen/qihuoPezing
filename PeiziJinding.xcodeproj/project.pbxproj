@@ -27,6 +27,13 @@
 		D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57E724DBFEB400A2696B /* PSRequestManager.m */; };
 		D85C57EC24DBFF5B00A2696B /* MBProgressHUD+dxhud.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */; };
 		D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57EE24DC07CE00A2696B /* NewsCell.m */; };
+		D85C57F224DC421B00A2696B /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57F124DC421B00A2696B /* NewsListViewController.m */; };
+		D85C57F524DC46D300A2696B /* MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57F424DC46D300A2696B /* MarketViewController.m */; };
+		D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57F724DCE6E400A2696B /* FinCalViewController.m */; };
+		D85C57FB24DCF68F00A2696B /* CalSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57FA24DCF68F00A2696B /* CalSelectCell.m */; };
+		D85C57FE24DCF8F000A2696B /* DateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57FD24DCF8F000A2696B /* DateTool.m */; };
+		D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C580024DD0ACA00A2696B /* FinCalModel.m */; };
+		D85C580424DD411100A2696B /* CalNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C580324DD411100A2696B /* CalNewsCell.m */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -122,6 +129,20 @@
 		D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+dxhud.m"; sourceTree = "<group>"; };
 		D85C57ED24DC07CE00A2696B /* NewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		D85C57EE24DC07CE00A2696B /* NewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		D85C57F024DC421B00A2696B /* NewsListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		D85C57F124DC421B00A2696B /* NewsListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		D85C57F324DC46D300A2696B /* MarketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketViewController.h; sourceTree = "<group>"; };
+		D85C57F424DC46D300A2696B /* MarketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketViewController.m; sourceTree = "<group>"; };
+		D85C57F624DCE6E400A2696B /* FinCalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinCalViewController.h; sourceTree = "<group>"; };
+		D85C57F724DCE6E400A2696B /* FinCalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinCalViewController.m; sourceTree = "<group>"; };
+		D85C57F924DCF68F00A2696B /* CalSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalSelectCell.h; sourceTree = "<group>"; };
+		D85C57FA24DCF68F00A2696B /* CalSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalSelectCell.m; sourceTree = "<group>"; };
+		D85C57FC24DCF8F000A2696B /* DateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
+		D85C57FD24DCF8F000A2696B /* DateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		D85C57FF24DD0ACA00A2696B /* FinCalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinCalModel.h; sourceTree = "<group>"; };
+		D85C580024DD0ACA00A2696B /* FinCalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinCalModel.m; sourceTree = "<group>"; };
+		D85C580224DD411100A2696B /* CalNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalNewsCell.h; sourceTree = "<group>"; };
+		D85C580324DD411100A2696B /* CalNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalNewsCell.m; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -299,6 +320,16 @@
 				D85C57CF24DBFE1E00A2696B /* HomeModel.m */,
 				D85C57CE24DBFE1E00A2696B /* HomeViewController.h */,
 				D85C57C624DBFE1D00A2696B /* HomeViewController.m */,
+				D85C57FC24DCF8F000A2696B /* DateTool.h */,
+				D85C57FD24DCF8F000A2696B /* DateTool.m */,
+				D85C580224DD411100A2696B /* CalNewsCell.h */,
+				D85C580324DD411100A2696B /* CalNewsCell.m */,
+				D85C57F624DCE6E400A2696B /* FinCalViewController.h */,
+				D85C57F724DCE6E400A2696B /* FinCalViewController.m */,
+				D85C57FF24DD0ACA00A2696B /* FinCalModel.h */,
+				D85C580024DD0ACA00A2696B /* FinCalModel.m */,
+				D85C57F924DCF68F00A2696B /* CalSelectCell.h */,
+				D85C57FA24DCF68F00A2696B /* CalSelectCell.m */,
 				D85C57ED24DC07CE00A2696B /* NewsCell.h */,
 				D85C57EE24DC07CE00A2696B /* NewsCell.m */,
 				D85C57CC24DBFE1E00A2696B /* NewsListDataModel.h */,
@@ -330,6 +361,10 @@
 				D86C63EF24D7A475004AD677 /* StorkSectionController.h */,
 				D86C63F224D7A475004AD677 /* MainViewController.m */,
 				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
+				D85C57F324DC46D300A2696B /* MarketViewController.h */,
+				D85C57F424DC46D300A2696B /* MarketViewController.m */,
+				D85C57F024DC421B00A2696B /* NewsListViewController.h */,
+				D85C57F124DC421B00A2696B /* NewsListViewController.m */,
 				D85C57AB24DBDEA100A2696B /* NewDetailsViewController.h */,
 				D85C57AC24DBDEA100A2696B /* NewDetailsViewController.m */,
 				D86C63F424D7A475004AD677 /* MainCellModelProtocol.h */,
@@ -637,6 +672,7 @@
 				D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */,
 				D85C57DB24DBFE1F00A2696B /* NSArray+Adpa.m in Sources */,
 				D85C57B324DBE7FD00A2696B /* NewsNewModel.m in Sources */,
+				D85C57FB24DCF68F00A2696B /* CalSelectCell.m in Sources */,
 				D86C63F924D7A475004AD677 /* MainViewController.m in Sources */,
 				D86C63B124D79D2C004AD677 /* ViewController.m in Sources */,
 				D85C57EC24DBFF5B00A2696B /* MBProgressHUD+dxhud.m in Sources */,
@@ -645,9 +681,11 @@
 				D86C644624D7A9EC004AD677 /* AFImageDownloader.m in Sources */,
 				D85C57DA24DBFE1F00A2696B /* HomeModel.m in Sources */,
 				D86C644924D7A9EC004AD677 /* AFURLSessionManager.m in Sources */,
+				D85C57F224DC421B00A2696B /* NewsListViewController.m in Sources */,
 				D85C57D824DBFE1F00A2696B /* NewsListDataModel.m in Sources */,
 				D86C644424D7A9EC004AD677 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D85C57DF24DBFE6300A2696B /* UIColor+QCategory.m in Sources */,
+				D85C57F524DC46D300A2696B /* MarketViewController.m in Sources */,
 				D85C57D624DBFE1F00A2696B /* HomeViewController.m in Sources */,
 				D85C57AD24DBDEA100A2696B /* NewDetailsViewController.m in Sources */,
 				D86C644124D7A9EC004AD677 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -660,9 +698,11 @@
 				D86C63BC24D79D30004AD677 /* main.m in Sources */,
 				D86C63FA24D7A475004AD677 /* StockRootViewController.m in Sources */,
 				D86C644A24D7A9EC004AD677 /* AFURLRequestSerialization.m in Sources */,
+				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
 				D86C641224D7A87E004AD677 /* LoginViewController.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
+				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
 				D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */,
@@ -671,9 +711,11 @@
 				D86C644524D7A9EC004AD677 /* AFAutoPurgingImageCache.m in Sources */,
 				D86C644824D7A9EC004AD677 /* AFHTTPSessionManager.m in Sources */,
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
+				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
 				D86C644B24D7A9EC004AD677 /* AFNetworkReachabilityManager.m in Sources */,
 				D85C57E524DBFE9000A2696B /* UINavigationBar+DD_Alpha.m in Sources */,
 				D85C57D724DBFE1F00A2696B /* HomeHeadCell.m in Sources */,
+				D85C57FE24DCF8F000A2696B /* DateTool.m in Sources */,
 				D86C640024D7A61F004AD677 /* StorkSectionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -67,24 +67,21 @@
            make.centerX.equalTo(self.exchangeImgView);
         make.top.equalTo(self.exchangeImgView.mas_bottom).offset(10);
        }];
-    
-    
+   
+}
 
-   
-   
-//
-   
+- (void)tapAction:(UITapGestureRecognizer *)tap{
     
-    
-    
-    
-   
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"itemClick" object:nil userInfo:@{@"tag":@(tap.view.tag)}];
 }
 
 - (UIImageView *)myIngolView{
     if(!_myIngolView){
         _myIngolView = [[UIImageView alloc]init];
-        //_myIngolView.backgroundColor = [UIColor greenColor];
+        _myIngolView.userInteractionEnabled = YES;
+        _myIngolView.tag = 200;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_myIngolView addGestureRecognizer:tap];
         _myIngolView.image = [UIImage imageNamed:@"hangqingIc"];
     }
     return _myIngolView;
@@ -93,6 +90,10 @@
 - (UIImageView *)myCollected{
     if (!_myCollected) {
         _myCollected = [[UIImageView alloc]init];
+        _myCollected.userInteractionEnabled = YES;
+        _myCollected.tag = 300;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_myCollected addGestureRecognizer:tap];
         _myCollected.image = [UIImage imageNamed:@"NewsIcon"];
         //_myCollected.backgroundColor = [UIColor redColor];
     }
@@ -102,6 +103,10 @@
 - (UILabel *)ingolLabel{
     if(!_ingolLabel){
         _ingolLabel = [[UILabel alloc]init];
+        _ingolLabel.tag = 2000;
+        _ingolLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_ingolLabel addGestureRecognizer:tap];
         _ingolLabel.font  =[UIFont systemFontOfSize:15];
         _ingolLabel.text = @"期货行情";
         _ingolLabel.textColor = MainColor;
@@ -113,6 +118,10 @@
 - (UILabel *)collectLabel{
     if(!_collectLabel){
         _collectLabel = [[UILabel alloc]init];
+        _collectLabel.tag = 3000;
+        _collectLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_collectLabel addGestureRecognizer:tap];
         _collectLabel.font  =[UIFont systemFontOfSize:15];
         _collectLabel.text = @"热门资讯";
         _collectLabel.textColor = MainColor;
@@ -125,8 +134,12 @@
     if(!_signLabel){
         _signLabel = [[UILabel alloc]init];
         _signLabel.textColor =MainColor;
+        _signLabel.tag = 100;
+        _signLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_signLabel addGestureRecognizer:tap];
         _signLabel.font = [UIFont systemFontOfSize:15];
-        _signLabel.text = @"每日签到";
+        _signLabel.text = @"财经日历";
         _signLabel.textColor = MainColor;
         _signLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -135,9 +148,12 @@
 
 - (UIImageView *)daySign{
     if(!_daySign){
-        
         _daySign = [[UIImageView alloc]init];
-        _daySign.image  = [UIImage imageNamed:@"daySignIc"];
+        _daySign.tag = 100;
+        _daySign.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_daySign addGestureRecognizer:tap];
+        _daySign.image  = [UIImage imageNamed:@"calIoconHomeItem"];
         //_daySign.backgroundColor = [UIColor
                                    // orangeColor];
     }
@@ -147,7 +163,11 @@
 - (UILabel *)exchangeLabel{
     if(!_exchangeLabel){
         _exchangeLabel = [[UILabel alloc]init];
+        _exchangeLabel.userInteractionEnabled = YES;
         _exchangeLabel.textColor = MainColor;
+        _exchangeLabel.tag = 4000;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_exchangeLabel addGestureRecognizer:tap];
         _exchangeLabel.font = [UIFont systemFontOfSize:15];
         _exchangeLabel.text = @"我的收藏";
         _exchangeLabel.textAlignment = NSTextAlignmentCenter;
@@ -159,6 +179,10 @@
 {
     if(!_exchangeImgView){
         _exchangeImgView = [[UIImageView alloc]init];
+        _exchangeImgView.userInteractionEnabled = YES;
+        _exchangeImgView.tag = 4000;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_exchangeImgView addGestureRecognizer:tap];
         _exchangeImgView.image = [UIImage imageNamed:@"mycolectIc"];
         //_exchangeImgView.backgroundColor = [UIColor cyanColor];
     }

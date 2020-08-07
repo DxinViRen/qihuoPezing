@@ -13,6 +13,8 @@
 #import "LoginManager.h"
 #import "LoginViewController.h"
 #import "DxRubNavigationVC.h"
+#import "NewsListViewController.h"
+#import "MarketViewController.h"
 @interface StockRootViewController ()
 
 @end
@@ -46,9 +48,24 @@
     HomeViewController *home  = [[HomeViewController alloc]init];
     [self addChildViewController:home title:@"首页" image:@"homeUSNew" selectImg:@"shouyeNew"];//
     
-//    ShopViewController *news  = [[ShopViewController alloc]init];
-//    [self addChildViewController:news title:@"积分兑换" image:@"exchangeUS" selectImg:@"exchangeS"];
-//
+    NewsListViewController *newlist = [[NewsListViewController alloc]init];
+    
+    MarketViewController *markt = [[MarketViewController alloc]init];
+      [self addChildViewController:markt title:@"行情" image:@"marketedUs" selectImg:@"marketed"];
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    [self addChildViewController:newlist title:@"资讯" image:@"tabNewsIcon28" selectImg:@"tabNewsListS"];
+    
     UserViewController *user  = [[UserViewController alloc]init];
     [self addChildViewController:user title:@"我的" image:@"mainUS" selectImg:@"mainSNew"];
 }
