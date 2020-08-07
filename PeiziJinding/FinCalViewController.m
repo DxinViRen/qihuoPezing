@@ -9,8 +9,14 @@
 #import "FinCalViewController.h"
 #import "FinCalModel.h"
 #import "CalSelectCell.h"
+#import "CalNewsCell.h"
+#import "CalNewsModel.h"
+#import "CalResponseModel.h"
 @interface FinCalViewController ()
-
+@property(nonatomic,strong)MBProgressHUD *hud;
+@property (nonatomic,strong)UIView *nodataView;
+@property(nonatomic,strong)UILabel *nodataLabel;
+@property(nonatomic,strong)UIImageView *haveNoDataView;
 @end
 
 @implementation FinCalViewController
@@ -18,15 +24,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"财经日历";
+    [self dxLayoutSubView];
     self.dataArray = [@[]  mutableCopy];
     [self configData];
     [self.adapter reloadDataWithCompletion:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(clickDate:) name:@"clickDate" object:nil];
-    //[self loadData];
+    [self dx_initData];
+    
+}
+
+- (void)nodataViewShow{
+    self.nodataView.hidden = NO;
+}
+
+- (void)nodataViewHid{
+    self.nodataView.hidden = YES;
+}
+
+- (void)dx_initData{
+      
+        NSString *allstr = [NSString stringWithFormat:@"%@%@",[DateTool getCurrentDateStr],[DateTool getDateStr]];
+       [self loadDataWithDate:allstr];
 }
 
 - (void)clickDate:(NSNotification *)noti{
     //刷新列表
+    if(self.dataArray.count>1){
+         [self.dataArray removeObjectAtIndex:1];
+    }
     NSDictionary *dic = noti.userInfo;
     NSNumber * date = dic[@"tag"];
     NSInteger index = [date integerValue]-100;
@@ -37,13 +62,63 @@
     
 }
 
+- (void)dxLayoutSubView{
+    [self.view addSubview:self.nodataView];
+    [self.nodataView addSubview:self.nodataLabel];
+    [self.nodataView addSubview:self.haveNoDataView];
+    [self.nodataView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view).offset(-20);
+        make.size.mas_equalTo(CGSizeMake(200, 200));
+    }];
+    
+    [self.haveNoDataView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.nodataView).inset(15);
+        make.centerX.equalTo(self.nodataView);
+        make.size.mas_equalTo(CGSizeMake(128, 128));
+    }];
+    
+    [self.nodataLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.haveNoDataView.mas_bottom).offset(15);
+        make.centerX.equalTo(self.haveNoDataView);
+        make.height.mas_equalTo(20);
+    }];
+    
+}
+
 - (void)loadDataWithDate:(NSString *)str{
     NSString  * urlstr = [NSString stringWithFormat:CladanUrl,str];
+    self.hud = [MBProgressHUD showMessage:@"请稍等"];
     [[PSRequestManager shareInstance] netRequestWithUrl:urlstr  method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        
+        [self.hud hideAnimated:YES];
+        CalResponseModel *responsModel = [CalResponseModel mj_objectWithKeyValues:responseObject];
+        NSMutableArray *sec2CellArr = [@[] mutableCopy];
+        if([responsModel.code isEqualToString:@"200"]){
+            for (CalNewsModel *newModel in responsModel.news.newsData) {
+                   newModel.cellName = NSStringFromClass([CalNewsCell class]);
+                   newModel.cellHeight = Scr_w * (100/375.0);
+                   newModel.cellWight = Scr_w;
+                   newModel.cellInderfier = NSStringFromClass([CalNewsCell class]);
+                   [sec2CellArr addObject:newModel];
+            }
+            if(sec2CellArr.count == 0){
+                [self nodataViewShow];
+            }else{
+                StorkSectionModel *sec2 = [[StorkSectionModel alloc]initWithArray:sec2CellArr];
+                [self.dataArray addObject:sec2];
+                [self nodataViewHid];
+            }
+            [self.adapter reloadDataWithCompletion:nil];
+        }
+        else{
+            
+            //加载失败
+                           [MBProgressHUD showMessage:@"数据异常" toView:self.mainCollectionView];
+                           [self nodataViewShow];
+        }
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        [self.hud hideAnimated:YES];
+        [self nodataViewShow];
     }];
 }
 
@@ -56,7 +131,6 @@
     NSMutableArray *sec1CellArr = [[NSMutableArray alloc]initWithObjects:fmodle, nil];
     StorkSectionModel *scModel1 = [[StorkSectionModel alloc]initWithArray:sec1CellArr];
     [self.dataArray addObject:scModel1];
-    
 }
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
@@ -73,6 +147,33 @@
         
     };
     return secC;
+}
+
+- (UIView *)nodataView{
+    if(!_nodataView){
+        
+        _nodataView = [[UIView alloc]init];
+    }
+    return _nodataView;
+}
+
+- (UILabel *)nodataLabel{
+    if(!_nodataLabel){
+        
+        _nodataLabel = [[UILabel alloc]init];
+        _nodataLabel.textColor = [UIColor colorWithHexString:@"#707070"];
+        _nodataLabel.text = @"你的资讯去了火星~~";
+        [_nodataLabel sizeToFit];
+    }
+    return _nodataLabel;
+}
+
+- (UIImageView *)haveNoDataView{
+    if(!_haveNoDataView){
+        _haveNoDataView = [[UIImageView alloc]init];
+        _haveNoDataView.image = [UIImage imageNamed:@"haveNoData"];
+    }
+    return _haveNoDataView;
 }
 
 

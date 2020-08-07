@@ -18,7 +18,7 @@
 #import "AppDelegate.h"
 #import "FinCalViewController.h"
 #import "NewsListViewController.h"
-
+#import "MyCollectViewController.h"
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *bannerUrlArr;
 @property(nonatomic,strong)NSArray *cycleUrlArr;
@@ -71,6 +71,8 @@
         
     }else if (tag == 400 || tag == 4000){
         //我的收藏
+        MyCollectViewController *mycll = [[MyCollectViewController alloc]init];
+        [self.navigationController pushViewController:mycll animated:YES];
     }
     
 }

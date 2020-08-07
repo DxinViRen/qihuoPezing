@@ -77,6 +77,11 @@
         [textBtn setTitle:dateArr[i] forState:UIControlStateNormal];
         textBtn.titleLabel.font = [UIFont systemFontOfSize:18];
         [textBtn addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
+        if(i == 6){
+            textBtn.backgroundColor  = [[UIColor colorWithHexString:@"#2A8EF8"]colorWithAlphaComponent:0.6];
+        }else{
+             textBtn.backgroundColor  = [[UIColor colorWithHexString:@"#ffffff"]colorWithAlphaComponent:0.6];
+        }
         [textBtn setTitleColor:[UIColor colorWithHexString:@"#C09843"] forState:UIControlStateNormal];
         [self.contentView addSubview:textBtn];
         [self.btnArr addObject:textBtn];

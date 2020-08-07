@@ -66,6 +66,9 @@
 - (void)setModel:(id<MainCellModelProtocol>)model{
     NewsNewModel *newModel =(NewsNewModel *) model;
     self.dxtitlelabel.text = newModel.title;
+    if(newModel.thumb.length == 0){
+        newModel.thumb = @"";
+    }
     [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.thumb] placeholderImage:[UIImage imageNamed:@""]];
     self.timeLabel.text = newModel.date;
 }
