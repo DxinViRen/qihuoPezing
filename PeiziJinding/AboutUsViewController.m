@@ -36,7 +36,7 @@
         _conLabel.font  = [UIFont systemFontOfSize:20];
         _conLabel.numberOfLines = 0;
         _conLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        _conLabel.text = @"金鼎股票资讯旨在为广大股民提供最新股票财经资讯，赢得广大用户的青睐以及合作伙伴的认可，紧密结合金融市场环境，让每个人都懂得投资，让每个人都掌握最新的财经资讯，实现自己的理财能力，加大自己的操作力度。我们只在z通过持之以恒的产品 创新和服务优化，创造性满足投资者的 财经知识，希望广大用户多多提意见，帮助我们改进产品 。";
+        _conLabel.text = @"";
         _conLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
     }
     return _conLabel;

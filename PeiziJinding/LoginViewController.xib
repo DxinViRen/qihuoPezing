@@ -22,14 +22,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeChat75003cb33413e29bab545512e08cf642" translatesAutoresizingMaskIntoConstraints="NO" id="5HX-HV-9s5">
-                    <rect key="frame" x="30" y="108" width="354" height="128"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeChat0411493369fdbdcb432faab2a9c0d5f1" translatesAutoresizingMaskIntoConstraints="NO" id="5HX-HV-9s5">
+                    <rect key="frame" x="30" y="108" width="354" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="128" id="4d3-vB-oou"/>
+                        <constraint firstAttribute="height" constant="150" id="4d3-vB-oou"/>
                     </constraints>
                 </imageView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" your user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-86-q2Z">
-                    <rect key="frame" x="30" y="336" width="354" height="60"/>
+                    <rect key="frame" x="30" y="308" width="354" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="aDb-3Z-QJb"/>
                     </constraints>
@@ -37,12 +37,12 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder=" your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZy-EN-57X">
-                    <rect key="frame" x="30" y="452" width="354" height="60"/>
+                    <rect key="frame" x="30" y="398" width="354" height="60"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kh-1C-ZqC">
-                    <rect key="frame" x="30" y="570" width="354" height="60"/>
+                    <rect key="frame" x="30" y="485" width="354" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="yLs-YZ-S58"/>
                     </constraints>
@@ -57,7 +57,7 @@
                         <constraint firstAttribute="height" constant="32" id="HEp-K9-IJ1"/>
                         <constraint firstAttribute="width" constant="32" id="uvB-zq-l1v"/>
                     </constraints>
-                    <state key="normal" title="Button" image="login_back"/>
+                    <state key="normal" title="Button" image="loginback"/>
                     <connections>
                         <action selector="cancelBtn:" destination="-1" eventType="touchUpInside" id="uKM-hI-S6T"/>
                     </connections>
@@ -66,12 +66,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4Kh-1C-ZqC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0RB-y5-Zld"/>
-                <constraint firstItem="g7X-86-q2Z" firstAttribute="top" secondItem="5HX-HV-9s5" secondAttribute="bottom" constant="100" id="1dm-ZA-NVY"/>
-                <constraint firstItem="4Kh-1C-ZqC" firstAttribute="top" secondItem="EZy-EN-57X" secondAttribute="bottom" constant="58" id="4rr-ZC-Eog"/>
+                <constraint firstItem="g7X-86-q2Z" firstAttribute="top" secondItem="5HX-HV-9s5" secondAttribute="bottom" constant="50" id="1dm-ZA-NVY"/>
+                <constraint firstItem="4Kh-1C-ZqC" firstAttribute="top" secondItem="EZy-EN-57X" secondAttribute="bottom" constant="27" id="4rr-ZC-Eog"/>
                 <constraint firstItem="4Kh-1C-ZqC" firstAttribute="leading" secondItem="EZy-EN-57X" secondAttribute="leading" id="A8u-RC-M5v"/>
                 <constraint firstItem="5HX-HV-9s5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="AhY-n1-wx0"/>
                 <constraint firstItem="EZy-EN-57X" firstAttribute="trailing" secondItem="g7X-86-q2Z" secondAttribute="trailing" id="H0L-UQ-Rgx"/>
-                <constraint firstItem="EZy-EN-57X" firstAttribute="top" secondItem="g7X-86-q2Z" secondAttribute="bottom" constant="56" id="J87-e2-tQC"/>
+                <constraint firstItem="EZy-EN-57X" firstAttribute="top" secondItem="g7X-86-q2Z" secondAttribute="bottom" constant="30" id="J87-e2-tQC"/>
                 <constraint firstItem="5K0-eu-xIu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="MfT-ai-kDF"/>
                 <constraint firstItem="5K0-eu-xIu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="XDU-a1-dPz"/>
                 <constraint firstItem="EZy-EN-57X" firstAttribute="height" secondItem="g7X-86-q2Z" secondAttribute="height" id="dq8-Mn-w0n"/>
@@ -86,7 +86,7 @@
         </view>
     </objects>
     <resources>
-        <image name="WeChat75003cb33413e29bab545512e08cf642" width="1000" height="572"/>
-        <image name="login_back" width="48" height="48"/>
+        <image name="WeChat0411493369fdbdcb432faab2a9c0d5f1" width="2166" height="1108"/>
+        <image name="loginback" width="48" height="48"/>
     </resources>
 </document>

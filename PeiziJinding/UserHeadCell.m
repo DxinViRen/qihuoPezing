@@ -14,6 +14,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self dx_layoutSubView];
+        //self.contentView.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -21,7 +22,7 @@
 -  (void)dx_layoutSubView{
     [self.contentView addSubview:self.headImageView];
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView);
+        make.edges.equalTo(self.contentView).inset(10);
     }];
 }
 
@@ -29,8 +30,10 @@
     if(!_headImageView){
         
         _headImageView = [[UIImageView alloc]init];
-        _headImageView.image = [UIImage imageNamed:@"WeChat75003cb33413e29bab545512e08cf642"];
+        _headImageView.image = [UIImage imageNamed:@"userhomePageBg"];
         _headImageView.backgroundColor = [UIColor redColor];
+        _headImageView.layer.cornerRadius = 8;
+        _headImageView.clipsToBounds = YES;
     }
     return _headImageView;
 }

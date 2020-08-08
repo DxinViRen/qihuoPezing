@@ -105,14 +105,16 @@
     };
     sect.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         if([model.cellName isEqualToString:NSStringFromClass([NewsCell class])]){
-                  NewsNewModel *newModel = (NewsNewModel *)model;
-                  NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
-                  newDetai.model = newModel;
-                  NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
-                  [newDetai loadHtmlWithUrl:detaiUrl];
-                  [self.navigationController pushViewController:newDetai animated:YES];
-              }
-        
+            [[LoginManager shareInsetance] checkLogin:^{
+                NewsNewModel *newModel = (NewsNewModel *)model;
+                NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
+                newDetai.model = newModel;
+                NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
+                [newDetai loadHtmlWithUrl:detaiUrl];
+                [self.navigationController pushViewController:newDetai animated:YES];
+            }];
+        }
+    
     };
     
     return sect;

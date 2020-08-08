@@ -74,11 +74,12 @@
     secCon.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         
         [[LoginManager shareInsetance] checkLogin:^{
-            NewsModel *nModel = (NewsModel *)model;
-            NewDetailsViewController *detail  = [[NewDetailsViewController alloc]init];
-            detail.model =nModel;
-            detail.url = nModel.url;
-            [self.navigationController pushViewController:detail animated:YES];
+            NewsNewModel *newModel = (NewsNewModel *)model;
+            NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
+            newDetai.model = newModel;
+            NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
+            [newDetai loadHtmlWithUrl:detaiUrl];
+            [self.navigationController pushViewController:newDetai animated:YES];
         }];
     };
     

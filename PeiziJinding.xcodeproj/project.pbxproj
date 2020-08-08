@@ -38,9 +38,6 @@
 		D85C580A24DD537F00A2696B /* CalResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C580924DD537F00A2696B /* CalResponseModel.m */; };
 		D85C580D24DD544800A2696B /* CalNews.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C580C24DD544800A2696B /* CalNews.m */; };
 		D85C581024DD70C500A2696B /* MyCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C580F24DD70C500A2696B /* MyCollectViewController.m */; };
-		D85C581824DD713A00A2696B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C581224DD713900A2696B /* LoginViewController.m */; };
-		D85C581924DD713A00A2696B /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C581324DD713900A2696B /* LoginManager.m */; };
-		D85C581A24DD713A00A2696B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C581424DD713900A2696B /* LoginViewController.xib */; };
 		D85C581B24DD713A00A2696B /* LoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C581624DD713900A2696B /* LoginCell.m */; };
 		D85C581E24DD7BD500A2696B /* UserSecModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C581D24DD7BD500A2696B /* UserSecModel.m */; };
 		D85C582A24DD7DBB00A2696B /* UserHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C582924DD7DBB00A2696B /* UserHeadCell.m */; };
@@ -50,6 +47,9 @@
 		D85C583624DD7F9A00A2696B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C583524DD7F9A00A2696B /* AboutUsViewController.m */; };
 		D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C583724DD800E00A2696B /* FeedbackViewController.xib */; };
 		D85C583B24DD800E00A2696B /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C583924DD800E00A2696B /* FeedbackViewController.m */; };
+		D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C583C24DE15D500A2696B /* LoginViewController.m */; };
+		D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C583D24DE15D500A2696B /* LoginViewController.xib */; };
+		D85C584324DE194700A2696B /* NewloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584224DE194700A2696B /* NewloginViewController.m */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -64,9 +64,7 @@
 		D86C640024D7A61F004AD677 /* StorkSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63FE24D7A61F004AD677 /* StorkSectionModel.m */; };
 		D86C640324D7A675004AD677 /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C640124D7A675004AD677 /* MainCollectionViewCell.m */; };
 		D86C640624D7A7B7004AD677 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C640524D7A7B7004AD677 /* UserViewController.m */; };
-		D86C641224D7A87E004AD677 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C640E24D7A87E004AD677 /* LoginViewController.m */; };
 		D86C641324D7A87E004AD677 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C641024D7A87E004AD677 /* LoginManager.m */; };
-		D86C641424D7A87E004AD677 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86C641124D7A87E004AD677 /* LoginViewController.xib */; };
 		D86C641724D7A8CD004AD677 /* DxRubNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C641524D7A8CD004AD677 /* DxRubNavigationVC.m */; };
 		D86C643D24D7A9EC004AD677 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D86C641924D7A9EC004AD677 /* LICENSE */; };
 		D86C643E24D7A9EC004AD677 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D86C641A24D7A9EC004AD677 /* README.md */; };
@@ -168,12 +166,7 @@
 		D85C580E24DD70C500A2696B /* MyCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectViewController.h; sourceTree = "<group>"; };
 		D85C580F24DD70C500A2696B /* MyCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectViewController.m; sourceTree = "<group>"; };
 		D85C581124DD713900A2696B /* LoginCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginCell.h; sourceTree = "<group>"; };
-		D85C581224DD713900A2696B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D85C581324DD713900A2696B /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
-		D85C581424DD713900A2696B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		D85C581524DD713900A2696B /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		D85C581624DD713900A2696B /* LoginCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginCell.m; sourceTree = "<group>"; };
-		D85C581724DD713A00A2696B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D85C581C24DD7BD500A2696B /* UserSecModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSecModel.h; sourceTree = "<group>"; };
 		D85C581D24DD7BD500A2696B /* UserSecModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSecModel.m; sourceTree = "<group>"; };
 		D85C582824DD7DBB00A2696B /* UserHeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHeadCell.h; sourceTree = "<group>"; };
@@ -189,6 +182,11 @@
 		D85C583724DD800E00A2696B /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		D85C583824DD800E00A2696B /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		D85C583924DD800E00A2696B /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		D85C583C24DE15D500A2696B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D85C583D24DE15D500A2696B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D85C583E24DE15D600A2696B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D85C584124DE194700A2696B /* NewloginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewloginViewController.h; sourceTree = "<group>"; };
+		D85C584224DE194700A2696B /* NewloginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewloginViewController.m; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -220,10 +218,7 @@
 		D86C640424D7A7B7004AD677 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		D86C640524D7A7B7004AD677 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		D86C640D24D7A87E004AD677 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
-		D86C640E24D7A87E004AD677 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D86C640F24D7A87E004AD677 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D86C641024D7A87E004AD677 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
-		D86C641124D7A87E004AD677 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D86C641524D7A8CD004AD677 /* DxRubNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DxRubNavigationVC.m; sourceTree = "<group>"; };
 		D86C641624D7A8CD004AD677 /* DxRubNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DxRubNavigationVC.h; sourceTree = "<group>"; };
 		D86C641924D7A9EC004AD677 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -353,6 +348,11 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
+				D85C583E24DE15D600A2696B /* LoginViewController.h */,
+				D85C583C24DE15D500A2696B /* LoginViewController.m */,
+				D85C584124DE194700A2696B /* NewloginViewController.h */,
+				D85C584224DE194700A2696B /* NewloginViewController.m */,
+				D85C583D24DE15D500A2696B /* LoginViewController.xib */,
 				D85C583824DD800E00A2696B /* FeedbackViewController.h */,
 				D85C583924DD800E00A2696B /* FeedbackViewController.m */,
 				D85C583724DD800E00A2696B /* FeedbackViewController.xib */,
@@ -368,17 +368,12 @@
 				D85C57C924DBFE1E00A2696B /* HomegyNotiCell.h */,
 				D85C581124DD713900A2696B /* LoginCell.h */,
 				D85C581624DD713900A2696B /* LoginCell.m */,
-				D85C581524DD713900A2696B /* LoginManager.h */,
 				D85C582824DD7DBB00A2696B /* UserHeadCell.h */,
 				D85C582F24DD7F0700A2696B /* HomeBlankCell.h */,
 				D85C582E24DD7F0700A2696B /* HomeBlankCell.m */,
 				D85C582924DD7DBB00A2696B /* UserHeadCell.m */,
-				D85C581324DD713900A2696B /* LoginManager.m */,
-				D85C581724DD713A00A2696B /* LoginViewController.h */,
-				D85C581224DD713900A2696B /* LoginViewController.m */,
 				D85C582B24DD7E7700A2696B /* HomeHeaderModel.h */,
 				D85C582C24DD7E7700A2696B /* HomeHeaderModel.m */,
-				D85C581424DD713900A2696B /* LoginViewController.xib */,
 				D85C57D424DBFE1F00A2696B /* HomegyNotiCell.m */,
 				D85C57CD24DBFE1E00A2696B /* HomeHeadCell.h */,
 				D85C57C724DBFE1D00A2696B /* HomeHeadCell.m */,
@@ -422,9 +417,6 @@
 				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
 				D86C640D24D7A87E004AD677 /* LoginManager.h */,
 				D86C641024D7A87E004AD677 /* LoginManager.m */,
-				D86C640F24D7A87E004AD677 /* LoginViewController.h */,
-				D86C640E24D7A87E004AD677 /* LoginViewController.m */,
-				D86C641124D7A87E004AD677 /* LoginViewController.xib */,
 				D86C641624D7A8CD004AD677 /* DxRubNavigationVC.h */,
 				D86C641524D7A8CD004AD677 /* DxRubNavigationVC.m */,
 				D85C57E024DBFE7900A2696B /* UIImage+QCategory.h */,
@@ -667,10 +659,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85C581A24DD713A00A2696B /* LoginViewController.xib in Resources */,
+				D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
-				D86C641424D7A87E004AD677 /* LoginViewController.xib in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
 				D86C63B924D79D30004AD677 /* LaunchScreen.storyboard in Resources */,
 				D86C63B624D79D30004AD677 /* Assets.xcassets in Resources */,
@@ -742,7 +733,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85C581824DD713A00A2696B /* LoginViewController.m in Sources */,
 				D86C641724D7A8CD004AD677 /* DxRubNavigationVC.m in Sources */,
 				D85C57A624DBCC8800A2696B /* HomeCycleCell.m in Sources */,
 				D85C581B24DD713A00A2696B /* LoginCell.m in Sources */,
@@ -776,6 +766,7 @@
 				D85C57AD24DBDEA100A2696B /* NewDetailsViewController.m in Sources */,
 				D86C644124D7A9EC004AD677 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */,
+				D85C584324DE194700A2696B /* NewloginViewController.m in Sources */,
 				D86C641324D7A87E004AD677 /* LoginManager.m in Sources */,
 				D85C57D524DBFE1F00A2696B /* HomeItemCell.m in Sources */,
 				D85C582A24DD7DBB00A2696B /* UserHeadCell.m in Sources */,
@@ -788,17 +779,16 @@
 				D85C582D24DD7E7700A2696B /* HomeHeaderModel.m in Sources */,
 				D86C644A24D7A9EC004AD677 /* AFURLRequestSerialization.m in Sources */,
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
-				D86C641224D7A87E004AD677 /* LoginViewController.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
 				D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */,
-				D85C581924DD713A00A2696B /* LoginManager.m in Sources */,
 				D86C644024D7A9EC004AD677 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D86C640324D7A675004AD677 /* MainCollectionViewCell.m in Sources */,
 				D86C644524D7A9EC004AD677 /* AFAutoPurgingImageCache.m in Sources */,
+				D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */,
 				D86C644824D7A9EC004AD677 /* AFHTTPSessionManager.m in Sources */,
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
 				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
@@ -979,9 +969,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5X5XSAZMKZ;
+				DEVELOPMENT_TEAM = 8P4MS7XLR7;
 				GCC_PREFIX_HEADER = $SRCROOT/PeiziJinding/PeiziJi.pch;
 				INFOPLIST_FILE = PeiziJinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -998,9 +989,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5X5XSAZMKZ;
+				DEVELOPMENT_TEAM = 8P4MS7XLR7;
 				GCC_PREFIX_HEADER = $SRCROOT/PeiziJinding/PeiziJi.pch;
 				INFOPLIST_FILE = PeiziJinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
