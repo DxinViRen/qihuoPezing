@@ -50,6 +50,9 @@
 		D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C583C24DE15D500A2696B /* LoginViewController.m */; };
 		D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C583D24DE15D500A2696B /* LoginViewController.xib */; };
 		D85C584324DE194700A2696B /* NewloginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584224DE194700A2696B /* NewloginViewController.m */; };
+		D85C584624DE493100A2696B /* MarketTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584524DE493100A2696B /* MarketTabView.m */; };
+		D85C584924DE540E00A2696B /* MarketDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584824DE540E00A2696B /* MarketDataView.m */; };
+		D85C584C24DE588700A2696B /* MarketDataCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -187,6 +190,12 @@
 		D85C583E24DE15D600A2696B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D85C584124DE194700A2696B /* NewloginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewloginViewController.h; sourceTree = "<group>"; };
 		D85C584224DE194700A2696B /* NewloginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewloginViewController.m; sourceTree = "<group>"; };
+		D85C584424DE493100A2696B /* MarketTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketTabView.h; sourceTree = "<group>"; };
+		D85C584524DE493100A2696B /* MarketTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketTabView.m; sourceTree = "<group>"; };
+		D85C584724DE540E00A2696B /* MarketDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDataView.h; sourceTree = "<group>"; };
+		D85C584824DE540E00A2696B /* MarketDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDataView.m; sourceTree = "<group>"; };
+		D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDataCellTableViewCell.h; sourceTree = "<group>"; };
+		D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDataCellTableViewCell.m; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -431,7 +440,13 @@
 				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
 				D85C57F324DC46D300A2696B /* MarketViewController.h */,
 				D85C57F424DC46D300A2696B /* MarketViewController.m */,
+				D85C584724DE540E00A2696B /* MarketDataView.h */,
+				D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */,
+				D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */,
+				D85C584824DE540E00A2696B /* MarketDataView.m */,
 				D85C57F024DC421B00A2696B /* NewsListViewController.h */,
+				D85C584424DE493100A2696B /* MarketTabView.h */,
+				D85C584524DE493100A2696B /* MarketTabView.m */,
 				D85C57F124DC421B00A2696B /* NewsListViewController.m */,
 				D85C57AB24DBDEA100A2696B /* NewDetailsViewController.h */,
 				D85C57AC24DBDEA100A2696B /* NewDetailsViewController.m */,
@@ -753,6 +768,7 @@
 				D85C580724DD4BBA00A2696B /* CalNewsModel.m in Sources */,
 				D85C581E24DD7BD500A2696B /* UserSecModel.m in Sources */,
 				D85C580A24DD537F00A2696B /* CalResponseModel.m in Sources */,
+				D85C584924DE540E00A2696B /* MarketDataView.m in Sources */,
 				D85C580D24DD544800A2696B /* CalNews.m in Sources */,
 				D85C57DA24DBFE1F00A2696B /* HomeModel.m in Sources */,
 				D86C644924D7A9EC004AD677 /* AFURLSessionManager.m in Sources */,
@@ -768,6 +784,7 @@
 				D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */,
 				D85C584324DE194700A2696B /* NewloginViewController.m in Sources */,
 				D86C641324D7A87E004AD677 /* LoginManager.m in Sources */,
+				D85C584624DE493100A2696B /* MarketTabView.m in Sources */,
 				D85C57D524DBFE1F00A2696B /* HomeItemCell.m in Sources */,
 				D85C582A24DD7DBB00A2696B /* UserHeadCell.m in Sources */,
 				D85C583B24DD800E00A2696B /* FeedbackViewController.m in Sources */,
@@ -788,6 +805,7 @@
 				D86C644024D7A9EC004AD677 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D86C640324D7A675004AD677 /* MainCollectionViewCell.m in Sources */,
 				D86C644524D7A9EC004AD677 /* AFAutoPurgingImageCache.m in Sources */,
+				D85C584C24DE588700A2696B /* MarketDataCellTableViewCell.m in Sources */,
 				D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */,
 				D86C644824D7A9EC004AD677 /* AFHTTPSessionManager.m in Sources */,
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,

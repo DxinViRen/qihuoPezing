@@ -7,16 +7,37 @@
 //
 
 #import "MarketViewController.h"
-
-@interface MarketViewController ()
-
+#import "MarketTabView.h"
+@interface MarketViewController ()<MarketTapClickprotocol>
+@property(nonatomic,strong)MarketTabView *tabView;
 @end
 
 @implementation MarketViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self dx_layoutSubView];
+}
+
+- (void)dx_layoutSubView{
+    
+}
+
+- (MarketTabView *)tabViewP{
+    if(!_tabView){
+        _tabView = [[MarketTabView  alloc]initWithDataArr:@[]];
+        _tabView.delegate = self;
+    }
+    return _tabView;
+}
+
+
+
+#pragma mark - MarketTabViewProtocol
+- (MarketTabView *)marketTabItemClick:(MarketTabView *)tabView item:(id)item index:(NSInteger)index{
+    
+    
+    return self.tabView;
 }
 
 /*
