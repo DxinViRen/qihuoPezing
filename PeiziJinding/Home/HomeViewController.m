@@ -19,6 +19,8 @@
 #import "FinCalViewController.h"
 #import "NewsListViewController.h"
 #import "MyCollectViewController.h"
+#import "NewsNewDataModel.h"
+#import "NewsDetaiItemModel.h"
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *bannerUrlArr;
 @property(nonatomic,strong)NSArray *cycleUrlArr;
@@ -33,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     self.newsListArr = [@[] mutableCopy];
     self.dataArray = [@[] mutableCopy];
     self.page = 1;
@@ -46,9 +50,7 @@
     self.bannerUrlArr = @[@"https://new.qq.com/omn/20200805/20200805A07UEH00.html",@"https://finance.sina.com.cn/money/nmetal/hjzx/2020-08-06/doc-iivhvpwx9534532.shtml",@"https://finance.sina.com.cn/money/future/agri/2020-08-06/doc-iivhuipn7164156.shtml"];
     self.cycleUrlArr = @[@"https://baijiahao.baidu.com/s?id=1674113437711834373&wfr=spider&for=pc",@"http://futures.eastmoney.com/a/202008061584630776.html",@"http://futures.eastmoney.com/a/202008061584161598.html"];
     
-    self.mainCollectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
-    }];
+   
 }
 
 
@@ -68,10 +70,8 @@
         
     }else if (tag  == 300 || tag == 3000){
         //热门资讯
-        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
-        UIWindow *win  = delegate.window;
-        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
-        [root setSelectedIndex:2];
+        NewsListViewController *news = [[NewsListViewController alloc]init];
+        [self.navigationController pushViewController:news animated:YES];
         
     }else if (tag == 400 || tag == 4000){
         //我的收藏
@@ -83,32 +83,29 @@
 
 - (void)moreNews:(NSNotification *)noti{
     //more
-    AppDelegate *delegate  =(AppDelegate *) [UIApplication sharedApplication].delegate;
-    
-    StockRootViewController *strt = (StockRootViewController *)delegate.window.rootViewController;
-    NSInteger rcount = strt.viewControllers.count;
-    [strt setSelectedIndex:rcount - 2];
-    
+    NewsListViewController *newsli = [[NewsListViewController alloc]init];
+    [self.navigationController pushViewController:newsli animated:YES];
 }
 
 - (void)loadData{
     [self.mainCollectionView.mj_header beginRefreshing];
-    self.hud = [MBProgressHUD showMessage:@"请稍等"];
-    if(self.page == 30){
+   
+         self.hud = [MBProgressHUD showMessage:@"请稍等"];
+        
+    if(self.page == 0){
         [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
         return;
     }
-    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,@"8",[NSString stringWithFormat:@"%ld",self.page]];
+    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,[NSString stringWithFormat:@"%@",@""]];
     [[PSRequestManager shareInstance] netRequestWithUrl:newurlStr method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
         [self.hud hideAnimated:YES];
         [self.mainCollectionView.mj_header endRefreshing];
         if(responseObject){
-            NewsListDataModel *listModel = [NewsListDataModel mj_objectWithKeyValues:responseObject];
-            if([listModel.code isEqualToString:@"200"])
-            {
+            NewsNewDataModel *listModel = [NewsNewDataModel mj_objectWithKeyValues:responseObject];
+           
                 //加载成功
-                [self.newsListArr addObjectsFromArray:listModel.newsList];
-                for (NewsNewModel *model in self.newsListArr) {
+                [self.newsListArr addObjectsFromArray:listModel.news];
+                for (NewsDetaiItemModel *model in self.newsListArr) {
                     model.cellName = NSStringFromClass([NewsCell class]);
                     model.cellWight = Scr_w;
                     model.cellHeight = Scr_w*(95.0/Scr_w);
@@ -118,13 +115,6 @@
                 
                 [self.dataArray addObject:secModel];
                 [self.adapter reloadDataWithCompletion:nil];
-                 
-            }
-            else
-            {
-                //加载失败
-            }
-            
         }
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
@@ -207,11 +197,11 @@
     stpct.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         if([model.cellName isEqualToString:NSStringFromClass([NewsCell class])]){
             [[LoginManager shareInsetance] checkLogin:^{
-                NewsNewModel *newModel = (NewsNewModel *)model;
+                NewsDetaiItemModel *newModel = (NewsDetaiItemModel *)model;
                 NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
                 newDetai.model = newModel;
-                NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
-                [newDetai loadHtmlWithUrl:detaiUrl];
+//                NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
+               // [newDetai loadHtmlWithUrl:detaiUrl];
                 [self.navigationController pushViewController:newDetai animated:YES];
             }];
            

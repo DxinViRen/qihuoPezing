@@ -15,6 +15,7 @@
 #import "DxRubNavigationVC.h"
 #import "NewsListViewController.h"
 #import "MarketViewController.h"
+#import "CommunityVC.h"
 @interface StockRootViewController ()
 
 @end
@@ -48,23 +49,15 @@
     HomeViewController *home  = [[HomeViewController alloc]init];
     [self addChildViewController:home title:@"首页" image:@"homeUSNew" selectImg:@"shouyeNew"];//
     
-    NewsListViewController *newlist = [[NewsListViewController alloc]init];
+  
     
     MarketViewController *markt = [[MarketViewController alloc]init];
       [self addChildViewController:markt title:@"行情" image:@"marketedUs" selectImg:@"marketed"];
       
+      CommunityVC *newlist = [[CommunityVC alloc]init];
+
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    [self addChildViewController:newlist title:@"资讯" image:@"tabNewsIcon28" selectImg:@"tabNewsListS"];
+    [self addChildViewController:newlist title:@"社区" image:@"CommityTabIconU" selectImg:@"CommitTabIconS"];
     
     UserViewController *user  = [[UserViewController alloc]init];
     [self addChildViewController:user title:@"我的" image:@"mainUS" selectImg:@"mainSNew"];

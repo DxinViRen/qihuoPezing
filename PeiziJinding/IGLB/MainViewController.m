@@ -19,13 +19,20 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
+     [self setupUI];
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor colorWithHexString:@"#f0f0f0"];
+    [self dxConfigData];
+    //[self dxLayoutSubview];
+    
 }
+
+- (void)dxConfigData{}
+- (void)dxLayoutSubview{}
 
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
-    [self setupUI];
+   
 }
 - (void)setupUI
 {

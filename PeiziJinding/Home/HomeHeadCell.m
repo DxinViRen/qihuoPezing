@@ -11,6 +11,7 @@
 @interface HomeHeadCell ()
 @property(nonatomic,strong)UIImageView *moreImgview;
 @property(nonatomic,strong)UIView *lineView;
+@property(nonatomic,strong)UILabel *morekLabel;
 @end
 
 @implementation HomeHeadCell
@@ -28,6 +29,7 @@
     [self.contentView addSubview:self.mainLabel];
     [self.contentView addSubview:self.moreImgview];
     [self.contentView addSubview:self.lineView];
+    [self.contentView addSubview:self.morekLabel];
     [self.mainLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
         make.left.equalTo(self.contentView).inset(15);
@@ -36,6 +38,11 @@
         make.centerY.equalTo(self.contentView);
         make.right.equalTo(self.contentView).inset(10);
         make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+    [self.morekLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+        make.right.equalTo(self.moreImgview.mas_left).offset(-10);
     }];
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,6 +84,20 @@
     return _lineView;
 }
 
+- (UILabel *)morekLabel{
+    if(!_morekLabel){
+        
+        _morekLabel = [[UILabel alloc]init];
+        _morekLabel.textColor = MainColor;
+        _morekLabel.font = [UIFont systemFontOfSize:15];
+        _morekLabel.text = @"更多";
+        _morekLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+        [_morekLabel addGestureRecognizer:tap];
+        _morekLabel.textAlignment = NSTextAlignmentRight;
+    }
+    return _morekLabel;
+}
 - (void)tapAction:(UITapGestureRecognizer *)tap{
     [[NSNotificationCenter defaultCenter]postNotificationName:@"more" object:nil];
 }

@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NewsModel.h"
 #import "NewsNewModel.h"
+#import "NewsDetaiItemModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NewDetailsViewController : UIViewController
 @property (nonatomic,copy)NSString *url;
-@property (nonatomic,strong)NewsNewModel *model;
+@property (nonatomic,strong)NewsDetaiItemModel *model;
 
 - (void)loadHtmlWithUrl:(NSString *)url;
 

@@ -54,7 +54,7 @@
 
 - (void)configDataSource{
      NSArray *collA = [[NSUserDefaults standardUserDefaults]objectForKey:@"collectList"];
-    NSMutableArray *modelArr  = [NewsNewModel mj_objectArrayWithKeyValuesArray:collA];
+    NSMutableArray *modelArr  = [NewsDetaiItemModel mj_objectArrayWithKeyValuesArray:collA];
     StorkSectionModel *secModel = [[StorkSectionModel alloc]initWithArray:modelArr];
     self.dataArray = [[NSMutableArray alloc]initWithObjects:secModel, nil];
     
@@ -74,11 +74,9 @@
     secCon.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         
         [[LoginManager shareInsetance] checkLogin:^{
-            NewsNewModel *newModel = (NewsNewModel *)model;
+            NewsDetaiItemModel *newModel = (NewsDetaiItemModel *)model;
             NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
             newDetai.model = newModel;
-            NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];
-            [newDetai loadHtmlWithUrl:detaiUrl];
             [self.navigationController pushViewController:newDetai animated:YES];
         }];
     };

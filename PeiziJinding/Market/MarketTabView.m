@@ -30,7 +30,7 @@
 }
 
 - (void)dx_layoutSubview{
-    CGFloat width =(Scr_w - 3)/4.0;
+    CGFloat width =(Scr_w - self.titleArray.count+1)/self.titleArray.count;
     for (int i = 0; i < self.titleArray.count; i ++) {
         UIButton *selectBtn = [[UIButton alloc]initWithFrame:CGRectMake(i*(width + 1), 0, width,45)];
         [selectBtn setTitleColor:UNSELECTCOLOR forState:UIControlStateNormal];
@@ -43,6 +43,7 @@
         lineview.backgroundColor = MainColor;
         //[self addSubview:lineview];
     }
+    [self selectAtIndex:0];
 }
 
 - (void)btnClick:(UIButton *)btn{
