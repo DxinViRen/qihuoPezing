@@ -27,7 +27,7 @@ static   PSRequestManager * psMana =nil;
     [manager.requestSerializer setTimeoutInterval:10.f];
    
     manager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
-    
+    manager.securityPolicy.validatesDomainName = NO;
     
     
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -62,8 +62,7 @@ static   PSRequestManager * psMana =nil;
        NSURLSessionDataTask * task =  [manager POST :url parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            if([responseObject[@"message"] isEqualToString:@"认证过期,请重新登录"])
-            {
+           
 //                //弹出登录页面
 //                [[UserManager shareInstance]deleteUserData];
 //                [[LoginController shareInstance]login:^{
@@ -73,16 +72,7 @@ static   PSRequestManager * psMana =nil;
                         //                [HUD performSelector:@selector(removeFromSuperview)  withObject:nil afterDelay:0.0];
                     }
                 //}];
-            }
-            else
-                
-            {
-                if(success)
-                {
-                    success(responseObject,nil);
-                    //                [HUD performSelector:@selector(removeFromSuperview)  withObject:nil afterDelay:0.0];
-                }
-            }
+           
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
             if(failure)

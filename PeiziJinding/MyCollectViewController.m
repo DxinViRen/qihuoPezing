@@ -91,7 +91,7 @@
     if(!_collectImgView){
         
         _collectImgView = [[UIImageView alloc]init];
-        _collectImgView.image = [UIImage imageNamed:@"haveNoCollect"];
+        _collectImgView.image = [UIImage imageNamed:@"haveNoCollectNew"];
     }
     return _collectImgView;
 }

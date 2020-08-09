@@ -53,6 +53,12 @@
 		D85C584624DE493100A2696B /* MarketTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584524DE493100A2696B /* MarketTabView.m */; };
 		D85C584924DE540E00A2696B /* MarketDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584824DE540E00A2696B /* MarketDataView.m */; };
 		D85C584C24DE588700A2696B /* MarketDataCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */; };
+		D85C584F24DEA82700A2696B /* MarketDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C584E24DEA82700A2696B /* MarketDetailModel.m */; };
+		D85C585224DEACA000A2696B /* MarketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585124DEACA000A2696B /* MarketModel.m */; };
+		D85C585524DEACC000A2696B /* MarketTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585424DEACC000A2696B /* MarketTypeModel.m */; };
+		D85C585824DEAF7400A2696B /* MarketItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585724DEAF7400A2696B /* MarketItemModel.m */; };
+		D85C585B24DEB13900A2696B /* MarketRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585A24DEB13900A2696B /* MarketRootModel.m */; };
+		D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */ = {isa = PBXBuildFile; fileRef = D85C585E24DF05F900A2696B /* MarketDataJson.plist */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -87,6 +93,7 @@
 		D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C643A24D7A9EC004AD677 /* AFSecurityPolicy.m */; };
 		D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */; };
 		D86C645A24D7E472004AD677 /* NewsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D86C645924D7E472004AD677 /* NewsList.plist */; };
+		D8758F3C24DF892700412B95 /* MarketItemShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F3B24DF892700412B95 /* MarketItemShowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +203,17 @@
 		D85C584824DE540E00A2696B /* MarketDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDataView.m; sourceTree = "<group>"; };
 		D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDataCellTableViewCell.h; sourceTree = "<group>"; };
 		D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDataCellTableViewCell.m; sourceTree = "<group>"; };
+		D85C584D24DEA82700A2696B /* MarketDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDetailModel.h; sourceTree = "<group>"; };
+		D85C584E24DEA82700A2696B /* MarketDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDetailModel.m; sourceTree = "<group>"; };
+		D85C585024DEACA000A2696B /* MarketModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketModel.h; sourceTree = "<group>"; };
+		D85C585124DEACA000A2696B /* MarketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketModel.m; sourceTree = "<group>"; };
+		D85C585324DEACC000A2696B /* MarketTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketTypeModel.h; sourceTree = "<group>"; };
+		D85C585424DEACC000A2696B /* MarketTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketTypeModel.m; sourceTree = "<group>"; };
+		D85C585624DEAF7400A2696B /* MarketItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketItemModel.h; sourceTree = "<group>"; };
+		D85C585724DEAF7400A2696B /* MarketItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketItemModel.m; sourceTree = "<group>"; };
+		D85C585924DEB13900A2696B /* MarketRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketRootModel.h; sourceTree = "<group>"; };
+		D85C585A24DEB13900A2696B /* MarketRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketRootModel.m; sourceTree = "<group>"; };
+		D85C585E24DF05F900A2696B /* MarketDataJson.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MarketDataJson.plist; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -267,6 +285,8 @@
 		D86C644D24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderModelCellCollectionViewCell.h; sourceTree = "<group>"; };
 		D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderModelCellCollectionViewCell.m; sourceTree = "<group>"; };
 		D86C645924D7E472004AD677 /* NewsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsList.plist; sourceTree = "<group>"; };
+		D8758F3A24DF892700412B95 /* MarketItemShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketItemShowView.h; sourceTree = "<group>"; };
+		D8758F3B24DF892700412B95 /* MarketItemShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketItemShowView.m; sourceTree = "<group>"; };
 		DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeiziJinding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.debug.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -357,6 +377,7 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
+				D85C585E24DF05F900A2696B /* MarketDataJson.plist */,
 				D85C583E24DE15D600A2696B /* LoginViewController.h */,
 				D85C583C24DE15D500A2696B /* LoginViewController.m */,
 				D85C584124DE194700A2696B /* NewloginViewController.h */,
@@ -440,9 +461,21 @@
 				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
 				D85C57F324DC46D300A2696B /* MarketViewController.h */,
 				D85C57F424DC46D300A2696B /* MarketViewController.m */,
+				D85C585024DEACA000A2696B /* MarketModel.h */,
+				D85C585924DEB13900A2696B /* MarketRootModel.h */,
+				D85C585A24DEB13900A2696B /* MarketRootModel.m */,
+				D85C585124DEACA000A2696B /* MarketModel.m */,
+				D85C585324DEACC000A2696B /* MarketTypeModel.h */,
+				D85C585424DEACC000A2696B /* MarketTypeModel.m */,
 				D85C584724DE540E00A2696B /* MarketDataView.h */,
 				D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */,
 				D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */,
+				D8758F3A24DF892700412B95 /* MarketItemShowView.h */,
+				D8758F3B24DF892700412B95 /* MarketItemShowView.m */,
+				D85C584D24DEA82700A2696B /* MarketDetailModel.h */,
+				D85C584E24DEA82700A2696B /* MarketDetailModel.m */,
+				D85C585624DEAF7400A2696B /* MarketItemModel.h */,
+				D85C585724DEAF7400A2696B /* MarketItemModel.m */,
 				D85C584824DE540E00A2696B /* MarketDataView.m */,
 				D85C57F024DC421B00A2696B /* NewsListViewController.h */,
 				D85C584424DE493100A2696B /* MarketTabView.h */,
@@ -675,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */,
+				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
@@ -750,6 +784,8 @@
 			files = (
 				D86C641724D7A8CD004AD677 /* DxRubNavigationVC.m in Sources */,
 				D85C57A624DBCC8800A2696B /* HomeCycleCell.m in Sources */,
+				D85C585224DEACA000A2696B /* MarketModel.m in Sources */,
+				D85C585B24DEB13900A2696B /* MarketRootModel.m in Sources */,
 				D85C581B24DD713A00A2696B /* LoginCell.m in Sources */,
 				D86C644324D7A9EC004AD677 /* UIButton+AFNetworking.m in Sources */,
 				D85C57E224DBFE7900A2696B /* UIImage+QCategory.m in Sources */,
@@ -798,6 +834,7 @@
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
+				D85C585524DEACC000A2696B /* MarketTypeModel.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
@@ -810,11 +847,14 @@
 				D86C644824D7A9EC004AD677 /* AFHTTPSessionManager.m in Sources */,
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
 				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
+				D85C584F24DEA82700A2696B /* MarketDetailModel.m in Sources */,
+				D8758F3C24DF892700412B95 /* MarketItemShowView.m in Sources */,
 				D86C644B24D7A9EC004AD677 /* AFNetworkReachabilityManager.m in Sources */,
 				D85C57E524DBFE9000A2696B /* UINavigationBar+DD_Alpha.m in Sources */,
 				D85C57D724DBFE1F00A2696B /* HomeHeadCell.m in Sources */,
 				D85C583624DD7F9A00A2696B /* AboutUsViewController.m in Sources */,
 				D85C581024DD70C500A2696B /* MyCollectViewController.m in Sources */,
+				D85C585824DEAF7400A2696B /* MarketItemModel.m in Sources */,
 				D85C57FE24DCF8F000A2696B /* DateTool.m in Sources */,
 				D86C640024D7A61F004AD677 /* StorkSectionModel.m in Sources */,
 			);

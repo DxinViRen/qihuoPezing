@@ -23,27 +23,36 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self dx_layoutSubview];
+        self.backgroundColor = [UIColor whiteColor];
         
     }
     return self;
 }
 
 - (void)dx_layoutSubview{
-    CGFloat width =(Scr_w - 4)/5.0;
+    CGFloat width =(Scr_w - 3)/4.0;
     for (int i = 0; i < self.titleArray.count; i ++) {
-        UIButton *selectBtn = [[UIButton alloc]initWithFrame:CGRectMake(i*(width + 1), 0, width,self.frame.size.height)];
+        UIButton *selectBtn = [[UIButton alloc]initWithFrame:CGRectMake(i*(width + 1), 0, width,45)];
+        [selectBtn setTitleColor:UNSELECTCOLOR forState:UIControlStateNormal];
         selectBtn.tag = i;
         [selectBtn setTitle:self.titleArray[i] forState:UIControlStateNormal];
         [self addSubview:selectBtn];
         [selectBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
          [self.itemArrar addObject:selectBtn];
-        UIView *lineview = [[UIView alloc]initWithFrame:CGRectMake(selectBtn.frame.origin.x + width, 5, 0.8, selectBtn.frame.size.height - 10)];
-        [self addSubview:lineview];
+        UIView *lineview = [[UIView alloc]initWithFrame:CGRectMake(selectBtn.frame.origin.x + width-8, 12, 0.8, selectBtn.frame.size.height - 24)];
+        lineview.backgroundColor = MainColor;
+        //[self addSubview:lineview];
     }
 }
 
 - (void)btnClick:(UIButton *)btn{
+    
+    [btn setTitleColor:SELECTCOLOR forState:UIControlStateNormal];
+    for (UIButton *mbtn in self.itemArrar) {
+           if(mbtn != btn){
+               [mbtn setTitleColor:UNSELECTCOLOR forState:UIControlStateNormal];
+      }
+    }
     if([self.delegate respondsToSelector:@selector(marketTabItemClick:item:index:)]){
         [self.delegate marketTabItemClick:self item:btn index:btn.tag];
     }
@@ -53,6 +62,7 @@
     if(self == [super init]){
         self.titleArray = [titleArr copy];
         self.itemArrar = [@[] mutableCopy];
+         [self dx_layoutSubview];
     }
     return self;
 }
@@ -60,9 +70,9 @@
 - (void)selectAtIndex:(NSInteger)index{
     for (UIButton *btn in self.itemArrar) {
         if(btn.tag == index){
-            btn.titleLabel.textColor =SELECTCOLOR;
+            [btn setTitleColor:SELECTCOLOR forState:UIControlStateNormal];
         }else{
-            btn.titleLabel.textColor = UNSELECTCOLOR;
+            [btn setTitleColor:UNSELECTCOLOR forState:UIControlStateNormal];
         }
     }
 }

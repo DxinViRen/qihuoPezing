@@ -9,7 +9,7 @@
 #import "MarketDataCellTableViewCell.h"
 
 @interface MarketDataCellTableViewCell ()
-@property(nonatomic,strong)UILabel *mTitleLabel;
+
 @end
 
 @implementation MarketDataCellTableViewCell
@@ -22,8 +22,108 @@
 }
 
 - (void)dxLayoutSubView{
-   
+    [self.contentView addSubview:self.mTitleLabel];
+    [self.contentView addSubview:self.neTitleLanbel];
+    [self.contentView addSubview:self.lastPrice];
+    [self.contentView addSubview:self.turnoverLabel];
+//    [self.contentView addSubview:self.rangeLabel];
+    
+    [self.mTitleLabel  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentView);
+        make.width.mas_equalTo(Scr_w/3.0);
+        make.top.equalTo(self.contentView).inset(10);
+        
+    }];
+    
+    [self.neTitleLanbel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.mTitleLabel);
+        make.width.equalTo(self.mTitleLabel);
+        make.top.equalTo(self.mTitleLabel.mas_bottom).offset(5);
+        make.height.mas_equalTo(20);
+    }];
+    
+    NSArray *arr = @[self.mTitleLabel,self.lastPrice,self.turnoverLabel];
+    [arr mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    
+    [self.lastPrice mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.mTitleLabel);
+       
+    }];
+    
+    [self.turnoverLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.lastPrice);
+    }];
+    
+//    [self.rangeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.lastPrice);
+//        make.right.equalTo(self.contentView).inset(10);
+//    }];
 }
+
+- (void)setModel:(MarketDetailModel *)model{
+    _model = model;
+    self.mTitleLabel.text = _model.cat_name;
+    self.neTitleLanbel.text = _model.product_name;
+   // self.lastPrice.text =
+}
+
+
+- (UILabel *)mTitleLabel{
+    if(!_mTitleLabel){
+        
+        _mTitleLabel = [[UILabel alloc]init];
+        _mTitleLabel.font = [UIFont systemFontOfSize:15];
+        _mTitleLabel.textColor = MainColor;
+        _mTitleLabel.textAlignment = NSTextAlignmentCenter;
+        
+    }
+    return _mTitleLabel;
+}
+
+- (UILabel *)lastPrice{
+    if(!_lastPrice){
+        _lastPrice = [[UILabel alloc]init];
+        _lastPrice.font = [UIFont systemFontOfSize:15];
+        _lastPrice.textColor = MainColor;
+        _lastPrice.textAlignment = NSTextAlignmentCenter;
+    }
+    return _lastPrice;
+}
+
+- (UILabel *)turnoverLabel{
+    if(!_turnoverLabel){
+        _turnoverLabel = [[UILabel alloc]init];
+        _turnoverLabel.font = [UIFont systemFontOfSize:15];
+        _turnoverLabel.textColor = MainColor;
+        //_turnoverLabel.backgroundColor = [UIColor redColor];
+        _turnoverLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _turnoverLabel;
+}
+
+- (UILabel *)rangeLabel{
+    if(!_rangeLabel){
+        _rangeLabel = [[UILabel alloc]init];
+        _rangeLabel.font = [UIFont systemFontOfSize:15];
+        _rangeLabel.textColor = MainColor;
+        _rangeLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _rangeLabel;
+}
+
+- (UILabel *)neTitleLanbel{
+    if(!_neTitleLanbel){
+        
+        _neTitleLanbel = [[UILabel alloc]init];
+        _neTitleLanbel.font = [UIFont systemFontOfSize:13];
+        _neTitleLanbel.textColor = MainColor;
+        _neTitleLanbel.textAlignment = NSTextAlignmentCenter;
+        
+    }
+    return _neTitleLanbel;
+}
+
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
