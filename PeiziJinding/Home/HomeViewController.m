@@ -61,6 +61,10 @@
         [self.navigationController pushViewController:finc animated:YES];
     }else if (tag == 200 || tag == 2000){
         //期货行情
+        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+        UIWindow *win  = delegate.window;
+        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+        [root setSelectedIndex:1];
         
     }else if (tag  == 300 || tag == 3000){
         //热门资讯

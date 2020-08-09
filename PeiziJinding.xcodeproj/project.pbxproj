@@ -345,13 +345,6 @@
 			path = GYRollingNoticeView;
 			sourceTree = "<group>";
 		};
-		D85C57B724DBF10000A2696B /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
 		D86C639D24D79D2C004AD677 = {
 			isa = PBXGroup;
 			children = (
@@ -377,127 +370,20 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
-				D85C585E24DF05F900A2696B /* MarketDataJson.plist */,
-				D85C583E24DE15D600A2696B /* LoginViewController.h */,
-				D85C583C24DE15D500A2696B /* LoginViewController.m */,
-				D85C584124DE194700A2696B /* NewloginViewController.h */,
-				D85C584224DE194700A2696B /* NewloginViewController.m */,
-				D85C583D24DE15D500A2696B /* LoginViewController.xib */,
-				D85C583824DD800E00A2696B /* FeedbackViewController.h */,
-				D85C583924DD800E00A2696B /* FeedbackViewController.m */,
-				D85C583724DD800E00A2696B /* FeedbackViewController.xib */,
-				D85C583424DD7F9A00A2696B /* AboutUsViewController.h */,
-				D85C583524DD7F9A00A2696B /* AboutUsViewController.m */,
-				D85C580E24DD70C500A2696B /* MyCollectViewController.h */,
-				D85C580F24DD70C500A2696B /* MyCollectViewController.m */,
-				D85C57DD24DBFE6300A2696B /* UIColor+QCategory.h */,
-				D85C57DE24DBFE6300A2696B /* UIColor+QCategory.m */,
-				D85C583224DD7F6900A2696B /* UserItemCell.h */,
-				D85C583124DD7F6900A2696B /* UserItemCell.m */,
-				D85C57D224DBFE1E00A2696B /* HomeCycleCell.h */,
-				D85C57C924DBFE1E00A2696B /* HomegyNotiCell.h */,
-				D85C581124DD713900A2696B /* LoginCell.h */,
-				D85C581624DD713900A2696B /* LoginCell.m */,
-				D85C582824DD7DBB00A2696B /* UserHeadCell.h */,
-				D85C582F24DD7F0700A2696B /* HomeBlankCell.h */,
-				D85C582E24DD7F0700A2696B /* HomeBlankCell.m */,
-				D85C582924DD7DBB00A2696B /* UserHeadCell.m */,
-				D85C582B24DD7E7700A2696B /* HomeHeaderModel.h */,
-				D85C582C24DD7E7700A2696B /* HomeHeaderModel.m */,
-				D85C57D424DBFE1F00A2696B /* HomegyNotiCell.m */,
-				D85C57CD24DBFE1E00A2696B /* HomeHeadCell.h */,
-				D85C57C724DBFE1D00A2696B /* HomeHeadCell.m */,
-				D85C57D324DBFE1E00A2696B /* HomeItemCell.h */,
-				D85C57C524DBFE1D00A2696B /* HomeItemCell.m */,
-				D85C57D124DBFE1E00A2696B /* HomeModel.h */,
-				D85C57CF24DBFE1E00A2696B /* HomeModel.m */,
-				D85C57CE24DBFE1E00A2696B /* HomeViewController.h */,
-				D85C57C624DBFE1D00A2696B /* HomeViewController.m */,
-				D85C57FC24DCF8F000A2696B /* DateTool.h */,
-				D85C57FD24DCF8F000A2696B /* DateTool.m */,
-				D85C580224DD411100A2696B /* CalNewsCell.h */,
-				D85C580324DD411100A2696B /* CalNewsCell.m */,
-				D85C57F624DCE6E400A2696B /* FinCalViewController.h */,
-				D85C57F724DCE6E400A2696B /* FinCalViewController.m */,
-				D85C580524DD4BBA00A2696B /* CalNewsModel.h */,
-				D85C580624DD4BBA00A2696B /* CalNewsModel.m */,
-				D85C57FF24DD0ACA00A2696B /* FinCalModel.h */,
-				D85C580024DD0ACA00A2696B /* FinCalModel.m */,
-				D85C57F924DCF68F00A2696B /* CalSelectCell.h */,
-				D85C57FA24DCF68F00A2696B /* CalSelectCell.m */,
-				D85C580824DD537F00A2696B /* CalResponseModel.h */,
-				D85C580B24DD544800A2696B /* CalNews.h */,
-				D85C580C24DD544800A2696B /* CalNews.m */,
-				D85C580924DD537F00A2696B /* CalResponseModel.m */,
-				D85C581C24DD7BD500A2696B /* UserSecModel.h */,
-				D85C581D24DD7BD500A2696B /* UserSecModel.m */,
-				D85C57ED24DC07CE00A2696B /* NewsCell.h */,
-				D85C57EE24DC07CE00A2696B /* NewsCell.m */,
-				D85C57CC24DBFE1E00A2696B /* NewsListDataModel.h */,
-				D85C57C824DBFE1D00A2696B /* NewsListDataModel.m */,
-				D85C57CA24DBFE1E00A2696B /* NewsModel.h */,
-				D85C57CB24DBFE1E00A2696B /* NewsModel.m */,
-				D85C57C424DBFE1D00A2696B /* NSArray+Adpa.h */,
-				D85C57D024DBFE1E00A2696B /* NSArray+Adpa.m */,
-				D85C57BF24DBFA8000A2696B /* MBProgressHUD+dxhud.h */,
-				D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */,
-				D86C644D24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.h */,
-				D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */,
-				D85C57E424DBFE9000A2696B /* UINavigationBar+DD_Alpha.h */,
-				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
-				D86C640D24D7A87E004AD677 /* LoginManager.h */,
-				D86C641024D7A87E004AD677 /* LoginManager.m */,
-				D86C641624D7A8CD004AD677 /* DxRubNavigationVC.h */,
-				D86C641524D7A8CD004AD677 /* DxRubNavigationVC.m */,
-				D85C57E024DBFE7900A2696B /* UIImage+QCategory.h */,
-				D85C57E124DBFE7900A2696B /* UIImage+QCategory.m */,
-				D86C640224D7A675004AD677 /* MainCollectionViewCell.h */,
-				D86C640124D7A675004AD677 /* MainCollectionViewCell.m */,
-				D86C63FF24D7A61F004AD677 /* StorkSectionModel.h */,
-				D86C63FE24D7A61F004AD677 /* StorkSectionModel.m */,
-				D86C63EE24D7A475004AD677 /* StockRootViewController.h */,
-				D86C63EF24D7A475004AD677 /* StorkSectionController.h */,
-				D86C63F224D7A475004AD677 /* MainViewController.m */,
-				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
-				D85C57F324DC46D300A2696B /* MarketViewController.h */,
-				D85C57F424DC46D300A2696B /* MarketViewController.m */,
-				D85C585024DEACA000A2696B /* MarketModel.h */,
-				D85C585924DEB13900A2696B /* MarketRootModel.h */,
-				D85C585A24DEB13900A2696B /* MarketRootModel.m */,
-				D85C585124DEACA000A2696B /* MarketModel.m */,
-				D85C585324DEACC000A2696B /* MarketTypeModel.h */,
-				D85C585424DEACC000A2696B /* MarketTypeModel.m */,
-				D85C584724DE540E00A2696B /* MarketDataView.h */,
-				D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */,
-				D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */,
-				D8758F3A24DF892700412B95 /* MarketItemShowView.h */,
-				D8758F3B24DF892700412B95 /* MarketItemShowView.m */,
-				D85C584D24DEA82700A2696B /* MarketDetailModel.h */,
-				D85C584E24DEA82700A2696B /* MarketDetailModel.m */,
-				D85C585624DEAF7400A2696B /* MarketItemModel.h */,
-				D85C585724DEAF7400A2696B /* MarketItemModel.m */,
-				D85C584824DE540E00A2696B /* MarketDataView.m */,
-				D85C57F024DC421B00A2696B /* NewsListViewController.h */,
-				D85C584424DE493100A2696B /* MarketTabView.h */,
-				D85C584524DE493100A2696B /* MarketTabView.m */,
-				D85C57F124DC421B00A2696B /* NewsListViewController.m */,
-				D85C57AB24DBDEA100A2696B /* NewDetailsViewController.h */,
-				D85C57AC24DBDEA100A2696B /* NewDetailsViewController.m */,
-				D86C63F424D7A475004AD677 /* MainCellModelProtocol.h */,
+				D8758F3E24DFBA9E00412B95 /* Login */,
+				D8758F4024DFBAE600412B95 /* User */,
+				D8758F3F24DFBAC800412B95 /* Category */,
+				D8758F3D24DFB94700412B95 /* Home */,
+				D8758F4124DFBB6B00412B95 /* Fina */,
+				D8758F4224DFBBAD00412B95 /* IGLB */,
+				D8758F4324DFBC1A00412B95 /* Market */,
+				D8758F4424DFBC3F00412B95 /* NewsList */,
 				D85C57E624DBFEB300A2696B /* PSRequestManager.h */,
 				D85C57E724DBFEB400A2696B /* PSRequestManager.m */,
-				D86C63F524D7A475004AD677 /* StorkSectionController.m */,
-				D86C63F724D7A475004AD677 /* MainViewController.h */,
-				D85C57A424DBCC8800A2696B /* HomeCycleCell.m */,
-				D86C640424D7A7B7004AD677 /* UserViewController.h */,
-				D86C640524D7A7B7004AD677 /* UserViewController.m */,
-				D86C645924D7E472004AD677 /* NewsList.plist */,
 				D86C63A924D79D2C004AD677 /* AppDelegate.h */,
 				D86C63AA24D79D2C004AD677 /* AppDelegate.m */,
 				D86C63AF24D79D2C004AD677 /* ViewController.h */,
 				D86C641824D7A9EC004AD677 /* AFNetworking */,
-				D86C63ED24D7A475004AD677 /* Base */,
-				D86C63EB24D7A358004AD677 /* category */,
 				D86C63B024D79D2C004AD677 /* ViewController.m */,
 				D86C63EC24D7A393004AD677 /* PeiziJi.pch */,
 				D86C63B224D79D2C004AD677 /* Main.storyboard */,
@@ -527,21 +413,6 @@
 				D86C63D224D79D31004AD677 /* Info.plist */,
 			);
 			path = PeiziJindingUITests;
-			sourceTree = "<group>";
-		};
-		D86C63EB24D7A358004AD677 /* category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
-		D86C63ED24D7A475004AD677 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				D85C57B724DBF10000A2696B /* models */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		D86C641824D7A9EC004AD677 /* AFNetworking */ = {
@@ -600,6 +471,175 @@
 				D86C643C24D7A9EC004AD677 /* AFHTTPSessionManager.h */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		D8758F3D24DFB94700412B95 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D85C57A424DBCC8800A2696B /* HomeCycleCell.m */,
+				D85C57D224DBFE1E00A2696B /* HomeCycleCell.h */,
+				D85C57C924DBFE1E00A2696B /* HomegyNotiCell.h */,
+				D85C582F24DD7F0700A2696B /* HomeBlankCell.h */,
+				D85C582E24DD7F0700A2696B /* HomeBlankCell.m */,
+				D85C582B24DD7E7700A2696B /* HomeHeaderModel.h */,
+				D85C582C24DD7E7700A2696B /* HomeHeaderModel.m */,
+				D85C57CD24DBFE1E00A2696B /* HomeHeadCell.h */,
+				D85C57C724DBFE1D00A2696B /* HomeHeadCell.m */,
+				D85C57D324DBFE1E00A2696B /* HomeItemCell.h */,
+				D85C57C524DBFE1D00A2696B /* HomeItemCell.m */,
+				D85C57D124DBFE1E00A2696B /* HomeModel.h */,
+				D85C57CF24DBFE1E00A2696B /* HomeModel.m */,
+				D85C57D424DBFE1F00A2696B /* HomegyNotiCell.m */,
+				D85C57CE24DBFE1E00A2696B /* HomeViewController.h */,
+				D85C57C624DBFE1D00A2696B /* HomeViewController.m */,
+				D86C644D24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.h */,
+				D86C644E24D7D85C004AD677 /* HomeHeaderModelCellCollectionViewCell.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D8758F3E24DFBA9E00412B95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D85C583E24DE15D600A2696B /* LoginViewController.h */,
+				D85C583C24DE15D500A2696B /* LoginViewController.m */,
+				D85C584124DE194700A2696B /* NewloginViewController.h */,
+				D85C584224DE194700A2696B /* NewloginViewController.m */,
+				D85C583D24DE15D500A2696B /* LoginViewController.xib */,
+				D85C581124DD713900A2696B /* LoginCell.h */,
+				D85C581624DD713900A2696B /* LoginCell.m */,
+				D86C640D24D7A87E004AD677 /* LoginManager.h */,
+				D86C641024D7A87E004AD677 /* LoginManager.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D8758F3F24DFBAC800412B95 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D85C57DD24DBFE6300A2696B /* UIColor+QCategory.h */,
+				D85C57DE24DBFE6300A2696B /* UIColor+QCategory.m */,
+				D85C57C424DBFE1D00A2696B /* NSArray+Adpa.h */,
+				D85C57D024DBFE1E00A2696B /* NSArray+Adpa.m */,
+				D85C57BF24DBFA8000A2696B /* MBProgressHUD+dxhud.h */,
+				D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */,
+				D85C57E424DBFE9000A2696B /* UINavigationBar+DD_Alpha.h */,
+				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
+				D85C57E024DBFE7900A2696B /* UIImage+QCategory.h */,
+				D85C57E124DBFE7900A2696B /* UIImage+QCategory.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D8758F4024DFBAE600412B95 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D86C640524D7A7B7004AD677 /* UserViewController.m */,
+				D86C640424D7A7B7004AD677 /* UserViewController.h */,
+				D85C581D24DD7BD500A2696B /* UserSecModel.m */,
+				D85C583824DD800E00A2696B /* FeedbackViewController.h */,
+				D85C583924DD800E00A2696B /* FeedbackViewController.m */,
+				D85C583724DD800E00A2696B /* FeedbackViewController.xib */,
+				D85C583424DD7F9A00A2696B /* AboutUsViewController.h */,
+				D85C583524DD7F9A00A2696B /* AboutUsViewController.m */,
+				D85C580E24DD70C500A2696B /* MyCollectViewController.h */,
+				D85C580F24DD70C500A2696B /* MyCollectViewController.m */,
+				D85C583224DD7F6900A2696B /* UserItemCell.h */,
+				D85C583124DD7F6900A2696B /* UserItemCell.m */,
+				D85C582824DD7DBB00A2696B /* UserHeadCell.h */,
+				D85C582924DD7DBB00A2696B /* UserHeadCell.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D8758F4124DFBB6B00412B95 /* Fina */ = {
+			isa = PBXGroup;
+			children = (
+				D85C580224DD411100A2696B /* CalNewsCell.h */,
+				D85C580324DD411100A2696B /* CalNewsCell.m */,
+				D85C57F624DCE6E400A2696B /* FinCalViewController.h */,
+				D85C57F724DCE6E400A2696B /* FinCalViewController.m */,
+				D85C580524DD4BBA00A2696B /* CalNewsModel.h */,
+				D85C580624DD4BBA00A2696B /* CalNewsModel.m */,
+				D85C57FF24DD0ACA00A2696B /* FinCalModel.h */,
+				D85C580024DD0ACA00A2696B /* FinCalModel.m */,
+				D85C57F924DCF68F00A2696B /* CalSelectCell.h */,
+				D85C57FA24DCF68F00A2696B /* CalSelectCell.m */,
+				D85C580824DD537F00A2696B /* CalResponseModel.h */,
+				D85C580B24DD544800A2696B /* CalNews.h */,
+				D85C580C24DD544800A2696B /* CalNews.m */,
+				D85C580924DD537F00A2696B /* CalResponseModel.m */,
+				D85C581C24DD7BD500A2696B /* UserSecModel.h */,
+				D85C57ED24DC07CE00A2696B /* NewsCell.h */,
+				D85C57EE24DC07CE00A2696B /* NewsCell.m */,
+				D85C57CC24DBFE1E00A2696B /* NewsListDataModel.h */,
+				D85C57C824DBFE1D00A2696B /* NewsListDataModel.m */,
+				D85C57CA24DBFE1E00A2696B /* NewsModel.h */,
+				D85C57CB24DBFE1E00A2696B /* NewsModel.m */,
+			);
+			path = Fina;
+			sourceTree = "<group>";
+		};
+		D8758F4224DFBBAD00412B95 /* IGLB */ = {
+			isa = PBXGroup;
+			children = (
+				D85C57FC24DCF8F000A2696B /* DateTool.h */,
+				D85C57FD24DCF8F000A2696B /* DateTool.m */,
+				D86C63F724D7A475004AD677 /* MainViewController.h */,
+				D86C63F524D7A475004AD677 /* StorkSectionController.m */,
+				D86C63F424D7A475004AD677 /* MainCellModelProtocol.h */,
+				D86C641624D7A8CD004AD677 /* DxRubNavigationVC.h */,
+				D86C641524D7A8CD004AD677 /* DxRubNavigationVC.m */,
+				D86C640224D7A675004AD677 /* MainCollectionViewCell.h */,
+				D86C640124D7A675004AD677 /* MainCollectionViewCell.m */,
+				D86C63FF24D7A61F004AD677 /* StorkSectionModel.h */,
+				D86C63FE24D7A61F004AD677 /* StorkSectionModel.m */,
+				D86C63EE24D7A475004AD677 /* StockRootViewController.h */,
+				D86C63EF24D7A475004AD677 /* StorkSectionController.h */,
+				D86C63F224D7A475004AD677 /* MainViewController.m */,
+				D86C63F324D7A475004AD677 /* StockRootViewController.m */,
+			);
+			path = IGLB;
+			sourceTree = "<group>";
+		};
+		D8758F4324DFBC1A00412B95 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				D85C585E24DF05F900A2696B /* MarketDataJson.plist */,
+				D85C57F324DC46D300A2696B /* MarketViewController.h */,
+				D85C57F424DC46D300A2696B /* MarketViewController.m */,
+				D85C585024DEACA000A2696B /* MarketModel.h */,
+				D85C585924DEB13900A2696B /* MarketRootModel.h */,
+				D85C585A24DEB13900A2696B /* MarketRootModel.m */,
+				D85C585124DEACA000A2696B /* MarketModel.m */,
+				D85C585324DEACC000A2696B /* MarketTypeModel.h */,
+				D85C585424DEACC000A2696B /* MarketTypeModel.m */,
+				D85C584724DE540E00A2696B /* MarketDataView.h */,
+				D85C584A24DE588700A2696B /* MarketDataCellTableViewCell.h */,
+				D85C584B24DE588700A2696B /* MarketDataCellTableViewCell.m */,
+				D8758F3A24DF892700412B95 /* MarketItemShowView.h */,
+				D8758F3B24DF892700412B95 /* MarketItemShowView.m */,
+				D85C584D24DEA82700A2696B /* MarketDetailModel.h */,
+				D85C584E24DEA82700A2696B /* MarketDetailModel.m */,
+				D85C585624DEAF7400A2696B /* MarketItemModel.h */,
+				D85C585724DEAF7400A2696B /* MarketItemModel.m */,
+				D85C584824DE540E00A2696B /* MarketDataView.m */,
+				D85C584424DE493100A2696B /* MarketTabView.h */,
+				D85C584524DE493100A2696B /* MarketTabView.m */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		D8758F4424DFBC3F00412B95 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				D85C57F024DC421B00A2696B /* NewsListViewController.h */,
+				D85C57F124DC421B00A2696B /* NewsListViewController.m */,
+				D85C57AB24DBDEA100A2696B /* NewDetailsViewController.h */,
+				D85C57AC24DBDEA100A2696B /* NewDetailsViewController.m */,
+				D86C645924D7E472004AD677 /* NewsList.plist */,
+			);
+			path = NewsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

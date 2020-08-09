@@ -95,7 +95,7 @@
         }
         
     }else{
-        NSArray *arr = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七"];
+        NSArray *arr = @[@"一",@"二",@"三",@"四",@"五",@"六",@"日"];
         for (int i = 0; i<7; i ++) {
             [weekArr addObject:arr[i]];
         }
@@ -118,14 +118,14 @@
         }else if ([wek isEqualToString:@"6"]){
             wek = @"六";
         }else if ([wek isEqualToString:@"7"]){
-            wek = @"七";
+            wek = @"日";
         }
         
         [endArr addObject:wek];
     }
     
-    bArr = [[endArr reverseObjectEnumerator] allObjects];
-    return bArr;
+   // bArr = [[endArr reverseObjectEnumerator] allObjects];
+    return endArr;
 }
 
 @end

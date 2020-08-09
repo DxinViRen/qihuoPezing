@@ -21,6 +21,7 @@
     self.window = [[UIWindow alloc]initWithFrame: [UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     //ViewController *view  = [[ViewController alloc]init];
+   // NSArray *str = [DateTool getWeekArr];
     StockRootViewController *stokRot = [[StockRootViewController alloc]init];
     self.window.rootViewController = stokRot;
     [self.window makeKeyAndVisible];
