@@ -386,6 +386,17 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
+				D85C57DD24DBFE6300A2696B /* UIColor+QCategory.h */,
+				D85C57DE24DBFE6300A2696B /* UIColor+QCategory.m */,
+				D85C57C424DBFE1D00A2696B /* NSArray+Adpa.h */,
+				D85C57D024DBFE1E00A2696B /* NSArray+Adpa.m */,
+				D85C57BF24DBFA8000A2696B /* MBProgressHUD+dxhud.h */,
+				D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */,
+				D85C57E424DBFE9000A2696B /* UINavigationBar+DD_Alpha.h */,
+				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
+				D85C57E024DBFE7900A2696B /* UIImage+QCategory.h */,
+				D85C57E124DBFE7900A2696B /* UIImage+QCategory.m */,
+				D86C63EC24D7A393004AD677 /* PeiziJi.pch */,
 				D8758F3E24DFBA9E00412B95 /* Login */,
 				D8758F4024DFBAE600412B95 /* User */,
 				D8758F3F24DFBAC800412B95 /* Category */,
@@ -402,7 +413,6 @@
 				D86C63AF24D79D2C004AD677 /* ViewController.h */,
 				D86C641824D7A9EC004AD677 /* AFNetworking */,
 				D86C63B024D79D2C004AD677 /* ViewController.m */,
-				D86C63EC24D7A393004AD677 /* PeiziJi.pch */,
 				D86C63B224D79D2C004AD677 /* Main.storyboard */,
 				D86C63B524D79D30004AD677 /* Assets.xcassets */,
 				D86C63B724D79D30004AD677 /* LaunchScreen.storyboard */,
@@ -538,16 +548,6 @@
 		D8758F3F24DFBAC800412B95 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D85C57DD24DBFE6300A2696B /* UIColor+QCategory.h */,
-				D85C57DE24DBFE6300A2696B /* UIColor+QCategory.m */,
-				D85C57C424DBFE1D00A2696B /* NSArray+Adpa.h */,
-				D85C57D024DBFE1E00A2696B /* NSArray+Adpa.m */,
-				D85C57BF24DBFA8000A2696B /* MBProgressHUD+dxhud.h */,
-				D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */,
-				D85C57E424DBFE9000A2696B /* UINavigationBar+DD_Alpha.h */,
-				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
-				D85C57E024DBFE7900A2696B /* UIImage+QCategory.h */,
-				D85C57E124DBFE7900A2696B /* UIImage+QCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
