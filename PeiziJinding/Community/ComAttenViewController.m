@@ -12,6 +12,7 @@
 #import "DateTool.h"
 #import "CommShareVCViewController.h"
 #import "ComAttenViewController.h"
+#import "ComReviewsViewController.h"
 @interface ComAttenViewController ()
 @property(nonatomic,strong)MBProgressHUD *hud;
 //@property(nonatomic,strong)UILabel *nodataLabel;
@@ -56,7 +57,7 @@
 - (void)loadData{
     [self.dataArray removeAllObjects];
   //  self.hud = [MBProgressHUD showMessage:@"请稍等..."];
-        [[PSRequestManager shareInstance] netRequestWithUrl:@"https://quanzi.cngold.org/say/hotLine/2099016/0/5/?version=2.1" method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [[PSRequestManager shareInstance] netRequestWithUrl:@"https://quanzi.cngold.org/say/hotLine/2099016/0/13/?version=2.1" method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
             [self.mainCollectionView.mj_header endRefreshing];
             [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
         CommRootModel *model = [CommRootModel mj_objectWithKeyValues:responseObject];
@@ -78,7 +79,16 @@
                 datam.cellInderfier = NSStringFromClass([CommItemDataCell class]);
                 [cellArr addObject:datam];
             }
-            StorkSectionModel *secModel = [[StorkSectionModel alloc]initWithArray:cellArr];
+            NSMutableArray *newarr = [@[] mutableCopy];
+            StorkSectionModel *secModel = nil;
+            if(cellArr.count > 4){
+                [newarr  addObjectsFromArray:[cellArr subarrayWithRange:NSMakeRange(6, 4)]] ;
+                secModel = [[StorkSectionModel alloc]initWithArray:[[cellArr subarrayWithRange:NSMakeRange(6, 4)] mutableCopy]];
+            }else{
+                [newarr addObjectsFromArray:cellArr];
+                secModel = [[StorkSectionModel alloc]initWithArray:newarr];
+            }
+           
             [self.dataArray addObject:secModel];
             [self.adapter reloadDataWithCompletion:nil];
         }
@@ -115,7 +125,24 @@
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
     StorkSectionController *section = [[StorkSectionController alloc]init];
     section.configCellBlock = ^(id<MainCellModelProtocol>  _Nonnull mode, MainCollectionViewCell * _Nonnull cell, NSInteger index) {
-        
+        CommItemDataCell *comCell = (CommItemDataCell *)cell;
+               comCell.shablock = ^(CommDataModel * _Nonnull sharemodel) {
+                   CommShareVCViewController *share = [[CommShareVCViewController alloc]init];
+                   share.dataModel =sharemodel;
+                   [self.navigationController pushViewController:share animated:YES];
+               };
+               
+               __weak typeof(self) weakself = self;
+               comCell.reBlock = ^(CommDataModel * _Nonnull sharemodel) {
+                   ComReviewsViewController *comre = [[ComReviewsViewController alloc]init];
+                   comre.makeBlock = ^{
+                       NSInteger revc = [sharemodel.say.countOfComment intValue];
+                       revc++;
+                       sharemodel.say.countOfComment = [NSString stringWithFormat:@"%ld",revc];
+                       [weakself.adapter reloadDataWithCompletion:nil];
+                   };
+                   [self.navigationController pushViewController:comre animated:YES];
+               };
     };
     section.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         

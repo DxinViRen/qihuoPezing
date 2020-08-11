@@ -63,7 +63,9 @@
 		D865726D24E2168B00C6D56E /* CommuShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865726B24E2168B00C6D56E /* CommuShareCell.m */; };
 		D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865726C24E2168B00C6D56E /* CommuShareCell.xib */; };
 		D865727124E226A900C6D56E /* ShareSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865727024E226A900C6D56E /* ShareSuccessViewController.m */; };
-		D865727324E2402F00C6D56E /* CommNewJ.json in Resources */ = {isa = PBXBuildFile; fileRef = D865727224E2402F00C6D56E /* CommNewJ.json */; };
+		D865727524E2428200C6D56E /* CommNewJ.plist in Resources */ = {isa = PBXBuildFile; fileRef = D865727424E2428200C6D56E /* CommNewJ.plist */; };
+		D865728024E24CAD00C6D56E /* ComReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865727E24E24CAD00C6D56E /* ComReviewsViewController.m */; };
+		D865728124E24CAD00C6D56E /* ComReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865727F24E24CAD00C6D56E /* ComReviewsViewController.xib */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -240,7 +242,10 @@
 		D865726C24E2168B00C6D56E /* CommuShareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommuShareCell.xib; sourceTree = "<group>"; };
 		D865726F24E226A900C6D56E /* ShareSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareSuccessViewController.h; sourceTree = "<group>"; };
 		D865727024E226A900C6D56E /* ShareSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareSuccessViewController.m; sourceTree = "<group>"; };
-		D865727224E2402F00C6D56E /* CommNewJ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommNewJ.json; sourceTree = "<group>"; };
+		D865727424E2428200C6D56E /* CommNewJ.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CommNewJ.plist; sourceTree = "<group>"; };
+		D865727D24E24CAD00C6D56E /* ComReviewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComReviewsViewController.h; sourceTree = "<group>"; };
+		D865727E24E24CAD00C6D56E /* ComReviewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComReviewsViewController.m; sourceTree = "<group>"; };
+		D865727F24E24CAD00C6D56E /* ComReviewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComReviewsViewController.xib; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -703,7 +708,7 @@
 		D8758F4824DFE9FF00412B95 /* Community */ = {
 			isa = PBXGroup;
 			children = (
-				D865727224E2402F00C6D56E /* CommNewJ.json */,
+				D865727424E2428200C6D56E /* CommNewJ.plist */,
 				D8758F5124E04B9A00412B95 /* CommItemDataCell.h */,
 				D8758F5224E04B9A00412B95 /* CommItemDataCell.m */,
 				D8758F6B24E1A1D900412B95 /* CommShareVCViewController.h */,
@@ -733,6 +738,9 @@
 				D865726C24E2168B00C6D56E /* CommuShareCell.xib */,
 				D865726F24E226A900C6D56E /* ShareSuccessViewController.h */,
 				D865727024E226A900C6D56E /* ShareSuccessViewController.m */,
+				D865727D24E24CAD00C6D56E /* ComReviewsViewController.h */,
+				D865727E24E24CAD00C6D56E /* ComReviewsViewController.m */,
+				D865727F24E24CAD00C6D56E /* ComReviewsViewController.xib */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -846,12 +854,13 @@
 				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
 				D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */,
-				D865727324E2402F00C6D56E /* CommNewJ.json in Resources */,
+				D865728124E24CAD00C6D56E /* ComReviewsViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
 				D86C63B924D79D30004AD677 /* LaunchScreen.storyboard in Resources */,
 				D86C63B624D79D30004AD677 /* Assets.xcassets in Resources */,
 				D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */,
+				D865727524E2428200C6D56E /* CommNewJ.plist in Resources */,
 				D8758F5024E0309500412B95 /* CommunityData.plist in Resources */,
 				D86C643D24D7A9EC004AD677 /* LICENSE in Resources */,
 				D8758F5524E04B9A00412B95 /* CommItemDataCell.xib in Resources */,
@@ -974,6 +983,7 @@
 				D86C644724D7A9EC004AD677 /* AFURLResponseSerialization.m in Sources */,
 				D86C63BC24D79D30004AD677 /* main.m in Sources */,
 				D86C63FA24D7A475004AD677 /* StockRootViewController.m in Sources */,
+				D865728024E24CAD00C6D56E /* ComReviewsViewController.m in Sources */,
 				D85C582D24DD7E7700A2696B /* HomeHeaderModel.m in Sources */,
 				D86C644A24D7A9EC004AD677 /* AFURLRequestSerialization.m in Sources */,
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,

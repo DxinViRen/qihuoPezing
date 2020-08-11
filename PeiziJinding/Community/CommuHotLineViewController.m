@@ -11,6 +11,7 @@
 #import "CommItemDataCell.h"
 #import "DateTool.h"
 #import "CommShareVCViewController.h"
+#import "ComReviewsViewController.h"
 @interface CommuHotLineViewController ()
 @property(nonatomic,strong)MBProgressHUD *hud;
 //@property(nonatomic,strong)UILabel *nodataLabel;
@@ -116,6 +117,18 @@
             CommShareVCViewController *share = [[CommShareVCViewController alloc]init];
             share.dataModel =sharemodel;
             [self.navigationController pushViewController:share animated:YES];
+        };
+        
+        __weak typeof(self) weakself = self;
+        comCell.reBlock = ^(CommDataModel * _Nonnull sharemodel) {
+            ComReviewsViewController *comre = [[ComReviewsViewController alloc]init];
+            comre.makeBlock = ^{
+                NSInteger revc = [sharemodel.say.countOfComment intValue];
+                revc++;
+                sharemodel.say.countOfComment = [NSString stringWithFormat:@"%ld",revc];
+                [weakself.adapter reloadDataWithCompletion:nil];
+            };
+            [self.navigationController pushViewController:comre animated:YES];
         };
     };
     section.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {

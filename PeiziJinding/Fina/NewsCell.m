@@ -77,7 +77,7 @@
     if(newModel.url_w.length == 0){
         newModel.url_w = @"";
     }
-    [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.image] placeholderImage:[UIImage imageNamed:@""]];
+    [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.image] placeholderImage:[UIImage imageNamed:@"WeChat9ade9325550dceeb73e46edb90924a58"]];
     self.timeLabel.text = [self timeStr:[newModel.showtime substringWithRange:NSMakeRange(0, 10)]];
     self.sourceLabel.text = newModel.Art_Media_Name;
 }

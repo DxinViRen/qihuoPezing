@@ -165,7 +165,7 @@
    
     self.dataModel = (CommDataModel *)model;
     //self.model = dataModel;
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:CommitBaseImgURL,self.dataModel.say.senderPhoto]] placeholderImage:[UIImage imageNamed:@""]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:CommitBaseImgURL,self.dataModel.say.senderPhoto]] placeholderImage:[UIImage imageNamed:@"default_headImg"]];
     CGFloat textH = [DateTool
                      getStringHeightWithText:self.dataModel.say.content font:[UIFont systemFontOfSize:15] viewWidth:Scr_w-20];
     
@@ -392,7 +392,9 @@
 }
 
 - (void)reviewACtion:(UIButton *)btn{
-   
+    if(self.reBlock){
+        self.reBlock(self.dataModel);
+    }
 }
 
 - (UIButton *)spotImgView{
