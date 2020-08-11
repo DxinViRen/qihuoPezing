@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UICollectionView *mainCollectionView;
 @property(nonatomic,strong)IGListAdapter *adapter;
 @property(nonatomic,strong)NSMutableArray *dataArray;
+@property(nonatomic,strong)UILabel *nodataLabel;
+@property(nonatomic,strong)UIImageView *haveNoDataView;
 - (void)dxConfigData;
 - (void)dxLayoutSubview;
 @end

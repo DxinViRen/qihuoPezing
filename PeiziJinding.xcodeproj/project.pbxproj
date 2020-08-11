@@ -59,6 +59,11 @@
 		D85C585824DEAF7400A2696B /* MarketItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585724DEAF7400A2696B /* MarketItemModel.m */; };
 		D85C585B24DEB13900A2696B /* MarketRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C585A24DEB13900A2696B /* MarketRootModel.m */; };
 		D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */ = {isa = PBXBuildFile; fileRef = D85C585E24DF05F900A2696B /* MarketDataJson.plist */; };
+		D865726924E2108100C6D56E /* CommuShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865726824E2108100C6D56E /* CommuShareViewController.m */; };
+		D865726D24E2168B00C6D56E /* CommuShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865726B24E2168B00C6D56E /* CommuShareCell.m */; };
+		D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865726C24E2168B00C6D56E /* CommuShareCell.xib */; };
+		D865727124E226A900C6D56E /* ShareSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865727024E226A900C6D56E /* ShareSuccessViewController.m */; };
+		D865727324E2402F00C6D56E /* CommNewJ.json in Resources */ = {isa = PBXBuildFile; fileRef = D865727224E2402F00C6D56E /* CommNewJ.json */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -100,6 +105,14 @@
 		D8758F5024E0309500412B95 /* CommunityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8758F4F24E0309500412B95 /* CommunityData.plist */; };
 		D8758F5424E04B9A00412B95 /* CommItemDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F5224E04B9A00412B95 /* CommItemDataCell.m */; };
 		D8758F5524E04B9A00412B95 /* CommItemDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8758F5324E04B9A00412B95 /* CommItemDataCell.xib */; };
+		D8758F5824E10EE100412B95 /* ComAttenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F5724E10EE100412B95 /* ComAttenViewController.m */; };
+		D8758F5B24E10EF700412B95 /* CommuSayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F5A24E10EF700412B95 /* CommuSayViewController.m */; };
+		D8758F5E24E10F2100412B95 /* CommuHotLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F5D24E10F2100412B95 /* CommuHotLineViewController.m */; };
+		D8758F6124E11B2300412B95 /* CommRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F6024E11B2300412B95 /* CommRootModel.m */; };
+		D8758F6424E11B9100412B95 /* CommDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F6324E11B9100412B95 /* CommDataModel.m */; };
+		D8758F6724E11BD100412B95 /* CommSayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F6624E11BD100412B95 /* CommSayModel.m */; };
+		D8758F6A24E11E4A00412B95 /* CommitReCommetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F6924E11E4A00412B95 /* CommitReCommetModel.m */; };
+		D8758F6D24E1A1D900412B95 /* CommShareVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8758F6C24E1A1D900412B95 /* CommShareVCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +233,14 @@
 		D85C585924DEB13900A2696B /* MarketRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketRootModel.h; sourceTree = "<group>"; };
 		D85C585A24DEB13900A2696B /* MarketRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketRootModel.m; sourceTree = "<group>"; };
 		D85C585E24DF05F900A2696B /* MarketDataJson.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MarketDataJson.plist; sourceTree = "<group>"; };
+		D865726724E2108100C6D56E /* CommuShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuShareViewController.h; sourceTree = "<group>"; };
+		D865726824E2108100C6D56E /* CommuShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommuShareViewController.m; sourceTree = "<group>"; };
+		D865726A24E2168B00C6D56E /* CommuShareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuShareCell.h; sourceTree = "<group>"; };
+		D865726B24E2168B00C6D56E /* CommuShareCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommuShareCell.m; sourceTree = "<group>"; };
+		D865726C24E2168B00C6D56E /* CommuShareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommuShareCell.xib; sourceTree = "<group>"; };
+		D865726F24E226A900C6D56E /* ShareSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareSuccessViewController.h; sourceTree = "<group>"; };
+		D865727024E226A900C6D56E /* ShareSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareSuccessViewController.m; sourceTree = "<group>"; };
+		D865727224E2402F00C6D56E /* CommNewJ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommNewJ.json; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -303,6 +324,22 @@
 		D8758F5124E04B9A00412B95 /* CommItemDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommItemDataCell.h; sourceTree = "<group>"; };
 		D8758F5224E04B9A00412B95 /* CommItemDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommItemDataCell.m; sourceTree = "<group>"; };
 		D8758F5324E04B9A00412B95 /* CommItemDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommItemDataCell.xib; sourceTree = "<group>"; };
+		D8758F5624E10EE100412B95 /* ComAttenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComAttenViewController.h; sourceTree = "<group>"; };
+		D8758F5724E10EE100412B95 /* ComAttenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComAttenViewController.m; sourceTree = "<group>"; };
+		D8758F5924E10EF700412B95 /* CommuSayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuSayViewController.h; sourceTree = "<group>"; };
+		D8758F5A24E10EF700412B95 /* CommuSayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommuSayViewController.m; sourceTree = "<group>"; };
+		D8758F5C24E10F2100412B95 /* CommuHotLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuHotLineViewController.h; sourceTree = "<group>"; };
+		D8758F5D24E10F2100412B95 /* CommuHotLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommuHotLineViewController.m; sourceTree = "<group>"; };
+		D8758F5F24E11B2300412B95 /* CommRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommRootModel.h; sourceTree = "<group>"; };
+		D8758F6024E11B2300412B95 /* CommRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommRootModel.m; sourceTree = "<group>"; };
+		D8758F6224E11B9100412B95 /* CommDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommDataModel.h; sourceTree = "<group>"; };
+		D8758F6324E11B9100412B95 /* CommDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommDataModel.m; sourceTree = "<group>"; };
+		D8758F6524E11BD100412B95 /* CommSayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommSayModel.h; sourceTree = "<group>"; };
+		D8758F6624E11BD100412B95 /* CommSayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommSayModel.m; sourceTree = "<group>"; };
+		D8758F6824E11E4A00412B95 /* CommitReCommetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitReCommetModel.h; sourceTree = "<group>"; };
+		D8758F6924E11E4A00412B95 /* CommitReCommetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitReCommetModel.m; sourceTree = "<group>"; };
+		D8758F6B24E1A1D900412B95 /* CommShareVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommShareVCViewController.h; sourceTree = "<group>"; };
+		D8758F6C24E1A1D900412B95 /* CommShareVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommShareVCViewController.m; sourceTree = "<group>"; };
 		DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeiziJinding.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A60D6093B8773C59F97BCF /* Pods-PeiziJinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.debug.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -666,12 +703,36 @@
 		D8758F4824DFE9FF00412B95 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				D865727224E2402F00C6D56E /* CommNewJ.json */,
 				D8758F5124E04B9A00412B95 /* CommItemDataCell.h */,
 				D8758F5224E04B9A00412B95 /* CommItemDataCell.m */,
+				D8758F6B24E1A1D900412B95 /* CommShareVCViewController.h */,
+				D8758F6C24E1A1D900412B95 /* CommShareVCViewController.m */,
 				D8758F5324E04B9A00412B95 /* CommItemDataCell.xib */,
 				D8758F4524DFE9FB00412B95 /* CommunityVC.h */,
 				D8758F4624DFE9FB00412B95 /* CommunityVC.m */,
+				D8758F5C24E10F2100412B95 /* CommuHotLineViewController.h */,
+				D8758F5D24E10F2100412B95 /* CommuHotLineViewController.m */,
+				D865726724E2108100C6D56E /* CommuShareViewController.h */,
+				D865726824E2108100C6D56E /* CommuShareViewController.m */,
+				D8758F5624E10EE100412B95 /* ComAttenViewController.h */,
+				D8758F5724E10EE100412B95 /* ComAttenViewController.m */,
+				D8758F5924E10EF700412B95 /* CommuSayViewController.h */,
+				D8758F5A24E10EF700412B95 /* CommuSayViewController.m */,
 				D8758F4F24E0309500412B95 /* CommunityData.plist */,
+				D8758F5F24E11B2300412B95 /* CommRootModel.h */,
+				D8758F6024E11B2300412B95 /* CommRootModel.m */,
+				D8758F6224E11B9100412B95 /* CommDataModel.h */,
+				D8758F6324E11B9100412B95 /* CommDataModel.m */,
+				D8758F6524E11BD100412B95 /* CommSayModel.h */,
+				D8758F6824E11E4A00412B95 /* CommitReCommetModel.h */,
+				D8758F6924E11E4A00412B95 /* CommitReCommetModel.m */,
+				D8758F6624E11BD100412B95 /* CommSayModel.m */,
+				D865726A24E2168B00C6D56E /* CommuShareCell.h */,
+				D865726B24E2168B00C6D56E /* CommuShareCell.m */,
+				D865726C24E2168B00C6D56E /* CommuShareCell.xib */,
+				D865726F24E226A900C6D56E /* ShareSuccessViewController.h */,
+				D865727024E226A900C6D56E /* ShareSuccessViewController.m */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -784,6 +845,8 @@
 				D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */,
 				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
+				D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */,
+				D865727324E2402F00C6D56E /* CommNewJ.json in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
 				D86C63B924D79D30004AD677 /* LaunchScreen.storyboard in Resources */,
@@ -858,6 +921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D865726924E2108100C6D56E /* CommuShareViewController.m in Sources */,
 				D86C641724D7A8CD004AD677 /* DxRubNavigationVC.m in Sources */,
 				D85C57A624DBCC8800A2696B /* HomeCycleCell.m in Sources */,
 				D85C585224DEACA000A2696B /* MarketModel.m in Sources */,
@@ -866,6 +930,7 @@
 				D86C644324D7A9EC004AD677 /* UIButton+AFNetworking.m in Sources */,
 				D85C57E224DBFE7900A2696B /* UIImage+QCategory.m in Sources */,
 				D85C57A324DBCBFF00A2696B /* GYRollingNoticeView.m in Sources */,
+				D8758F6A24E11E4A00412B95 /* CommitReCommetModel.m in Sources */,
 				D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */,
 				D85C57DB24DBFE1F00A2696B /* NSArray+Adpa.m in Sources */,
 				D85C57B324DBE7FD00A2696B /* NewsNewModel.m in Sources */,
@@ -878,7 +943,9 @@
 				D86C640624D7A7B7004AD677 /* UserViewController.m in Sources */,
 				D86C644624D7A9EC004AD677 /* AFImageDownloader.m in Sources */,
 				D85C580724DD4BBA00A2696B /* CalNewsModel.m in Sources */,
+				D865727124E226A900C6D56E /* ShareSuccessViewController.m in Sources */,
 				D8758F4B24DFF79F00412B95 /* NewsNewDataModel.m in Sources */,
+				D8758F6424E11B9100412B95 /* CommDataModel.m in Sources */,
 				D85C581E24DD7BD500A2696B /* UserSecModel.m in Sources */,
 				D85C580A24DD537F00A2696B /* CalResponseModel.m in Sources */,
 				D85C584924DE540E00A2696B /* MarketDataView.m in Sources */,
@@ -912,13 +979,17 @@
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
+				D8758F6124E11B2300412B95 /* CommRootModel.m in Sources */,
 				D85C585524DEACC000A2696B /* MarketTypeModel.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
 				D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */,
+				D8758F6724E11BD100412B95 /* CommSayModel.m in Sources */,
 				D86C644024D7A9EC004AD677 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D86C640324D7A675004AD677 /* MainCollectionViewCell.m in Sources */,
+				D8758F5B24E10EF700412B95 /* CommuSayViewController.m in Sources */,
+				D8758F5824E10EE100412B95 /* ComAttenViewController.m in Sources */,
 				D86C644524D7A9EC004AD677 /* AFAutoPurgingImageCache.m in Sources */,
 				D85C584C24DE588700A2696B /* MarketDataCellTableViewCell.m in Sources */,
 				D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */,
@@ -926,8 +997,10 @@
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
 				D8758F5424E04B9A00412B95 /* CommItemDataCell.m in Sources */,
 				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
+				D8758F5E24E10F2100412B95 /* CommuHotLineViewController.m in Sources */,
 				D85C584F24DEA82700A2696B /* MarketDetailModel.m in Sources */,
 				D8758F3C24DF892700412B95 /* MarketItemShowView.m in Sources */,
+				D865726D24E2168B00C6D56E /* CommuShareCell.m in Sources */,
 				D86C644B24D7A9EC004AD677 /* AFNetworkReachabilityManager.m in Sources */,
 				D85C57E524DBFE9000A2696B /* UINavigationBar+DD_Alpha.m in Sources */,
 				D85C57D724DBFE1F00A2696B /* HomeHeadCell.m in Sources */,
@@ -935,6 +1008,7 @@
 				D85C581024DD70C500A2696B /* MyCollectViewController.m in Sources */,
 				D85C585824DEAF7400A2696B /* MarketItemModel.m in Sources */,
 				D8758F4E24DFF7D200412B95 /* NewsDetaiItemModel.m in Sources */,
+				D8758F6D24E1A1D900412B95 /* CommShareVCViewController.m in Sources */,
 				D85C57FE24DCF8F000A2696B /* DateTool.m in Sources */,
 				D86C640024D7A61F004AD677 /* StorkSectionModel.m in Sources */,
 			);

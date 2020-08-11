@@ -54,4 +54,11 @@
 #define NewsListUrl @"https://gateway-infrastructure.eastmoney.com/Newsplatform-Tag-Futures/api/yw?banner=banner&source=app&limit=20&em_appid=14053&encode=qhdd&sys=ios&version=2008008&min_id=%@&axiosConf=776699704"
 #define DetailUrl   @"https://dl.xyxyj999.com/api/news/newsDetail.htm?id=%@"
 #define CladanUrl   @"https://dl.xyxyj999.com/api/news/calendar.htm?date=%@"
-#endif /* PeiziJi_pch */
+//热点
+#define CommHotLineUrl @"https://quanzi.cngold.org/say/hotLine/2099016/0/30/?version=2.1"
+//说说
+#define CommiSayUrl @"https://quanzi.cngold.org//say/squareLine/2099016/1/30/?version=2.1"
+//关注
+
+#define CommitBaseImgURL @"https://res.cngoldres.com%@"
+#endif

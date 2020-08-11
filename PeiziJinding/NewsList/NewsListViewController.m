@@ -13,9 +13,9 @@
 #import "NewDetailsViewController.h"
 #import "NewsNewDataModel.h"
 @interface NewsListViewController ()
-@property (nonatomic,strong)UIView *nodataView;
-@property(nonatomic,strong)UILabel *nodataLabel;
-@property(nonatomic,strong)UIImageView *haveNoDataView;
+//@property (nonatomic,strong)UIView *nodataView;
+//@property(nonatomic,strong)UILabel *nodataLabel;
+//@property(nonatomic,strong)UIImageView *haveNoDataView;
 @property(nonatomic,strong)MBProgressHUD *hud;
 @property(nonatomic,assign)NSInteger page;
 @property(nonatomic,strong)NSMutableArray *newsListArr;
@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self nodataViewHid];
+   // [self nodataViewHid];
     [self dxLayoutSubView];
     self.prArray = @[@"",@"202008071584794280" ,@"202008091586762117",@"202008071586335947",@"202008071585026080",@"202008061584362987",@"202008061583310178",@"202008061583055652",@"202008051582907626",@"202008051581384755",@"202008041581246981"];
     self.navigationItem.title = @"资讯";
@@ -80,7 +80,7 @@
         }
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
-        [self nodataViewShow];
+        //[self nodataViewShow];
     }];
 }
 
@@ -113,64 +113,64 @@
 }
 
 - (void)dxLayoutSubView{
-    [self.view addSubview:self.nodataView];
-    [self.nodataView addSubview:self.nodataLabel];
-    [self.nodataView addSubview:self.haveNoDataView];
-    [self.nodataView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.centerY.equalTo(self.view).offset(-20);
-        make.size.mas_equalTo(CGSizeMake(200, 200));
-    }];
+//    [self.view addSubview:self.nodataView];
+//    [self.nodataView addSubview:self.nodataLabel];
+//    [self.nodataView addSubview:self.haveNoDataView];
+//    [self.nodataView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.view);
+//        make.centerY.equalTo(self.view).offset(-20);
+//        make.size.mas_equalTo(CGSizeMake(200, 200));
+//    }];
     
-    [self.haveNoDataView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.nodataView).inset(15);
-        make.centerX.equalTo(self.nodataView);
-        make.size.mas_equalTo(CGSizeMake(128, 128));
-    }];
+//    [self.haveNoDataView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.nodataView).inset(15);
+//        make.centerX.equalTo(self.nodataView);
+//        make.size.mas_equalTo(CGSizeMake(128, 128));
+//    }];
+//
+//    [self.nodataLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.haveNoDataView.mas_bottom).offset(15);
+//        make.centerX.equalTo(self.haveNoDataView);
+//        make.height.mas_equalTo(20);
+//    }];
     
-    [self.nodataLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.haveNoDataView.mas_bottom).offset(15);
-        make.centerX.equalTo(self.haveNoDataView);
-        make.height.mas_equalTo(20);
-    }];
-    
 }
 
-- (void)nodataViewShow{
-    self.nodataView.hidden = NO;
-}
+//- (void)nodataViewShow{
+//    self.nodataView.hidden = NO;
+//}
+//
+//- (void)nodataViewHid{
+//    self.nodataView.hidden = YES;
+//}
 
-- (void)nodataViewHid{
-    self.nodataView.hidden = YES;
-}
-
-- (UIView *)nodataView{
-    if(!_nodataView){
-        
-        _nodataView = [[UIView alloc]init];
-    }
-    return _nodataView;
-}
-
-- (UILabel *)nodataLabel{
-    if(!_nodataLabel){
-        
-        _nodataLabel = [[UILabel alloc]init];
-        _nodataLabel.textColor = [UIColor colorWithHexString:@"#707070"];
-        _nodataLabel.text = @"你的资讯去了火星~~";
-        [_nodataLabel sizeToFit];
-    }
-    return _nodataLabel;
-}
-
-- (UIImageView *)haveNoDataView{
-    if(!_haveNoDataView){
-        
-        _haveNoDataView = [[UIImageView alloc]init];
-        _haveNoDataView.image = [UIImage imageNamed:@"haveNoData"];
-    }
-    return _haveNoDataView;
-}
+//- (UIView *)nodataView{
+//    if(!_nodataView){
+//        
+//        _nodataView = [[UIView alloc]init];
+//    }
+//    return _nodataView;
+//}
+//
+//- (UILabel *)nodataLabel{
+//    if(!_nodataLabel){
+//        
+//        _nodataLabel = [[UILabel alloc]init];
+//        _nodataLabel.textColor = [UIColor colorWithHexString:@"#707070"];
+//        _nodataLabel.text = @"你的资讯去了火星~~";
+//        [_nodataLabel sizeToFit];
+//    }
+//    return _nodataLabel;
+//}
+//
+//- (UIImageView *)haveNoDataView{
+//    if(!_haveNoDataView){
+//        
+//        _haveNoDataView = [[UIImageView alloc]init];
+//        _haveNoDataView.image = [UIImage imageNamed:@"haveNoData"];
+//    }
+//    return _haveNoDataView;
+//}
 /*
 #pragma mark - Navigation
 

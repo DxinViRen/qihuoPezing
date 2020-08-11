@@ -60,6 +60,20 @@
 }
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter{
+    UIView *haveNeo = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+      [haveNeo addSubview:self.haveNoDataView];
+      [haveNeo addSubview:self.nodataLabel];
+      [self.haveNoDataView mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.center.equalTo(haveNeo);
+          make.size.mas_equalTo(CGSizeMake(128, 128));
+      }];
+      
+      [self.nodataLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.top.equalTo(self.haveNoDataView.mas_bottom).offset(10);
+          make.centerX.equalTo(haveNeo);
+      }];
+      
+      return haveNeo;
     return nil;
 }
 
@@ -106,6 +120,26 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+}
+
+- (UILabel *)nodataLabel{
+    if(!_nodataLabel){
+        
+        _nodataLabel = [[UILabel alloc]init];
+        _nodataLabel.textColor = [UIColor colorWithHexString:@"#707070"];
+        //_nodataLabel.text = @"暂无数据";
+        [_nodataLabel sizeToFit];
+    }
+    return _nodataLabel;
+}
+
+- (UIImageView *)haveNoDataView{
+    if(!_haveNoDataView){
+        
+        _haveNoDataView = [[UIImageView alloc]init];
+        _haveNoDataView.image = [UIImage imageNamed:@"haveNoData"];
+    }
+    return _haveNoDataView;
 }
 
 

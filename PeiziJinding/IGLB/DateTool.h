@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray *)getCuWekArr;
 + (NSString *)getMounthStr;
 + (NSString *)getCurrentDateStr;
++ (CGFloat)getStringHeightWithText:(NSString *)text font:(UIFont *)font viewWidth:(CGFloat)width;
 @end
 
 NS_ASSUME_NONNULL_END

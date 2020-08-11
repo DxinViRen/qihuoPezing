@@ -1,8 +1,8 @@
 //
-//  CommunityVC.h
+//  CommuHotLineViewController.h
 //  PeiziJinding
 //
-//  Created by D.xin on 2020/8/9.
+//  Created by D.xin on 2020/8/10.
 //  Copyright © 2020 koryv. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityVC : UIViewController
+@interface CommuHotLineViewController : MainViewController
 
 @end
 

@@ -8,42 +8,56 @@
 
 #import "CommunityVC.h"
 #import "MarketTabView.h"
-@interface CommunityVC ()<MarketTapClickprotocol>
+#import "CommItemDataCell.h"
+#import "CommuHotLineViewController.h"
+#import "CommuSayViewController.h"
+#import "ComAttenViewController.h"
+@interface CommunityVC ()<MarketTapClickprotocol,UIScrollViewDelegate>
 @property(nonatomic,strong)MarketTabView *tabView;
+@property(nonatomic,strong)UIScrollView *mainScrollView;
+@property(nonatomic,assign)CGFloat tabbarH;
+@property(nonatomic,assign)CGFloat navigHs;
 @end
 
 @implementation CommunityVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tabbarH  = self.tabBarController.tabBar.frame.origin.y;
+    self.navigHs  = self.navigationController.navigationBar.frame.size.height + statusH;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    // self.view.backgroundColor = [UIColor colorWithHexString:@"#F4F5F6"];
+     [self dx_layoutSubView];
 }
 
-- (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter{
-    return self.dataArray;
+
+- (void)dx_layoutSubView{
+    [self.view addSubview:self.mainScrollView];
+    self.tabView.frame = CGRectMake(0, 0, Scr_w, 45);
+    [self.view addSubview:self.tabView];
+    CommuHotLineViewController *commiHotC = [[CommuHotLineViewController alloc]init];
+    commiHotC.view.frame = CGRectMake(0, 0, Scr_w, self.mainScrollView.frame.size.height);
+    [self.mainScrollView addSubview:commiHotC.view];
+    CommuSayViewController *commSay = [[CommuSayViewController alloc]init];
+    commSay.view.frame = CGRectMake(Scr_w, 0, Scr_w, self.mainScrollView.frame.size.height);
+    [self.mainScrollView addSubview:commSay.view];
+
+    ComAttenViewController *attenV =[[ComAttenViewController alloc]init];
+    attenV.view.frame = CGRectMake(2*Scr_w, 0, Scr_w, self.mainScrollView.frame.size.height);
+    [self.mainScrollView addSubview:attenV.view];
+    [self addChildViewController:commiHotC];
+    [self addChildViewController:commSay];
+    [self addChildViewController:attenV];
+//
+    
+
 }
 
-- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object{
-    StorkSectionController *secC = [[StorkSectionController alloc]init];
-    secC.configCellBlock = ^(id<MainCellModelProtocol>  _Nonnull mode, MainCollectionViewCell * _Nonnull cell, NSInteger index) {
-        
-    };
-    
-    secC.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
-        
-    };
-    
-    return secC;
-}
 - (void)dxConfigData{
     [self.view addSubview:self.tabView];
     [self.tabView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.and.right.top.equalTo(self.view);\
+        make.left.and.right.top.equalTo(self.view);
         make.height.mas_equalTo(45);
-    }];
-    [self.mainCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.and.right.equalTo(self.tabView);
-        make.top.equalTo(self.tabView);
     }];
 }
 
@@ -56,10 +70,36 @@
     return _tabView;
 }
 
+- (UIScrollView *)mainScrollView{
+    if(!_mainScrollView){
+       
+        _mainScrollView = [[UIScrollView alloc]initWithFrame: CGRectMake(0,45, Scr_w, self.tabbarH - self.navigHs - 45)];
+        _mainScrollView.delegate = self;
+        _mainScrollView.bounces = NO;
+        _mainScrollView.contentSize = CGSizeMake(Scr_w * 4, 0);
+        _mainScrollView.showsVerticalScrollIndicator = NO;
+        _mainScrollView.showsHorizontalScrollIndicator = NO;
+       // _mainScrollView.backgroundColor = [UIColor redColor];
+        _mainScrollView.pagingEnabled = YES;
+        _mainScrollView.scrollEnabled = YES;
+    }
+    return _mainScrollView;
+}
 
 #pragma mark - MarketTabLCickDelegate
 - (MarketTabView *)marketTabItemClick:(MarketTabView *)tabView item:(id)item index:(NSInteger)index{
+    CGPoint position = CGPointMake(index * Scr_w, 0);
+    [self.mainScrollView setContentOffset:position animated:YES];
     
     return self.tabView;
 }
+
+#pragma mark -UIscrViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSInteger page =  scrollView.contentOffset.x/Scr_w;
+   
+    [self.tabView selectAtIndex:page];
+}
+
+
 @end
