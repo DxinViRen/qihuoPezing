@@ -11,6 +11,7 @@
 #import "MarketRootModel.h"
 #import "MarketDataView.h"
 #import "MarketItemShowView.h"
+#import "MarketDetailVC.h"
 
 @interface MarketViewController ()<MarketTapClickprotocol,UIScrollViewDelegate>
 @property(nonatomic,strong)MarketTabView *tabView;
@@ -26,6 +27,7 @@
 @property(nonatomic,assign)CGFloat navigHs;
 @property(nonatomic,strong)MarketItemShowView*itemshowView;
 @property(nonatomic,strong)NSArray *mArr;
+@property(nonatomic,strong)NSTimer *timer;
 @end
 
 @implementation MarketViewController
@@ -40,8 +42,23 @@
     [self loadData];
     [self dx_layoutSubView];
     [self loadIndexData];
-   
+    //self.timer =  [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeAction) userInfo:nil repeats:YES];
     
+}
+
+- (void)timeAction{
+    
+    if(self.mArr.count  == self.mainScrollView.subviews.count){
+        for (int i = 0; i <self.mainScrollView.subviews.count;i++) {
+              MarketDataView *dataView = self.mainScrollView.subviews[i];
+              MarketItemModel *itemnM = self.mArr[i];
+              dataView.model =itemnM;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [dataView reloadData];
+            });
+        }
+    }
+  
 }
 
 - (void)dx_layoutSubView{
@@ -55,7 +72,12 @@
     for (int i = 0; i <self.dataArray.count; i ++) {
         MarketDataView *dataView = self.dataArray[i];
         dataView.frame = CGRectMake(i *Scr_w, 0, Scr_w, self.mainScrollView.frame.size.height);
-      
+        dataView.clickBlock = ^(MarketDetailModel * _Nonnull mdoel) {
+            //跳转详情
+            MarketDetailVC *detailVC = [[MarketDetailVC alloc]init];
+            detailVC.model = mdoel;
+            [self.navigationController pushViewController:detailVC animated:YES];
+        };
         dataView.tag = i;
        // dataView.model = self.rootmodel.data
         [self.mainScrollView addSubview:dataView];
@@ -84,10 +106,8 @@
             dataView.model =itemnM;
             if(i == 0){
                 dispatch_async(dispatch_get_main_queue(), ^{
-                               [dataView reloadData];
-                                  });
-                
-                
+                    [dataView reloadData];
+                });
             }
         }
         
@@ -200,6 +220,12 @@
                                    [dataView reloadData];
                                       });
     [self.tabView selectAtIndex:page];
+}
+
+- (void)dealloc
+{
+    [self.timer invalidate];
+    self.timer = nil;
 }
 /*
 #pragma mark - Navigation

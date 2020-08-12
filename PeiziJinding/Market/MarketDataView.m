@@ -72,6 +72,7 @@
     }
     
     if(self.dataArray.count>indexPath.row &&self.model.list.count>indexPath.row){
+        cell.numDaraArr = self.model.list[indexPath.row];
         cell.model = self.dataArray[indexPath.row];
         NSArray *daArr = self.model.list[indexPath.row];
         if(daArr.count >= 4){
@@ -82,12 +83,12 @@
     return cell;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(self.clickBlock){
+        if(self.dataArray.count>indexPath.row ){
+             self.clickBlock(self.dataArray[indexPath.row]);
+        }
+    }
 }
-*/
 
 @end

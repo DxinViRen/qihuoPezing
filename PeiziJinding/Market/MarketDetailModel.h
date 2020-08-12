@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSNumber *total_trading;
 @property (nonatomic,strong)NSNumber *pid;
 
+@property (nonatomic,strong)NSArray *pre_numArr;
+
 @end
 
 NS_ASSUME_NONNULL_END

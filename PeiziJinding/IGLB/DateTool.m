@@ -141,4 +141,13 @@
    // 当你是把获得的高度来布局控件的View的高度的时候.size转化为ceilf(size.height)。
     return  ceilf(size.height);
 }
+
++ (NSString *)gettodayStr{
+    NSDate *date=[NSDate date];
+    NSDateFormatter *format1=[[NSDateFormatter alloc] init];
+    [format1 setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateStr;
+    dateStr=[format1 stringFromDate:date];
+    return dateStr;
+}
 @end

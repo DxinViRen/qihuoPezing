@@ -64,7 +64,31 @@
     _model = model;
     self.mTitleLabel.text = _model.cat_name;
     self.neTitleLanbel.text = _model.product_name;
+   // self.numDaraArr = _model.pre_numArr;
    // self.lastPrice.text =
+    /**
+     
+     @property(nonatomic,strong)UILabel *mTitleLabel;    //名称
+     @property(nonatomic,strong)UILabel *neTitleLanbel;  //年份
+     @property(nonatomic,strong)UILabel *lastPrice;      //最新价格
+     @property(nonatomic,strong)UILabel *turnoverLabel;  //成交量
+     @property(nonatomic,strong)UILabel *rangeLabel;     //幅度
+     */
+    _model.pre_numArr  = self.numDaraArr;
+    if([self.numDaraArr[2] floatValue] >0){
+        self.mTitleLabel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
+        self.neTitleLanbel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
+        self.lastPrice.textColor = [UIColor colorWithHexString:@"#F92E3C"];
+        self.turnoverLabel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
+        self.rangeLabel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
+              }
+    else{
+                  self.mTitleLabel.textColor = [UIColor colorWithHexString:@"#18C07E"];
+                  self.neTitleLanbel.textColor = [UIColor colorWithHexString:@"#18C07E"];
+                  self.lastPrice.textColor = [UIColor colorWithHexString:@"#18C07E"];
+                  self.turnoverLabel.textColor = [UIColor colorWithHexString:@"#18C07E"];
+                  self.rangeLabel.textColor = [UIColor colorWithHexString:@"#18C07E"];
+              }
 }
 
 

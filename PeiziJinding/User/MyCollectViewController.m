@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title =  @"我的收藏";
+    self.nodataLabel.text = @"你还没有收藏";
     [self.view addSubview:self.collectImgView];
     [self.view addSubview:self.mainLable];
     [self.collectImgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -46,10 +47,10 @@
     [super viewWillAppear:animated];
     [self configDataSource];
     [self.adapter reloadDataWithCompletion:nil];
-    StorkSectionModel *model = self.dataArray[0];
-    
-    self.collectImgView.hidden = model.dataArray.count != 0;
-    self.mainLable.hidden = model.dataArray.count  != 0;
+//    StorkSectionModel *model = self.dataArray[0];
+//
+//    self.collectImgView.hidden = model.dataArray.count != 0;
+//    self.mainLable.hidden = model.dataArray.count  != 0;
 }
 
 - (void)configDataSource{
@@ -85,26 +86,9 @@
 }
 
 
-- (UIImageView *)collectImgView{
-    if(!_collectImgView){
-        
-        _collectImgView = [[UIImageView alloc]init];
-        _collectImgView.image = [UIImage imageNamed:@"haveNoCollectNew"];
-    }
-    return _collectImgView;
-}
 
-- (UILabel *)mainLable{
-    if(!_mainLable){
-        
-        _mainLable = [[UILabel alloc]init];
-        _mainLable.textColor  = [UIColor  colorWithHexString:@"#5B5B5B"];
-        _mainLable.font = [UIFont systemFontOfSize:14];
-        _mainLable.text = @"你还没有收藏";
-        _mainLable.textAlignment = NSTextAlignmentCenter;
-    }
-    return _mainLable;
-}
+
+
 /*
 #pragma mark - Navigation
 
