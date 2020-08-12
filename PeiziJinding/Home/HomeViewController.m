@@ -135,7 +135,7 @@
     NSInteger index = [dic[@"index"] integerValue];
     
     NewDetailsViewController *news = [[NewDetailsViewController alloc]init];
-    news.url = self.bannerUrlArr[index];
+    news.url = self.bannerUrlArr [index];
     [self.navigationController pushViewController:news animated:YES];
 }
 

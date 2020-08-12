@@ -14,4 +14,14 @@
 @synthesize cellHeight;
 @synthesize cellInderfier;
 @synthesize extra;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [CommSayModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+            return @{@"ID":@"id"};
+        }];
+    }
+    return self;
+}
 @end

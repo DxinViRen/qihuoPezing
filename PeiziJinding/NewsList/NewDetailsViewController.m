@@ -22,7 +22,12 @@
     [super viewDidLoad];
     [self.view addSubview:self.webView];
     self.navigationItem.title = @"详情";
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.model.url_w]]];
+    if(self.model){
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.model.url_w]]];
+    }else{
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+    }
+    
     self.webView.allowsBackForwardNavigationGestures = YES;
     
     //创建网页配置对象

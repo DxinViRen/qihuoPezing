@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSArray *pics; //发表的图片
 @property(nonatomic,copy)NSString *content; //内容
 @property(nonatomic,copy)NSString *tags; //标签
+@property(nonatomic,copy)NSNumber *ID;
 @property(nonatomic,copy)NSString *countOfComment;//评论数量
 @property(nonatomic,copy)NSString *countOfAgree;//点赞数量
 @property(nonatomic,copy)NSString *senderMedalImage;//会员等级可能为nil

@@ -325,22 +325,24 @@
 }
 
 - (void)attenAction:(UIButton *)btn{
-    self.hub = [MBProgressHUD showMessage:@"请稍等"];
-   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       [self.hub hideAnimated:YES];
-       if(self.dataModel.pre_isAtten){
-           [self.attentionBtn setTitleColor:MainColor forState:UIControlStateNormal];
-           self.attentionBtn.layer.borderWidth = 0.8;
-           self.attentionBtn.layer.borderColor = MainColor.CGColor;
-           self.attentionBtn.layer.cornerRadius = 3;
-       }else{
-           [self.attentionBtn setTitleColor:[UIColor colorWithHexString:@"#d81e06"] forState:UIControlStateNormal];
-           self.attentionBtn.layer.borderWidth = 0.8;
-           self.attentionBtn.layer.borderColor = [UIColor colorWithHexString:@"#d81e06"].CGColor;
-           self.attentionBtn.layer.cornerRadius = 3;
-       }
-       self.dataModel.pre_isAtten = !self.dataModel.pre_isAtten;
-    });
+    [[LoginManager shareInsetance] checkLogin:^{
+        self.hub = [MBProgressHUD showMessage:@"请稍等"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.hub hideAnimated:YES];
+            if(self.dataModel.pre_isAtten){
+                [self.attentionBtn setTitleColor:MainColor forState:UIControlStateNormal];
+                self.attentionBtn.layer.borderWidth = 0.8;
+                self.attentionBtn.layer.borderColor = MainColor.CGColor;
+                self.attentionBtn.layer.cornerRadius = 3;
+            }else{
+                [self.attentionBtn setTitleColor:[UIColor colorWithHexString:@"#d81e06"] forState:UIControlStateNormal];
+                self.attentionBtn.layer.borderWidth = 0.8;
+                self.attentionBtn.layer.borderColor = [UIColor colorWithHexString:@"#d81e06"].CGColor;
+                self.attentionBtn.layer.cornerRadius = 3;
+            }
+            self.dataModel.pre_isAtten = !self.dataModel.pre_isAtten;
+         });
+    }];
 }
 
 - (UIButton *)shareBtn{
@@ -366,9 +368,11 @@
 }
 
 - (void)shareAction:(UIButton *)share{
-    if(self.shablock){
-        self.shablock(self.dataModel);
-    }
+    [[LoginManager shareInsetance] checkLogin:^{
+        if(self.shablock){
+            self.shablock(self.dataModel);
+        }
+    }];
 }
 
 - (UIButton *)reviewIcon{
@@ -392,9 +396,11 @@
 }
 
 - (void)reviewACtion:(UIButton *)btn{
-    if(self.reBlock){
-        self.reBlock(self.dataModel);
-    }
+    [[LoginManager shareInsetance] checkLogin:^{
+        if(self.reBlock){
+              self.reBlock(self.dataModel);
+          }
+    }];
 }
 
 - (UIButton *)spotImgView{
@@ -419,17 +425,20 @@
 
 - (void)spotAction:(UIButton *)spot{
     //点赞
-    NSInteger  spotin  = [self.dataModel.say.countOfAgree  intValue];
-       if(self.dataModel.pre_isSopt){
-           [self.spotImgView setImage:[UIImage imageNamed:@"spotIconNew_new"] forState:UIControlStateNormal];
-           spotin--;
-       }else{
-           [self.spotImgView setImage:[UIImage imageNamed:@"have_sport"] forState:UIControlStateNormal];
-           spotin++;
-       }
-       self.dataModel.pre_isSopt = !self.dataModel.pre_isSopt;
-    self.dataModel.say.countOfAgree = [NSString stringWithFormat:@"%ld",spotin];
-    self.spotLabel.text = self.dataModel.say.countOfAgree;
+    [[LoginManager shareInsetance] checkLogin:^{
+        NSInteger  spotin  = [self.dataModel.say.countOfAgree  intValue];
+           if(self.dataModel.pre_isSopt){
+               [self.spotImgView setImage:[UIImage imageNamed:@"spotIconNew_new"] forState:UIControlStateNormal];
+               spotin--;
+           }else{
+               [self.spotImgView setImage:[UIImage imageNamed:@"have_sport"] forState:UIControlStateNormal];
+               spotin++;
+           }
+           self.dataModel.pre_isSopt = !self.dataModel.pre_isSopt;
+        self.dataModel.say.countOfAgree = [NSString stringWithFormat:@"%ld",spotin];
+        self.spotLabel.text = self.dataModel.say.countOfAgree;
+    }];
+    
 }
 
 - (UIView *)lineView{

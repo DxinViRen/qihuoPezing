@@ -75,6 +75,12 @@
 		D865729A24E25CC300C6D56E /* KLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865729824E25CC300C6D56E /* KLineChartViewController.m */; };
 		D865753B24E34AC700C6D56E /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D865753A24E34AC700C6D56E /* data.plist */; };
 		D865753E24E34AE000C6D56E /* MarketDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D865753D24E34AE000C6D56E /* MarketDetailVC.m */; };
+		D865754124E39FA800C6D56E /* CommSayDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754024E39FA800C6D56E /* CommSayDetailVC.m */; };
+		D865754524E3A4CA00C6D56E /* ComDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754324E3A4CA00C6D56E /* ComDetailCell.m */; };
+		D865754624E3A4CA00C6D56E /* ComDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865754424E3A4CA00C6D56E /* ComDetailCell.xib */; };
+		D865754924E3B03300C6D56E /* CommDetailRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754824E3B03300C6D56E /* CommDetailRoot.m */; };
+		D865754C24E3B8AC00C6D56E /* CommDetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754B24E3B8AC00C6D56E /* CommDetailItemModel.m */; };
+		D865754F24E3BBA400C6D56E /* CommCommentJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754E24E3BBA400C6D56E /* CommCommentJsonModel.m */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -273,6 +279,17 @@
 		D865753A24E34AC700C6D56E /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		D865753C24E34AE000C6D56E /* MarketDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarketDetailVC.h; sourceTree = "<group>"; };
 		D865753D24E34AE000C6D56E /* MarketDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketDetailVC.m; sourceTree = "<group>"; };
+		D865753F24E39FA800C6D56E /* CommSayDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommSayDetailVC.h; sourceTree = "<group>"; };
+		D865754024E39FA800C6D56E /* CommSayDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommSayDetailVC.m; sourceTree = "<group>"; };
+		D865754224E3A4CA00C6D56E /* ComDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComDetailCell.h; sourceTree = "<group>"; };
+		D865754324E3A4CA00C6D56E /* ComDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComDetailCell.m; sourceTree = "<group>"; };
+		D865754424E3A4CA00C6D56E /* ComDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComDetailCell.xib; sourceTree = "<group>"; };
+		D865754724E3B03300C6D56E /* CommDetailRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommDetailRoot.h; sourceTree = "<group>"; };
+		D865754824E3B03300C6D56E /* CommDetailRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommDetailRoot.m; sourceTree = "<group>"; };
+		D865754A24E3B8AC00C6D56E /* CommDetailItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommDetailItemModel.h; sourceTree = "<group>"; };
+		D865754B24E3B8AC00C6D56E /* CommDetailItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommDetailItemModel.m; sourceTree = "<group>"; };
+		D865754D24E3BBA400C6D56E /* CommCommentJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommCommentJsonModel.h; sourceTree = "<group>"; };
+		D865754E24E3BBA400C6D56E /* CommCommentJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommCommentJsonModel.m; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -781,6 +798,10 @@
 				D8758F5F24E11B2300412B95 /* CommRootModel.h */,
 				D8758F6024E11B2300412B95 /* CommRootModel.m */,
 				D8758F6224E11B9100412B95 /* CommDataModel.h */,
+				D865754A24E3B8AC00C6D56E /* CommDetailItemModel.h */,
+				D865754B24E3B8AC00C6D56E /* CommDetailItemModel.m */,
+				D865754D24E3BBA400C6D56E /* CommCommentJsonModel.h */,
+				D865754E24E3BBA400C6D56E /* CommCommentJsonModel.m */,
 				D8758F6324E11B9100412B95 /* CommDataModel.m */,
 				D8758F6524E11BD100412B95 /* CommSayModel.h */,
 				D8758F6824E11E4A00412B95 /* CommitReCommetModel.h */,
@@ -794,6 +815,13 @@
 				D865727D24E24CAD00C6D56E /* ComReviewsViewController.h */,
 				D865727E24E24CAD00C6D56E /* ComReviewsViewController.m */,
 				D865727F24E24CAD00C6D56E /* ComReviewsViewController.xib */,
+				D865754724E3B03300C6D56E /* CommDetailRoot.h */,
+				D865754824E3B03300C6D56E /* CommDetailRoot.m */,
+				D865753F24E39FA800C6D56E /* CommSayDetailVC.h */,
+				D865754024E39FA800C6D56E /* CommSayDetailVC.m */,
+				D865754224E3A4CA00C6D56E /* ComDetailCell.h */,
+				D865754324E3A4CA00C6D56E /* ComDetailCell.m */,
+				D865754424E3A4CA00C6D56E /* ComDetailCell.xib */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -907,6 +935,7 @@
 				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
 				D865753B24E34AC700C6D56E /* data.plist in Resources */,
+				D865754624E3A4CA00C6D56E /* ComDetailCell.xib in Resources */,
 				D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */,
 				D865728124E24CAD00C6D56E /* ComReviewsViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
@@ -988,6 +1017,7 @@
 				D865729324E25CB000C6D56E /* YKLineDataSet.m in Sources */,
 				D86C641724D7A8CD004AD677 /* DxRubNavigationVC.m in Sources */,
 				D85C57A624DBCC8800A2696B /* HomeCycleCell.m in Sources */,
+				D865754924E3B03300C6D56E /* CommDetailRoot.m in Sources */,
 				D85C585224DEACA000A2696B /* MarketModel.m in Sources */,
 				D85C585B24DEB13900A2696B /* MarketRootModel.m in Sources */,
 				D85C581B24DD713A00A2696B /* LoginCell.m in Sources */,
@@ -1015,6 +1045,7 @@
 				D85C584924DE540E00A2696B /* MarketDataView.m in Sources */,
 				D85C580D24DD544800A2696B /* CalNews.m in Sources */,
 				D85C57DA24DBFE1F00A2696B /* HomeModel.m in Sources */,
+				D865754524E3A4CA00C6D56E /* ComDetailCell.m in Sources */,
 				D86C644924D7A9EC004AD677 /* AFURLSessionManager.m in Sources */,
 				D85C57F224DC421B00A2696B /* NewsListViewController.m in Sources */,
 				D865729524E25CB000C6D56E /* YKViewBase.m in Sources */,
@@ -1049,12 +1080,15 @@
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
 				D8758F6124E11B2300412B95 /* CommRootModel.m in Sources */,
+				D865754124E39FA800C6D56E /* CommSayDetailVC.m in Sources */,
 				D85C585524DEACC000A2696B /* MarketTypeModel.m in Sources */,
 				D865729A24E25CC300C6D56E /* KLineChartViewController.m in Sources */,
+				D865754C24E3B8AC00C6D56E /* CommDetailItemModel.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
 				D865729724E25CB000C6D56E /* YKLineEntity.m in Sources */,
+				D865754F24E3BBA400C6D56E /* CommCommentJsonModel.m in Sources */,
 				D86C644C24D7A9EC004AD677 /* AFSecurityPolicy.m in Sources */,
 				D865729624E25CB000C6D56E /* YKLineChartView.m in Sources */,
 				D8758F6724E11BD100412B95 /* CommSayModel.m in Sources */,
