@@ -81,6 +81,12 @@
 		D865754924E3B03300C6D56E /* CommDetailRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754824E3B03300C6D56E /* CommDetailRoot.m */; };
 		D865754C24E3B8AC00C6D56E /* CommDetailItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754B24E3B8AC00C6D56E /* CommDetailItemModel.m */; };
 		D865754F24E3BBA400C6D56E /* CommCommentJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865754E24E3BBA400C6D56E /* CommCommentJsonModel.m */; };
+		D865755224E3C03F00C6D56E /* CommitDetaildfData.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755124E3C03F00C6D56E /* CommitDetaildfData.m */; };
+		D865755624E3E5E700C6D56E /* CommPreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755424E3E5E700C6D56E /* CommPreCell.m */; };
+		D865755724E3E5E700C6D56E /* CommPreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865755524E3E5E700C6D56E /* CommPreCell.xib */; };
+		D865755A24E3E6E500C6D56E /* commDetailHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755924E3E6E500C6D56E /* commDetailHeadCell.m */; };
+		D865755D24E3F6DC00C6D56E /* AgreeRelationItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755C24E3F6DC00C6D56E /* AgreeRelationItemModel.m */; };
+		D865756024E409FB00C6D56E /* ReviewDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755F24E409FB00C6D56E /* ReviewDetailCell.m */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -290,6 +296,17 @@
 		D865754B24E3B8AC00C6D56E /* CommDetailItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommDetailItemModel.m; sourceTree = "<group>"; };
 		D865754D24E3BBA400C6D56E /* CommCommentJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommCommentJsonModel.h; sourceTree = "<group>"; };
 		D865754E24E3BBA400C6D56E /* CommCommentJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommCommentJsonModel.m; sourceTree = "<group>"; };
+		D865755024E3C03F00C6D56E /* CommitDetaildfData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommitDetaildfData.h; sourceTree = "<group>"; };
+		D865755124E3C03F00C6D56E /* CommitDetaildfData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommitDetaildfData.m; sourceTree = "<group>"; };
+		D865755324E3E5E700C6D56E /* CommPreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommPreCell.h; sourceTree = "<group>"; };
+		D865755424E3E5E700C6D56E /* CommPreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommPreCell.m; sourceTree = "<group>"; };
+		D865755524E3E5E700C6D56E /* CommPreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommPreCell.xib; sourceTree = "<group>"; };
+		D865755824E3E6E500C6D56E /* commDetailHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = commDetailHeadCell.h; sourceTree = "<group>"; };
+		D865755924E3E6E500C6D56E /* commDetailHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commDetailHeadCell.m; sourceTree = "<group>"; };
+		D865755B24E3F6DC00C6D56E /* AgreeRelationItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreeRelationItemModel.h; sourceTree = "<group>"; };
+		D865755C24E3F6DC00C6D56E /* AgreeRelationItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreeRelationItemModel.m; sourceTree = "<group>"; };
+		D865755E24E409FB00C6D56E /* ReviewDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewDetailCell.h; sourceTree = "<group>"; };
+		D865755F24E409FB00C6D56E /* ReviewDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewDetailCell.m; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -815,10 +832,21 @@
 				D865727D24E24CAD00C6D56E /* ComReviewsViewController.h */,
 				D865727E24E24CAD00C6D56E /* ComReviewsViewController.m */,
 				D865727F24E24CAD00C6D56E /* ComReviewsViewController.xib */,
+				D865755024E3C03F00C6D56E /* CommitDetaildfData.h */,
+				D865755124E3C03F00C6D56E /* CommitDetaildfData.m */,
 				D865754724E3B03300C6D56E /* CommDetailRoot.h */,
+				D865755B24E3F6DC00C6D56E /* AgreeRelationItemModel.h */,
+				D865755C24E3F6DC00C6D56E /* AgreeRelationItemModel.m */,
 				D865754824E3B03300C6D56E /* CommDetailRoot.m */,
 				D865753F24E39FA800C6D56E /* CommSayDetailVC.h */,
 				D865754024E39FA800C6D56E /* CommSayDetailVC.m */,
+				D865755E24E409FB00C6D56E /* ReviewDetailCell.h */,
+				D865755F24E409FB00C6D56E /* ReviewDetailCell.m */,
+				D865755824E3E6E500C6D56E /* commDetailHeadCell.h */,
+				D865755924E3E6E500C6D56E /* commDetailHeadCell.m */,
+				D865755324E3E5E700C6D56E /* CommPreCell.h */,
+				D865755424E3E5E700C6D56E /* CommPreCell.m */,
+				D865755524E3E5E700C6D56E /* CommPreCell.xib */,
 				D865754224E3A4CA00C6D56E /* ComDetailCell.h */,
 				D865754324E3A4CA00C6D56E /* ComDetailCell.m */,
 				D865754424E3A4CA00C6D56E /* ComDetailCell.xib */,
@@ -931,6 +959,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D865755724E3E5E700C6D56E /* CommPreCell.xib in Resources */,
 				D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */,
 				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
@@ -1026,6 +1055,7 @@
 				D85C57A324DBCBFF00A2696B /* GYRollingNoticeView.m in Sources */,
 				D8758F6A24E11E4A00412B95 /* CommitReCommetModel.m in Sources */,
 				D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */,
+				D865756024E409FB00C6D56E /* ReviewDetailCell.m in Sources */,
 				D85C57DB24DBFE1F00A2696B /* NSArray+Adpa.m in Sources */,
 				D85C57B324DBE7FD00A2696B /* NewsNewModel.m in Sources */,
 				D85C57FB24DCF68F00A2696B /* CalSelectCell.m in Sources */,
@@ -1078,6 +1108,7 @@
 				D865729224E25CB000C6D56E /* YKLineChartViewBase.m in Sources */,
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
+				D865755D24E3F6DC00C6D56E /* AgreeRelationItemModel.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
 				D8758F6124E11B2300412B95 /* CommRootModel.m in Sources */,
 				D865754124E39FA800C6D56E /* CommSayDetailVC.m in Sources */,
@@ -1085,6 +1116,7 @@
 				D865729A24E25CC300C6D56E /* KLineChartViewController.m in Sources */,
 				D865754C24E3B8AC00C6D56E /* CommDetailItemModel.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
+				D865755224E3C03F00C6D56E /* CommitDetaildfData.m in Sources */,
 				D86C644224D7A9EC004AD677 /* UIImageView+AFNetworking.m in Sources */,
 				D85C57E824DBFEB400A2696B /* PSRequestManager.m in Sources */,
 				D865729724E25CB000C6D56E /* YKLineEntity.m in Sources */,
@@ -1101,6 +1133,7 @@
 				D85C583F24DE15D600A2696B /* LoginViewController.m in Sources */,
 				D86C644824D7A9EC004AD677 /* AFHTTPSessionManager.m in Sources */,
 				D86C63FB24D7A475004AD677 /* StorkSectionController.m in Sources */,
+				D865755A24E3E6E500C6D56E /* commDetailHeadCell.m in Sources */,
 				D8758F5424E04B9A00412B95 /* CommItemDataCell.m in Sources */,
 				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
 				D8758F5E24E10F2100412B95 /* CommuHotLineViewController.m in Sources */,
@@ -1109,6 +1142,7 @@
 				D865726D24E2168B00C6D56E /* CommuShareCell.m in Sources */,
 				D86C644B24D7A9EC004AD677 /* AFNetworkReachabilityManager.m in Sources */,
 				D85C57E524DBFE9000A2696B /* UINavigationBar+DD_Alpha.m in Sources */,
+				D865755624E3E5E700C6D56E /* CommPreCell.m in Sources */,
 				D85C57D724DBFE1F00A2696B /* HomeHeadCell.m in Sources */,
 				D85C583624DD7F9A00A2696B /* AboutUsViewController.m in Sources */,
 				D85C581024DD70C500A2696B /* MyCollectViewController.m in Sources */,

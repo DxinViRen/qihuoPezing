@@ -9,10 +9,17 @@
 #import "CommDetailItemModel.h"
 
 @implementation CommDetailItemModel
+@synthesize cellName;
+@synthesize cellWight;
+@synthesize cellHeight;
+@synthesize cellInderfier;
+@synthesize extra;
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        
+        self.pre_SonH = [@[] mutableCopy];
         [CommDetailItemModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
             return @{
                 @"ID":@"id"

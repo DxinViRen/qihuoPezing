@@ -8,6 +8,7 @@
 
 #import "ComDetailCell.h"
 #import <YYText.h>
+#import "AgreeRelationItemModel.h"
 @interface ComDetailCell ()
 @property(nonatomic,strong)UIImageView *headImageView;
 @property(nonatomic,strong)UILabel *nameLabe;
@@ -18,6 +19,11 @@
 @property(nonatomic,strong)UIView *lineView;
 @property(nonatomic,strong)UILabel *timeLable;
 @property(nonatomic,strong)UIImageView *spotIcon;
+@property(nonatomic,strong)UIView *topLineView;
+@property(nonatomic,strong)CommSayModel *dataModel;
+@property(nonatomic,strong)UIView *botBgView;
+@property(nonatomic,strong)UIImageView *lastAgreeView;
+@property(nonatomic,strong)UILabel *agreeCLabel;
 
 @end
 
@@ -33,6 +39,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self dx_layoutSubview];
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        //self.contentView.backgroundColor = [UIColor redColor];
     }
     return self;
 }
@@ -45,15 +53,27 @@
     [self.contentView addSubview:self.contentImageView];
     [self.contentView addSubview:self.riskLabel];
     [self.contentView addSubview:self.lineView];
-    [self.contentView addSubview:self.spotIcon];
+    //[self.contentView addSubview:self.spotIcon];
+    [self.contentView addSubview:self.timeLable];
+    [self.contentView addSubview:self.topLineView];
+    [self.contentView addSubview:self.botBgView];
+    [self.botBgView addSubview:self.spotIcon];
+    
+    [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).inset(10);
+        make.top.equalTo(self.contentView).inset(2);
+        make.height.mas_equalTo(1);
+    }];
     
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.and.top.equalTo(self.contentView).inset(10);
+        make.left.equalTo(self.contentView).inset(10);
+        make.top.equalTo(self.contentView).inset(15);
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
     
     [self.nameLabe mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.headImageView).offset(10);
+        make.left.equalTo(self.headImageView.mas_right).offset(10);
         make.top.equalTo(self.headImageView);
     }];
     
@@ -62,11 +82,108 @@
         make.top.equalTo(self.nameLabe.mas_bottom).offset(8);
     }];
     
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.headImageView);
-        make.top.equalTo(self.headImageView.mas_bottom).offset(15);
+    [self.contentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.contentLabel).offset(8);
+        make.top.equalTo(self.contentLabel.mas_bottom).offset(10);
+        make.size.mas_equalTo(CGSizeMake(CGFLOAT_MIN, CGFLOAT_MIN));
     }];
+    
+    [self.attensionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.headImageView);
+        make.right.equalTo(self.contentView).inset(10);
+        make.size.mas_equalTo(CGSizeMake(71, 24));
+    }];
+
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView);
+        make.left.equalTo(self.contentView).inset(10);
+        make.bottom.equalTo(self.contentView).inset(45);
+        make.height.mas_equalTo(1);
+    }];
+    
+    [self.riskLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.lineView);
+        make.bottom.equalTo(self.lineView.mas_top);
+        make.right.equalTo(self.lineView);
+        make.height.mas_equalTo(30);
+    }];
+    
+    [self.botBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.bottom.right.equalTo(self.contentView);
+        make.top.equalTo(self.lineView);
+    }];
+    
+    [self.spotIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.botBgView).inset(10);
+        make.centerY.equalTo(self.botBgView);
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+    }];
+    
+     
 }
+
+- (void)setModel:(id<MainCellModelProtocol>)model{
+    CommSayModel *sayModel = (CommSayModel *)model;
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:CommitBaseImgURL,sayModel.senderPhoto]] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
+    self.nameLabe.text = sayModel.senderNickName;
+    self.timeLable.text = sayModel.timeForShow;
+
+    
+    CGFloat contentLabeH = sayModel.pre_textH;
+     [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+           make.left.equalTo(self.contentView).inset(10);
+           make.centerX.equalTo(self.contentView);
+           make.top.equalTo(self.headImageView.mas_bottom).offset(10);
+           make.height.mas_equalTo(contentLabeH);
+       }];
+    self.contentImageView.image = sayModel.pre_image;
+    [self.contentImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                   make.left.equalTo(self.contentLabel).offset(8);
+                   make.top.equalTo(self.contentLabel.mas_bottom).offset(10);
+        make.size.mas_equalTo(sayModel.pre_imgsize);
+               }];
+   
+   
+    if(sayModel.tags.length>0){
+           NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:sayModel.content];
+        NSRange range1 = NSMakeRange(0, sayModel.tags.length+6);
+        NSRange range2 = NSMakeRange(sayModel.tags.length, sayModel.content.length - sayModel.tags.length);
+           [str addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:range1];
+           [str addAttribute:NSForegroundColorAttributeName value:MainColor range:range2];
+           self.contentLabel.attributedText = str;
+       }
+    self.contentLabel.text = sayModel.content;
+    self.riskLabel.text = sayModel.pre_disclaimer;
+    
+    NSInteger count = sayModel.pre_alArr.count;
+    if(count>5)count = 5;
+    for (int i = 0; i < count ; i ++) {
+        UIImageView *imageview = [[UIImageView alloc]init];
+        imageview.frame = CGRectMake(40+i*(20+8), 12, 20, 20);
+        imageview.layer.cornerRadius = 10;
+        imageview.clipsToBounds = YES;
+        AgreeRelationItemModel *amodel = sayModel.pre_alArr[i];
+        [imageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:CommitBaseImgURL,amodel.userHeadPhoto]] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        }];
+        if(i ==count -1){
+            self.lastAgreeView = imageview;
+        }
+        
+        [self.botBgView addSubview:imageview];
+    }
+    [self.botBgView addSubview:self.agreeCLabel];
+    [self.agreeCLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(self.lastAgreeView.mas_right).offset(10);
+        make.centerY.equalTo(self.botBgView);
+    }];
+    
+    self.agreeCLabel.text = [NSString stringWithFormat:@"共%ld人点赞", sayModel.pre_alArr.count];
+}
+
+
 
 - (UIImageView *)headImageView{
     if(!_headImageView){
@@ -81,7 +198,7 @@
     if(!_nameLabe){
         _nameLabe = [[UILabel alloc]init];
         _nameLabe.font = [UIFont systemFontOfSize:15];
-        _nameLabe.textColor = [UIColor colorWithHexString:@"#E2D0AA"];
+        _nameLabe.textColor = [UIColor colorWithHexString:@"#F92E3C"];
         _nameLabe.textAlignment = NSTextAlignmentLeft;
     }
     return _nameLabe;
@@ -101,8 +218,8 @@
 - (YYLabel *)contentLabel{
     if(!_contentLabel){
         _contentLabel = [[YYLabel alloc]init];
-       // _contentLabel.backgroundColor = [UIColor cyanColor];
-        _contentLabel.font = [UIFont systemFontOfSize:17];
+       // _contentLabel.backgroundColor = [UIColor orangeColor];
+        _contentLabel.font = [UIFont systemFontOfSize:15];
         _contentLabel.textColor = MainColor;
         _contentLabel.numberOfLines = 0;
         _contentLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
@@ -115,6 +232,7 @@
 - (UIImageView *)contentImageView{
     if(!_contentImageView){
         _contentImageView = [[UIImageView alloc]init];
+        //_contentImageView.backgroundColor = [UIColor cyanColor];
         _contentImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _contentImageView;
@@ -124,7 +242,7 @@
     if(!_riskLabel){
         _riskLabel = [[UILabel  alloc]init];
         _riskLabel.font = [UIFont systemFontOfSize:13];
-        _riskLabel.textColor = [UIColor colorWithHexString:@"#E2D0AA"];
+        _riskLabel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
         _riskLabel.textAlignment = NSTextAlignmentLeft;
     }
     return _riskLabel;
@@ -143,7 +261,7 @@
     if(!_spotIcon){
         
         _spotIcon = [[UIImageView alloc]init];
-        _spotIcon.image = [UIImage imageNamed:@""];
+        _spotIcon.image = [UIImage imageNamed:@"spotlistIcon"];
     }
     return _spotIcon;
 }
@@ -162,6 +280,16 @@
     }
     return _attensionBtn;
 }
+
+- (UIView *)topLineView{
+    if(!_topLineView){
+        
+        _topLineView = [[UIView alloc]init];
+        _topLineView.backgroundColor = MainColor;
+    }
+    return _topLineView;
+}
+
 
 
 - (void)attenAction:(UIButton *)bt{
@@ -186,4 +314,22 @@
 }
 
 
+- (UIView *)botBgView{
+    if(!_botBgView){
+        
+        _botBgView = [[UIView alloc]init];
+    }
+    return _botBgView;
+}
+
+- (UILabel *)agreeCLabel{
+    if(!_agreeCLabel){
+        
+        _agreeCLabel = [[UILabel alloc]init];
+        _agreeCLabel.textColor = MainColor;
+        _agreeCLabel.font = [UIFont systemFontOfSize:13];
+        _agreeCLabel.textAlignment = NSTextAlignmentLeft;
+    }
+    return _agreeCLabel;
+}
 @end

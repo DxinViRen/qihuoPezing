@@ -150,4 +150,19 @@
     dateStr=[format1 stringFromDate:date];
     return dateStr;
 }
+
+//时间戳转指定格式日期
+-(NSString *)timewithIntervasting:(NSString*)string{
+    
+    // iOS 生成的时间戳是10位
+    NSTimeInterval interval    =[string doubleValue] / 1000.0;
+    NSDate *date               = [NSDate dateWithTimeIntervalSince1970:interval];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];//更改自己想要的时间格式
+    NSString *dateString       = [formatter stringFromDate: date];
+    return dateString;
+}
+
+
+
 @end

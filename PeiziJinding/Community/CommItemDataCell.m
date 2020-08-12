@@ -210,7 +210,7 @@
     }
     
     
-    if(self.dataModel.say.tags){
+    if(self.dataModel.say.tags.length>0){
         NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:self.dataModel.say.content];
         NSRange range1 = [[str string] rangeOfString:[NSString stringWithFormat:@"#%@#",self.dataModel.say.tags]];
         [str addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:range1];
@@ -290,7 +290,7 @@
     if(!_contentLabel){
         _contentLabel = [[YYLabel alloc]init];
        // _contentLabel.backgroundColor = [UIColor cyanColor];
-        _contentLabel.font = [UIFont systemFontOfSize:17];
+        _contentLabel.font = [UIFont systemFontOfSize:15];
         _contentLabel.textColor = MainColor;
         _contentLabel.numberOfLines = 0;
         _contentLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;

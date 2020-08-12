@@ -9,5 +9,14 @@
 #import "CommDetailRoot.h"
 
 @implementation CommDetailRoot
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [CommDetailRoot mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"data":@"CommitDetaildfData"};
+        }];
+    }
+    return self;
+}
 @end

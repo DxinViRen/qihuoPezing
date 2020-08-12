@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *cellInderfier;
 @property(nonatomic,assign)CGFloat cellWight;
 @property(nonatomic,strong)NSMutableDictionary *extra;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

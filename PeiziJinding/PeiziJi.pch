@@ -61,4 +61,6 @@
 //关注
 
 #define CommitBaseImgURL @"https://res.cngoldres.com%@"
+
+#define CommitDertailURL @"https://quanzi.cngold.org/say/detail/tree/%@/2099016/?version=2.1"
 #endif

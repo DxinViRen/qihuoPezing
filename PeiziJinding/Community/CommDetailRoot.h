@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CommSayModel.h"
+#import "CommCommentJsonModel.h"
+#import "CommitDetaildfData.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CommDetailRoot : NSObject
+@property(nonatomic,strong)NSNumber *returnCode; //状态码
+@property(nonatomic,copy)NSString *message;//返回信息
+@property(nonatomic,strong)CommitDetaildfData *data;
+
 
 @end
 

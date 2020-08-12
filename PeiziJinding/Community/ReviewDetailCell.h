@@ -1,5 +1,5 @@
 //
-//  ComDetailCell.h
+//  ReviewDetailCell.h
 //  PeiziJinding
 //
 //  Created by D.xin on 2020/8/12.
@@ -7,11 +7,11 @@
 //
 
 #import "MainCollectionViewCell.h"
-#import "CommItemDataCell.h"
-#import "CommSayModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ComDetailCell :MainCollectionViewCell
+@interface ReviewDetailCell : MainCollectionViewCell
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getCurrentDateStr;
 + (NSString *)gettodayStr;
 + (CGFloat)getStringHeightWithText:(NSString *)text font:(UIFont *)font viewWidth:(CGFloat)width;
++ (NSString *)timewithIntervasting:(NSString *)time;
 @end
 
 NS_ASSUME_NONNULL_END

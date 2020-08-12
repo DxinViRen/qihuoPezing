@@ -21,6 +21,8 @@
         [CommSayModel mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
             return @{@"ID":@"id"};
         }];
+        self.pre_textH = 100;
+        self.pre_imgsize = CGSizeMake(0.1, 0.1);
     }
     return self;
 }

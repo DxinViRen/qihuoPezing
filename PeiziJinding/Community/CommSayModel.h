@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy)NSString *countOfAgree;//点赞数量
 @property(nonatomic,copy)NSString *senderMedalImage;//会员等级可能为nil
 @property(nonatomic,copy)NSString *timeForShow;//发帖时间
+@property(nonatomic,copy)NSString *pre_disclaimer;
+
+@property(nonatomic,assign)CGFloat pre_textH;
+@property(nonatomic,assign)CGSize pre_imgsize;
+@property(nonatomic,strong)UIImage *pre_image;
+@property(nonatomic,strong)NSArray *pre_alArr;
 @end
 
 NS_ASSUME_NONNULL_END
