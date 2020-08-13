@@ -34,11 +34,11 @@
 
 
 - (BOOL)haveUser{
-    return    [[NSUserDefaults standardUserDefaults]objectForKey:@"18253575608"] == nil;
+    return    [[NSUserDefaults standardUserDefaults]objectForKey:@"login"] == nil;
 }
 
 - (BOOL)isLogin{
-    return  [[NSUserDefaults standardUserDefaults]objectForKey:@"18253575608"] != nil;
+    return  [[NSUserDefaults standardUserDefaults]objectForKey:@"login"] != nil;
 }
 
 - (void)checkLogin:(LoginBlock)login{

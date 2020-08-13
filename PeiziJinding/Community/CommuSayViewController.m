@@ -12,6 +12,7 @@
 #import "DateTool.h"
 #import "CommShareVCViewController.h"
 #import "ComReviewsViewController.h"
+#import "CommSayDetailVC.h"
 @interface CommuSayViewController ()
 
 @property(nonatomic,strong)MBProgressHUD *hud;
@@ -135,7 +136,9 @@
                };
     };
     section.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
-        
+        CommSayDetailVC *detailV = [[CommSayDetailVC alloc]init];
+        detailV.dataModel = (CommDataModel *)model;
+        [self.navigationController pushViewController:detailV animated:YES];
     };
     return section;
 }

@@ -13,6 +13,7 @@
 #import "CommShareVCViewController.h"
 #import "ComAttenViewController.h"
 #import "ComReviewsViewController.h"
+#import "CommSayDetailVC.h"
 @interface ComAttenViewController ()
 @property(nonatomic,strong)MBProgressHUD *hud;
 //@property(nonatomic,strong)UILabel *nodataLabel;
@@ -145,7 +146,9 @@
                };
     };
     section.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
-        
+        CommSayDetailVC *detailV = [[CommSayDetailVC alloc]init];
+               detailV.dataModel = (CommDataModel *)model;
+               [self.navigationController pushViewController:detailV animated:YES];
     };
     return section;
 }

@@ -139,10 +139,10 @@
        dataset.candleTopBottmLineWidth = 1;
        [self.view addSubview:self.klineView];
     [self.klineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view).inset(10);
+        make.right.equalTo(self.view);
         make.top.equalTo(self.gardView.mas_bottom);
-        make.left.equalTo(self.view).inset(50);
-        make.height.mas_equalTo(300);
+        make.left.equalTo(self.view);
+        make.height.mas_equalTo(450);
     }];
       [self.klineView setupChartOffsetWithLeft:50 top:10 right:10 bottom:10];
        self.klineView.gridBackgroundColor = [UIColor whiteColor];

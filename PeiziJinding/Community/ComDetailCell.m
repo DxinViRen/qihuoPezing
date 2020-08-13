@@ -48,7 +48,7 @@
 - (void)dx_layoutSubview{
     [self.contentView addSubview:self.headImageView];
     [self.contentView addSubview:self.nameLabe];
-    [self.contentView addSubview:self.attensionBtn];
+    //[self.contentView addSubview:self.attensionBtn];
     [self.contentView addSubview:self.contentLabel];
     [self.contentView addSubview:self.contentImageView];
     [self.contentView addSubview:self.riskLabel];
@@ -88,11 +88,11 @@
         make.size.mas_equalTo(CGSizeMake(CGFLOAT_MIN, CGFLOAT_MIN));
     }];
     
-    [self.attensionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.headImageView);
-        make.right.equalTo(self.contentView).inset(10);
-        make.size.mas_equalTo(CGSizeMake(71, 24));
-    }];
+//    [self.attensionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.equalTo(self.headImageView);
+//        make.right.equalTo(self.contentView).inset(10);
+//        make.size.mas_equalTo(CGSizeMake(71, 24));
+//    }];
 
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentView);
@@ -292,26 +292,26 @@
 
 
 
-- (void)attenAction:(UIButton *)bt{
+//- (void)attenAction:(UIButton *)bt{
 //    [[LoginManager shareInsetance] checkLogin:^{
 //        self.hub = [MBProgressHUD showMessage:@"请稍等"];
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            [self.hub hideAnimated:YES];
 //            if(self.dataModel.pre_isAtten){
-//                [self.attentionBtn setTitleColor:MainColor forState:UIControlStateNormal];
-//                self.attentionBtn.layer.borderWidth = 0.8;
-//                self.attentionBtn.layer.borderColor = MainColor.CGColor;
-//                self.attentionBtn.layer.cornerRadius = 3;
+//                [self.attensionBtn setTitleColor:MainColor forState:UIControlStateNormal];
+//                self.attensionBtn.layer.borderWidth = 0.8;
+//                self.attensionBtn.layer.borderColor = MainColor.CGColor;
+//                self.attensionBtn.layer.cornerRadius = 3;
 //            }else{
-//                [self.attentionBtn setTitleColor:[UIColor colorWithHexString:@"#d81e06"] forState:UIControlStateNormal];
-//                self.attentionBtn.layer.borderWidth = 0.8;
-//                self.attentionBtn.layer.borderColor = [UIColor colorWithHexString:@"#d81e06"].CGColor;
-//                self.attentionBtn.layer.cornerRadius = 3;
+//                [self.attensionBtn setTitleColor:[UIColor colorWithHexString:@"#d81e06"] forState:UIControlStateNormal];
+//                self.attensionBtn.layer.borderWidth = 0.8;
+//                self.attensionBtn.layer.borderColor = [UIColor colorWithHexString:@"#d81e06"].CGColor;
+//                self.attensionBtn.layer.cornerRadius = 3;
 //            }
 //            self.dataModel.pre_isAtten = !self.dataModel.pre_isAtten;
 //         });
 //    }];
-}
+//}
 
 
 - (UIView *)botBgView{

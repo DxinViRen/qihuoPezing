@@ -96,7 +96,7 @@
                     sonTotalH += (textSonH + 4);
                 }
                
-                item.cellHeight = sonTotalH + textH +132 ;
+                item.cellHeight =  textH +100 ;
                 item.cellInderfier = NSStringFromClass([ReviewDetailCell class]);
                 [preItemArr addObject:item];
             }

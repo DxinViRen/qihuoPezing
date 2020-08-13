@@ -7,18 +7,26 @@
 //
 
 #import "LoginViewController.h"
-
+#import "SignViewVCViewController.h"
 @interface LoginViewController ()
 @property (strong, nonatomic)  UIImageView *loginBanner;
 @property (strong, nonatomic)  UITextField *userNameTF;
 @property (strong, nonatomic)  UITextField *vfCodeTf;
 @property (strong, nonatomic)  UIButton *loginBtn;
 @property (strong, nonatomic)  UIButton *cancelBtn;
+@property(nonatomic,strong)MBProgressHUD *hud;
+@property (weak, nonatomic) IBOutlet UIButton *SignIn;
 
 
 @end
 
 @implementation LoginViewController
+- (IBAction)signAction:(id)sender {
+    SignViewVCViewController *signv = [[SignViewVCViewController alloc]init];
+    signv.modalPresentationStyle = 0;
+    [self presentViewController:signv animated:YES completion:nil];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,7 +70,7 @@
 
 
 - (void)loginbtn:(id)sender {
-    if(self.vfCodeTf.text.length == 0 || self.userNameTF.text.length == 0|| !([self.userNameTF.text isEqualToString:@"18253575608"] && [self.vfCodeTf.text isEqualToString:@"123456"])){
+    if(self.vfCodeTf.text.length == 0 || self.userNameTF.text.length == 0){
         
         UIAlertController  *alerc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"Login information error" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *alertion = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -74,11 +82,42 @@
         
         return;
     }
-    [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    NSDictionary *param = @{@"name":self.userNameTF.text,
+                            @"password":self.vfCodeTf.text
+                           
+    };
+    
+    self.hud = [MBProgressHUD showMessage:@"请稍等"];
+    
+    [[PSRequestManager shareInstance] netRequestWithUrl:@"http://bijiu.jtarget.cn/public/index.php?s=/index/User/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [self.hud hideAnimated:YES];
+        if([responseObject[@"code"] intValue] == 200){
+            [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
+                     [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
+                     [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        else{
+            [MBProgressHUD show:@"登录失败" icon:@"" view:self.view];
+        }
+      
+         
+        
+      
+//            [MBProgressHUD show:responseObject[@"message"] icon:nil view:self.view];
+        
+    } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        [self.hud hideAnimated:YES];
+    }];
+    
+    
+    
+    
+   
 }
 - (void)cancelBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"login"];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"logincancel" object:nil];
 }
 

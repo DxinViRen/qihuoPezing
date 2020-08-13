@@ -87,6 +87,8 @@
 		D865755A24E3E6E500C6D56E /* commDetailHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755924E3E6E500C6D56E /* commDetailHeadCell.m */; };
 		D865755D24E3F6DC00C6D56E /* AgreeRelationItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755C24E3F6DC00C6D56E /* AgreeRelationItemModel.m */; };
 		D865756024E409FB00C6D56E /* ReviewDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D865755F24E409FB00C6D56E /* ReviewDetailCell.m */; };
+		D865756424E4C3E600C6D56E /* SignViewVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D865756224E4C3E600C6D56E /* SignViewVCViewController.m */; };
+		D865756524E4C3E600C6D56E /* SignViewVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D865756324E4C3E600C6D56E /* SignViewVCViewController.xib */; };
 		D86C63AB24D79D2C004AD677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63AA24D79D2C004AD677 /* AppDelegate.m */; };
 		D86C63B124D79D2C004AD677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C63B024D79D2C004AD677 /* ViewController.m */; };
 		D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86C63B224D79D2C004AD677 /* Main.storyboard */; };
@@ -307,6 +309,9 @@
 		D865755C24E3F6DC00C6D56E /* AgreeRelationItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreeRelationItemModel.m; sourceTree = "<group>"; };
 		D865755E24E409FB00C6D56E /* ReviewDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewDetailCell.h; sourceTree = "<group>"; };
 		D865755F24E409FB00C6D56E /* ReviewDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewDetailCell.m; sourceTree = "<group>"; };
+		D865756124E4C3E600C6D56E /* SignViewVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignViewVCViewController.h; sourceTree = "<group>"; };
+		D865756224E4C3E600C6D56E /* SignViewVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignViewVCViewController.m; sourceTree = "<group>"; };
+		D865756324E4C3E600C6D56E /* SignViewVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignViewVCViewController.xib; sourceTree = "<group>"; };
 		D86C63A624D79D2C004AD677 /* PeiziJinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeiziJinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86C63A924D79D2C004AD677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D86C63AA24D79D2C004AD677 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -663,6 +668,9 @@
 				D85C584124DE194700A2696B /* NewloginViewController.h */,
 				D85C584224DE194700A2696B /* NewloginViewController.m */,
 				D85C583D24DE15D500A2696B /* LoginViewController.xib */,
+				D865756124E4C3E600C6D56E /* SignViewVCViewController.h */,
+				D865756224E4C3E600C6D56E /* SignViewVCViewController.m */,
+				D865756324E4C3E600C6D56E /* SignViewVCViewController.xib */,
 				D85C581124DD713900A2696B /* LoginCell.h */,
 				D85C581624DD713900A2696B /* LoginCell.m */,
 				D86C640D24D7A87E004AD677 /* LoginManager.h */,
@@ -966,6 +974,7 @@
 				D865753B24E34AC700C6D56E /* data.plist in Resources */,
 				D865754624E3A4CA00C6D56E /* ComDetailCell.xib in Resources */,
 				D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */,
+				D865756524E4C3E600C6D56E /* SignViewVCViewController.xib in Resources */,
 				D865728124E24CAD00C6D56E /* ComReviewsViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
@@ -1107,6 +1116,7 @@
 				D86C644A24D7A9EC004AD677 /* AFURLRequestSerialization.m in Sources */,
 				D865729224E25CB000C6D56E /* YKLineChartViewBase.m in Sources */,
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
+				D865756424E4C3E600C6D56E /* SignViewVCViewController.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
 				D865755D24E3F6DC00C6D56E /* AgreeRelationItemModel.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
