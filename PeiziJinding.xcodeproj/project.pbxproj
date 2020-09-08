@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C55B62743B0D09E80B3629FC /* libPods-PeiziJinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */; };
+		D8529A5624EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5524EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 */; };
+		D8529A5824EAB28F0066C328 /* StudayRo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5724EAB28F0066C328 /* StudayRo.plist */; };
+		D8529A5C24EAC3500066C328 /* wKg5J186WMDy44pSAK4uveBvawY347.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5B24EAC3500066C328 /* wKg5J186WMDy44pSAK4uveBvawY347.mp3 */; };
+		D8529A5E24EAC5090066C328 /* wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5D24EAC5090066C328 /* wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3 */; };
+		D8529A6024EAC8830066C328 /* wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5F24EAC8830066C328 /* wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3 */; };
+		D8529A6424EB92980066C328 /* StudayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8529A6224EB92980066C328 /* StudayCell.m */; };
+		D8529A6524EB92980066C328 /* StudayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8529A6324EB92980066C328 /* StudayCell.xib */; };
+		D8529A6824EB93EB0066C328 /* StudyRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8529A6724EB93EB0066C328 /* StudyRootModel.m */; };
+		D8529A6B24EB93FE0066C328 /* StudyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8529A6A24EB93FE0066C328 /* StudyModel.m */; };
+		D8529A6E24EB95F90066C328 /* StudyVc.m in Sources */ = {isa = PBXBuildFile; fileRef = D8529A6D24EB95F90066C328 /* StudyVc.m */; };
+		D8529A7524EC20A00066C328 /* PlaymVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8529A7324EC20A00066C328 /* PlaymVC.m */; };
+		D8529A7624EC20A00066C328 /* PlaymVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8529A7424EC20A00066C328 /* PlaymVC.xib */; };
 		D85C57A224DBCBFF00A2696B /* GYNoticeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C579E24DBCBFF00A2696B /* GYNoticeViewCell.m */; };
 		D85C57A324DBCBFF00A2696B /* GYRollingNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C579F24DBCBFF00A2696B /* GYRollingNoticeView.m */; };
 		D85C57A624DBCC8800A2696B /* HomeCycleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85C57A424DBCC8800A2696B /* HomeCycleCell.m */; };
@@ -159,6 +171,23 @@
 
 /* Begin PBXFileReference section */
 		89CA60AB772B1744C74AC73D /* Pods-PeiziJinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.release.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.release.xcconfig"; sourceTree = "<group>"; };
+		D8529A5524EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "成功的交易者是道与术的日积月累.mp3"; sourceTree = "<group>"; };
+		D8529A5724EAB28F0066C328 /* StudayRo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StudayRo.plist; sourceTree = "<group>"; };
+		D8529A5B24EAC3500066C328 /* wKg5J186WMDy44pSAK4uveBvawY347.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wKg5J186WMDy44pSAK4uveBvawY347.mp3; sourceTree = "<group>"; };
+		D8529A5D24EAC5090066C328 /* wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3; sourceTree = "<group>"; };
+		D8529A5F24EAC8830066C328 /* wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3; sourceTree = "<group>"; };
+		D8529A6124EB92980066C328 /* StudayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudayCell.h; sourceTree = "<group>"; };
+		D8529A6224EB92980066C328 /* StudayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudayCell.m; sourceTree = "<group>"; };
+		D8529A6324EB92980066C328 /* StudayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudayCell.xib; sourceTree = "<group>"; };
+		D8529A6624EB93EB0066C328 /* StudyRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyRootModel.h; sourceTree = "<group>"; };
+		D8529A6724EB93EB0066C328 /* StudyRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyRootModel.m; sourceTree = "<group>"; };
+		D8529A6924EB93FE0066C328 /* StudyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyModel.h; sourceTree = "<group>"; };
+		D8529A6A24EB93FE0066C328 /* StudyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyModel.m; sourceTree = "<group>"; };
+		D8529A6C24EB95F80066C328 /* StudyVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyVc.h; sourceTree = "<group>"; };
+		D8529A6D24EB95F90066C328 /* StudyVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyVc.m; sourceTree = "<group>"; };
+		D8529A7224EC20A00066C328 /* PlaymVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaymVC.h; sourceTree = "<group>"; };
+		D8529A7324EC20A00066C328 /* PlaymVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaymVC.m; sourceTree = "<group>"; };
+		D8529A7424EC20A00066C328 /* PlaymVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaymVC.xib; sourceTree = "<group>"; };
 		D85C579E24DBCBFF00A2696B /* GYNoticeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNoticeViewCell.m; sourceTree = "<group>"; };
 		D85C579F24DBCBFF00A2696B /* GYRollingNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYRollingNoticeView.m; sourceTree = "<group>"; };
 		D85C57A024DBCBFF00A2696B /* GYRollingNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYRollingNoticeView.h; sourceTree = "<group>"; };
@@ -516,12 +545,26 @@
 		D86C63A824D79D2C004AD677 /* PeiziJinding */ = {
 			isa = PBXGroup;
 			children = (
+				D8529A5F24EAC8830066C328 /* wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3 */,
+				D8529A5524EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 */,
+				D8529A5D24EAC5090066C328 /* wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3 */,
+				D8529A5B24EAC3500066C328 /* wKg5J186WMDy44pSAK4uveBvawY347.mp3 */,
+				D8529A5724EAB28F0066C328 /* StudayRo.plist */,
+				D8529A6624EB93EB0066C328 /* StudyRootModel.h */,
+				D8529A6724EB93EB0066C328 /* StudyRootModel.m */,
+				D8529A6924EB93FE0066C328 /* StudyModel.h */,
+				D8529A6A24EB93FE0066C328 /* StudyModel.m */,
+				D8529A6C24EB95F80066C328 /* StudyVc.h */,
+				D8529A6D24EB95F90066C328 /* StudyVc.m */,
 				D865753A24E34AC700C6D56E /* data.plist */,
 				D85C57DD24DBFE6300A2696B /* UIColor+QCategory.h */,
 				D85C57DE24DBFE6300A2696B /* UIColor+QCategory.m */,
 				D85C57C424DBFE1D00A2696B /* NSArray+Adpa.h */,
 				D85C57D024DBFE1E00A2696B /* NSArray+Adpa.m */,
 				D85C57BF24DBFA8000A2696B /* MBProgressHUD+dxhud.h */,
+				D8529A6124EB92980066C328 /* StudayCell.h */,
+				D8529A6224EB92980066C328 /* StudayCell.m */,
+				D8529A6324EB92980066C328 /* StudayCell.xib */,
 				D85C57EB24DBFF5B00A2696B /* MBProgressHUD+dxhud.m */,
 				D85C57E424DBFE9000A2696B /* UINavigationBar+DD_Alpha.h */,
 				D85C57E324DBFE9000A2696B /* UINavigationBar+DD_Alpha.m */,
@@ -551,6 +594,9 @@
 				D86C63BB24D79D30004AD677 /* main.m */,
 				D85C57B124DBE7FD00A2696B /* NewsNewModel.h */,
 				D85C57B224DBE7FD00A2696B /* NewsNewModel.m */,
+				D8529A7224EC20A00066C328 /* PlaymVC.h */,
+				D8529A7324EC20A00066C328 /* PlaymVC.m */,
+				D8529A7424EC20A00066C328 /* PlaymVC.xib */,
 			);
 			path = PeiziJinding;
 			sourceTree = "<group>";
@@ -969,16 +1015,23 @@
 			files = (
 				D865755724E3E5E700C6D56E /* CommPreCell.xib in Resources */,
 				D85C584024DE15D600A2696B /* LoginViewController.xib in Resources */,
+				D8529A6024EAC8830066C328 /* wKg5HV86Tu3xX0wyAA8k6bN5WhU319.mp3 in Resources */,
+				D8529A5624EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 in Resources */,
 				D85C585F24DF05F900A2696B /* MarketDataJson.plist in Resources */,
 				D85C583A24DD800E00A2696B /* FeedbackViewController.xib in Resources */,
 				D865753B24E34AC700C6D56E /* data.plist in Resources */,
+				D8529A5E24EAC5090066C328 /* wKg5Jl86OSjTTtg6ACrMPLaqqeQ580.mp3 in Resources */,
 				D865754624E3A4CA00C6D56E /* ComDetailCell.xib in Resources */,
+				D8529A5C24EAC3500066C328 /* wKg5J186WMDy44pSAK4uveBvawY347.mp3 in Resources */,
 				D865726E24E2168B00C6D56E /* CommuShareCell.xib in Resources */,
 				D865756524E4C3E600C6D56E /* SignViewVCViewController.xib in Resources */,
 				D865728124E24CAD00C6D56E /* ComReviewsViewController.xib in Resources */,
 				D86C643E24D7A9EC004AD677 /* README.md in Resources */,
+				D8529A5824EAB28F0066C328 /* StudayRo.plist in Resources */,
 				D86C645A24D7E472004AD677 /* NewsList.plist in Resources */,
 				D86C63B924D79D30004AD677 /* LaunchScreen.storyboard in Resources */,
+				D8529A6524EB92980066C328 /* StudayCell.xib in Resources */,
+				D8529A7624EC20A00066C328 /* PlaymVC.xib in Resources */,
 				D86C63B624D79D30004AD677 /* Assets.xcassets in Resources */,
 				D86C63B424D79D2C004AD677 /* Main.storyboard in Resources */,
 				D865727524E2428200C6D56E /* CommNewJ.plist in Resources */,
@@ -1065,6 +1118,7 @@
 				D8758F6A24E11E4A00412B95 /* CommitReCommetModel.m in Sources */,
 				D86C644F24D7D85D004AD677 /* HomeHeaderModelCellCollectionViewCell.m in Sources */,
 				D865756024E409FB00C6D56E /* ReviewDetailCell.m in Sources */,
+				D8529A6E24EB95F90066C328 /* StudyVc.m in Sources */,
 				D85C57DB24DBFE1F00A2696B /* NSArray+Adpa.m in Sources */,
 				D85C57B324DBE7FD00A2696B /* NewsNewModel.m in Sources */,
 				D85C57FB24DCF68F00A2696B /* CalSelectCell.m in Sources */,
@@ -1083,14 +1137,17 @@
 				D85C580A24DD537F00A2696B /* CalResponseModel.m in Sources */,
 				D85C584924DE540E00A2696B /* MarketDataView.m in Sources */,
 				D85C580D24DD544800A2696B /* CalNews.m in Sources */,
+				D8529A6424EB92980066C328 /* StudayCell.m in Sources */,
 				D85C57DA24DBFE1F00A2696B /* HomeModel.m in Sources */,
 				D865754524E3A4CA00C6D56E /* ComDetailCell.m in Sources */,
 				D86C644924D7A9EC004AD677 /* AFURLSessionManager.m in Sources */,
 				D85C57F224DC421B00A2696B /* NewsListViewController.m in Sources */,
+				D8529A6B24EB93FE0066C328 /* StudyModel.m in Sources */,
 				D865729524E25CB000C6D56E /* YKViewBase.m in Sources */,
 				D85C57D824DBFE1F00A2696B /* NewsListDataModel.m in Sources */,
 				D86C644424D7A9EC004AD677 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D85C57DF24DBFE6300A2696B /* UIColor+QCategory.m in Sources */,
+				D8529A6824EB93EB0066C328 /* StudyRootModel.m in Sources */,
 				D85C583024DD7F0700A2696B /* HomeBlankCell.m in Sources */,
 				D85C57F524DC46D300A2696B /* MarketViewController.m in Sources */,
 				D85C57D624DBFE1F00A2696B /* HomeViewController.m in Sources */,
@@ -1124,6 +1181,7 @@
 				D865754124E39FA800C6D56E /* CommSayDetailVC.m in Sources */,
 				D85C585524DEACC000A2696B /* MarketTypeModel.m in Sources */,
 				D865729A24E25CC300C6D56E /* KLineChartViewController.m in Sources */,
+				D8529A7524EC20A00066C328 /* PlaymVC.m in Sources */,
 				D865754C24E3B8AC00C6D56E /* CommDetailItemModel.m in Sources */,
 				D85C580424DD411100A2696B /* CalNewsCell.m in Sources */,
 				D865755224E3C03F00C6D56E /* CommitDetaildfData.m in Sources */,

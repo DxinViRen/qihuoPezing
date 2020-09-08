@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "SignViewVCViewController.h"
+#import "AppDelegate.h"
+#import "StockRootViewController.h"
 @interface LoginViewController ()
 @property (strong, nonatomic)  UIImageView *loginBanner;
 @property (strong, nonatomic)  UITextField *userNameTF;
@@ -92,28 +94,20 @@
     
     [[PSRequestManager shareInstance] netRequestWithUrl:@"http://bijiu.jtarget.cn/public/index.php?s=/index/User/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
-        if([responseObject[@"code"] intValue] == 200){
-            [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
-                     [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
-                     [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        else{
-            [MBProgressHUD show:@"登录失败" icon:@"" view:self.view];
-        }
-      
-         
-        
-      
-//            [MBProgressHUD show:responseObject[@"message"] icon:nil view:self.view];
-        
+
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
     }];
     
+    [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
+                        [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
+                        [self dismissViewControllerAnimated:YES completion:nil];
     
-    
-    
-   
+        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+        UIWindow *win  = delegate.window;
+        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+        [root setSelectedIndex:0];
+
 }
 - (void)cancelBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

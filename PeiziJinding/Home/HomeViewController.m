@@ -20,6 +20,7 @@
 #import "NewsListViewController.h"
 #import "MyCollectViewController.h"
 #import "NewsNewDataModel.h"
+#import "StudyVc.h"
 #import "NewsDetaiItemModel.h"
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *bannerUrlArr;
@@ -63,10 +64,13 @@
         [self.navigationController pushViewController:finc animated:YES];
     }else if (tag == 200 || tag == 2000){
         //期货行情
-        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
-        UIWindow *win  = delegate.window;
-        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
-        [root setSelectedIndex:1];
+//        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+//        UIWindow *win  = delegate.window;
+//        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+//        [root setSelectedIndex:1];
+        StudyVc *study = [[StudyVc alloc]init];
+        [self.navigationController pushViewController:study animated:YES];
+        
         
     }else if (tag  == 300 || tag == 3000){
         //热门资讯

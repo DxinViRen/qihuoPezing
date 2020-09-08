@@ -82,7 +82,7 @@
         _myIngolView.tag = 200;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
         [_myIngolView addGestureRecognizer:tap];
-        _myIngolView.image = [UIImage imageNamed:@"hangqingIc"];
+        _myIngolView.image = [UIImage imageNamed:@"LessonIcon"];
     }
     return _myIngolView;
 }
@@ -108,7 +108,7 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer  alloc]initWithTarget:self action:@selector(tapAction:)];
         [_ingolLabel addGestureRecognizer:tap];
         _ingolLabel.font  =[UIFont systemFontOfSize:15];
-        _ingolLabel.text = @"期货行情";
+        _ingolLabel.text = @"期货学堂";
         _ingolLabel.textColor = MainColor;
         [_ingolLabel sizeToFit];
     }

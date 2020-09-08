@@ -1,7 +1,5 @@
 platform:ios,'10.0'
 target 'PeiziJinding' do
-
-pod 'Masonry'
 pod 'SDWebImage'
 pod 'IGListKit'
 pod 'DZNEmptyDataSet'
@@ -11,9 +9,7 @@ pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
 pod 'YYText'
-
-
-
+pod 'Masonry'
 end
 
 
