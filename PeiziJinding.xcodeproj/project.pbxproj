@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184C91BE2508E28D006516A6 /* NewsRotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C91BD2508E28D006516A6 /* NewsRotModel.m */; };
+		184C91C1250A279A006516A6 /* NewsRItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C91C0250A279A006516A6 /* NewsRItemModel.m */; };
 		C55B62743B0D09E80B3629FC /* libPods-PeiziJinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC061FDBCCD617FFC87D725 /* libPods-PeiziJinding.a */; };
 		D8529A5624EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5524EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 */; };
 		D8529A5824EAB28F0066C328 /* StudayRo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8529A5724EAB28F0066C328 /* StudayRo.plist */; };
@@ -170,6 +172,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184C91BC2508E28D006516A6 /* NewsRotModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsRotModel.h; sourceTree = "<group>"; };
+		184C91BD2508E28D006516A6 /* NewsRotModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsRotModel.m; sourceTree = "<group>"; };
+		184C91BF250A279A006516A6 /* NewsRItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsRItemModel.h; sourceTree = "<group>"; };
+		184C91C0250A279A006516A6 /* NewsRItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsRItemModel.m; sourceTree = "<group>"; };
 		89CA60AB772B1744C74AC73D /* Pods-PeiziJinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeiziJinding.release.xcconfig"; path = "Target Support Files/Pods-PeiziJinding/Pods-PeiziJinding.release.xcconfig"; sourceTree = "<group>"; };
 		D8529A5524EA938E0066C328 /* 成功的交易者是道与术的日积月累.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "成功的交易者是道与术的日积月累.mp3"; sourceTree = "<group>"; };
 		D8529A5724EAB28F0066C328 /* StudayRo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StudayRo.plist; sourceTree = "<group>"; };
@@ -702,6 +708,8 @@
 				D8758F4A24DFF79F00412B95 /* NewsNewDataModel.m */,
 				D8758F4C24DFF7D200412B95 /* NewsDetaiItemModel.h */,
 				D8758F4D24DFF7D200412B95 /* NewsDetaiItemModel.m */,
+				184C91BC2508E28D006516A6 /* NewsRotModel.h */,
+				184C91BD2508E28D006516A6 /* NewsRotModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -776,6 +784,8 @@
 				D85C57CC24DBFE1E00A2696B /* NewsListDataModel.h */,
 				D85C57C824DBFE1D00A2696B /* NewsListDataModel.m */,
 				D85C57CA24DBFE1E00A2696B /* NewsModel.h */,
+				184C91BF250A279A006516A6 /* NewsRItemModel.h */,
+				184C91C0250A279A006516A6 /* NewsRItemModel.m */,
 				D85C57CB24DBFE1E00A2696B /* NewsModel.m */,
 			);
 			path = Fina;
@@ -1175,6 +1185,7 @@
 				D85C580124DD0ACA00A2696B /* FinCalModel.m in Sources */,
 				D865756424E4C3E600C6D56E /* SignViewVCViewController.m in Sources */,
 				D85C57EF24DC07CE00A2696B /* NewsCell.m in Sources */,
+				184C91C1250A279A006516A6 /* NewsRItemModel.m in Sources */,
 				D865755D24E3F6DC00C6D56E /* AgreeRelationItemModel.m in Sources */,
 				D85C57DC24DBFE1F00A2696B /* HomegyNotiCell.m in Sources */,
 				D8758F6124E11B2300412B95 /* CommRootModel.m in Sources */,
@@ -1204,6 +1215,7 @@
 				D865755A24E3E6E500C6D56E /* commDetailHeadCell.m in Sources */,
 				D8758F5424E04B9A00412B95 /* CommItemDataCell.m in Sources */,
 				D85C57F824DCE6E400A2696B /* FinCalViewController.m in Sources */,
+				184C91BE2508E28D006516A6 /* NewsRotModel.m in Sources */,
 				D8758F5E24E10F2100412B95 /* CommuHotLineViewController.m in Sources */,
 				D85C584F24DEA82700A2696B /* MarketDetailModel.m in Sources */,
 				D8758F3C24DF892700412B95 /* MarketItemShowView.m in Sources */,

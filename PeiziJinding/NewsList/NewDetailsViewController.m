@@ -23,7 +23,13 @@
     [self.view addSubview:self.webView];
     self.navigationItem.title = @"详情";
     if(self.model){
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.model.url_w]]];
+        NSString *nurl = @"https://api.tzch9.com/Index/NewsDetailListA";
+        [[PSRequestManager shareInstance] netRequestWithUrl:nurl method:HttpRequestMethodPOST param:@{@"tid":[NSString stringWithFormat:@"%@",self.model.tid]} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+            NSString *contens = responseObject[@"data"][@"content"];
+            [self.webView loadHTMLString:contens baseURL:nil];
+        } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+            
+        }];
     }else{
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
     }

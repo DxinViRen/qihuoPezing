@@ -9,6 +9,7 @@
 #import "NewsCell.h"
 #import "NewsNewModel.h"
 #import <YYLabel.h>
+#import "NewsRItemModel.h"
 #import <YYText.h>
 #import "NewsDetaiItemModel.h"
 @interface NewsCell ()
@@ -72,14 +73,14 @@
 }
 
 - (void)setModel:(id<MainCellModelProtocol>)model{
-     NewsDetaiItemModel*newModel =(NewsDetaiItemModel *) model;
+     NewsRItemModel*newModel =(NewsRItemModel *) model;
     self.dxtitlelabel.text = newModel.title;
-    if(newModel.url_w.length == 0){
-        newModel.url_w = @"";
-    }
-    [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.image] placeholderImage:[UIImage imageNamed:@"WeChat9ade9325550dceeb73e46edb90924a58"]];
-    self.timeLabel.text = [self timeStr:[newModel.showtime substringWithRange:NSMakeRange(0, 10)]];
-    self.sourceLabel.text = newModel.Art_Media_Name;
+//    if(newModel.url_w.length == 0){
+//        newModel.url_w = @"";
+//    }
+    [self.mainImgView sd_setImageWithURL:[NSURL  URLWithString:newModel.thumb] placeholderImage:[UIImage imageNamed:@"WeChat9ade9325550dceeb73e46edb90924a58"]];
+    //self.timeLabel.text = [self timeStr:[newModel.showtime substringWithRange:NSMakeRange(0, 10)]];
+    self.sourceLabel.text = newModel.post_date;
 }
 
 - (UIView *)lineView{

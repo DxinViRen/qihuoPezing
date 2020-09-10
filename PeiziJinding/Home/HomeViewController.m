@@ -22,6 +22,9 @@
 #import "NewsNewDataModel.h"
 #import "StudyVc.h"
 #import "NewsDetaiItemModel.h"
+#import "NewsNewModel.h"
+#import "NewsModel.h"
+#import "NewsRotModel.h"
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *bannerUrlArr;
 @property(nonatomic,strong)NSArray *cycleUrlArr;
@@ -73,14 +76,14 @@
         
         
     }else if (tag  == 300 || tag == 3000){
-        //热门资讯
-        NewsListViewController *news = [[NewsListViewController alloc]init];
-        [self.navigationController pushViewController:news animated:YES];
-        
-    }else if (tag == 400 || tag == 4000){
         //我的收藏
-        MyCollectViewController *mycll = [[MyCollectViewController alloc]init];
-        [self.navigationController pushViewController:mycll animated:YES];
+               MyCollectViewController *mycll = [[MyCollectViewController alloc]init];
+               [self.navigationController pushViewController:mycll animated:YES];
+       
+    }else if (tag == 400 || tag == 4000){
+       //热门资讯
+              NewsListViewController *news = [[NewsListViewController alloc]init];
+              [self.navigationController pushViewController:news animated:YES];
     }
     
 }
@@ -100,16 +103,15 @@
         [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
         return;
     }
-    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,[NSString stringWithFormat:@"%@",@""]];
-    [[PSRequestManager shareInstance] netRequestWithUrl:newurlStr method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
+   // NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,[NSString stringWithFormat:@"%@",@""]];
+    [[PSRequestManager shareInstance] netRequestWithUrl:NewsListUrl method:HttpRequestMethodPOST param:@{@"p":@"1"} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
         [self.hud hideAnimated:YES];
         [self.mainCollectionView.mj_header endRefreshing];
         if(responseObject){
-            NewsNewDataModel *listModel = [NewsNewDataModel mj_objectWithKeyValues:responseObject];
-           
+            NewsRotModel *listModel = [NewsRotModel mj_objectWithKeyValues:responseObject];
                 //加载成功
-                [self.newsListArr addObjectsFromArray:listModel.news];
-                for (NewsDetaiItemModel *model in self.newsListArr) {
+                [self.newsListArr addObjectsFromArray:listModel.data];
+                for (NewsNewModel *model in self.newsListArr) {
                     model.cellName = NSStringFromClass([NewsCell class]);
                     model.cellWight = Scr_w;
                     model.cellHeight = Scr_w*(95.0/Scr_w);
@@ -168,7 +170,7 @@
     HomeModel *homeItemModel = [[HomeModel alloc]init];
     homeItemModel.cellName = NSStringFromClass([HomeItemCell class]);
     homeItemModel.cellWight = Scr_w;
-    homeItemModel.cellHeight = Scr_w *(100/414.0);
+    homeItemModel.cellHeight = ((Scr_w - 50)*0.5 * (184/353.0)) * 2 + 40;
     
     HomeModel *homeHeadModel = [[HomeModel alloc]init];
     homeHeadModel.cellName = NSStringFromClass([HomeHeadCell class]);
@@ -201,7 +203,7 @@
     stpct.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         if([model.cellName isEqualToString:NSStringFromClass([NewsCell class])]){
             [[LoginManager shareInsetance] checkLogin:^{
-                NewsDetaiItemModel *newModel = (NewsDetaiItemModel *)model;
+                NewsRItemModel *newModel = (NewsRItemModel *)model;
                 NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
                 newDetai.model = newModel;
 //                NSString *detaiUrl = [NSString stringWithFormat:DetailUrl,[NSString stringWithFormat:@"%ld",[newModel.ID longValue]]];

@@ -10,6 +10,7 @@
 #import "StorkSectionModel.h"
 #import "StorkSectionController.h"
 #import "NewsModel.h"
+#import "NewsRItemModel.h"
 #import "NewDetailsViewController.h"
 @interface MyCollectViewController ()
 @property (nonatomic,strong)UILabel *mainLable;
@@ -55,7 +56,7 @@
 
 - (void)configDataSource{
      NSArray *collA = [[NSUserDefaults standardUserDefaults]objectForKey:@"collectList"];
-    NSMutableArray *modelArr  = [NewsDetaiItemModel mj_objectArrayWithKeyValuesArray:collA];
+    NSMutableArray *modelArr  = [NewsRItemModel mj_objectArrayWithKeyValuesArray:collA];
     StorkSectionModel *secModel = [[StorkSectionModel alloc]initWithArray:modelArr];
     self.dataArray = [[NSMutableArray alloc]initWithObjects:secModel, nil];
     
@@ -75,7 +76,7 @@
     secCon.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         
         [[LoginManager shareInsetance] checkLogin:^{
-            NewsDetaiItemModel *newModel = (NewsDetaiItemModel *)model;
+            NewsRItemModel *newModel = (NewsRItemModel *)model;
             NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
             newDetai.model = newModel;
             [self.navigationController pushViewController:newDetai animated:YES];

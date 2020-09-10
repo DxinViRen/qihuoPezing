@@ -49,9 +49,9 @@
 #define screenViewH ISIPHONEX? Scr_h-Scr_tabBar-34-statusH-naviH:Scr_h-Scr_tabBar-statusH-naviH
 #define    iPhoneX (SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f ? YES : NO)
 #define mainUrl  @"https://new.qq.com/rain/a/FIN2020072901167500"
-#define MainColor [UIColor colorWithHexString:@"#9992DA"]
+#define MainColor [UIColor colorWithHexString:@"#f36e26"]
 
-#define NewsListUrl @"https://gateway-infrastructure.eastmoney.com/Newsplatform-Tag-Futures/api/yw?banner=banner&source=app&limit=20&em_appid=14053&encode=qhdd&sys=ios&version=2008008&min_id=%@&axiosConf=776699704"
+#define NewsListUrl  @"https://api.tzch0.com/Index/NnewsListA" //@"https://dy.zhongz7h.com/api/news/newsList.htm?type=0&date=2020-0%@-14+23:51:20"
 #define DetailUrl   @"https://dl.xyxyj999.com/api/news/newsDetail.htm?id=%@"
 #define CladanUrl   @"https://dl.xyxyj999.com/api/news/calendar.htm?date=%@"
 //热点

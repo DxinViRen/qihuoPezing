@@ -12,6 +12,8 @@
 #import <MJRefresh/MJRefresh.h>
 #import "NewDetailsViewController.h"
 #import "NewsNewDataModel.h"
+#import "NewsRotModel.h"
+#import "NewsRItemModel.h"
 @interface NewsListViewController ()
 //@property (nonatomic,strong)UIView *nodataView;
 //@property(nonatomic,strong)UILabel *nodataLabel;
@@ -28,17 +30,18 @@
     [super viewDidLoad];
    // [self nodataViewHid];
     [self dxLayoutSubView];
-    self.prArray = @[@"",@"202008071584794280" ,@"202008091586762117",@"202008071586335947",@"202008071585026080",@"202008061584362987",@"202008061583310178",@"202008061583055652",@"202008051582907626",@"202008051581384755",@"202008041581246981"];
+    //self.prArray = @[@"",@"202008071584794280" ,@"202008091586762117",@"202008071586335947",@"202008071585026080",@"202008061584362987",@"202008061583310178",@"202008061583055652",@"202008051582907626",@"202008051581384755",@"202008041581246981"];
     self.navigationItem.title = @"资讯";
-    self.page = 0;
+    self.page = 1;
     self.dataArray = [@[] mutableCopy];
     self.newsListArr = [@[] mutableCopy];
     self.hud = [MBProgressHUD showMessage:@"请稍等"];
     
     [self configData];
+    [self.mainCollectionView.mj_header beginRefreshing];
     self.mainCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.mainCollectionView.mj_header beginRefreshing];
-        self.page = 0;
+        self.page = 1;
         [self loadData];
     }];
     
@@ -50,24 +53,24 @@
 }
 
 - (void)loadData{
-    if(self.page == self.prArray.count){
+    if(self.page == 8){
         [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
-        self.page = 0;
+        self.page = 1;
         return;
     }
-    if(self.page == 0){
-        [self.dataArray removeAllObjects];
+    if(self.page == 1){
+        [self.newsListArr removeAllObjects];
     }
-    NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,[NSString stringWithFormat:@"%@",self.prArray[self.page]]];
-    [[PSRequestManager shareInstance] netRequestWithUrl:newurlStr method:HttpRequestMethodPOST param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
+    //NSString *newurlStr = [NSString  stringWithFormat:NewsListUrl,[NSString stringWithFormat:@"%@",self.prArray[self.page]]];
+    [[PSRequestManager shareInstance] netRequestWithUrl:NewsListUrl method:HttpRequestMethodPOST param:@{@"p":[NSString stringWithFormat:@"%ld",self.page]} successBlock:^(id  _Nullable responseObject, NSError * _Nullable seerror) {
         [self.hud hideAnimated:YES];
         [self.mainCollectionView.mj_header endRefreshing];
         [self.mainCollectionView.mj_footer endRefreshing];
         if(responseObject){
-             NewsNewDataModel*listModel = [NewsNewDataModel mj_objectWithKeyValues:responseObject];
+             NewsRotModel*listModel = [NewsRotModel mj_objectWithKeyValues:responseObject];
               //加载成功
-                [self.newsListArr addObjectsFromArray:listModel.news];
-                for (NewsDetaiItemModel *model in self.newsListArr) {
+                [self.newsListArr addObjectsFromArray:listModel.data];
+                for (NewsNewModel *model in self.newsListArr) {
                     model.cellName = NSStringFromClass([NewsCell class]);
                     model.cellWight = Scr_w;
                     model.cellHeight = Scr_w*(95.0/Scr_w);
@@ -100,7 +103,7 @@
     sect.cellDidClickBlock = ^(id<MainCellModelProtocol>  _Nonnull model, NSInteger index) {
         if([model.cellName isEqualToString:NSStringFromClass([NewsCell class])]){
             [[LoginManager shareInsetance] checkLogin:^{
-                NewsDetaiItemModel *newModel = (NewsDetaiItemModel *)model;
+                NewsRItemModel *newModel = (NewsRItemModel *)model;
                 NewDetailsViewController *newDetai = [[NewDetailsViewController alloc]init];
                 newDetai.model = newModel;
                 [self.navigationController pushViewController:newDetai animated:YES];
