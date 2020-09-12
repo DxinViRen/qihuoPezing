@@ -30,7 +30,7 @@
     if(!_headImageView){
         
         _headImageView = [[UIImageView alloc]init];
-        _headImageView.image = [UIImage imageNamed:@"WeChat7d30c0a55b3eb7b04c456016ab56ff21"];
+        _headImageView.image = [UIImage imageNamed:@"111599901642"];
         _headImageView.backgroundColor = [UIColor redColor];
         _headImageView.layer.cornerRadius = 8;
         _headImageView.clipsToBounds = YES;
