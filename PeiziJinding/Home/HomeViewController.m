@@ -51,8 +51,8 @@
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(cycleClickAction:) name:@"cycleClick" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(moreNews:) name:@"more" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(itemClick:) name:@"itemClick" object:nil];
-    self.bannerUrlArr = @[@"https://new.qq.com/omn/20200805/20200805A07UEH00.html",@"https://finance.sina.com.cn/money/nmetal/hjzx/2020-08-06/doc-iivhvpwx9534532.shtml",@"https://finance.sina.com.cn/money/future/agri/2020-08-06/doc-iivhuipn7164156.shtml"];
-    self.cycleUrlArr = @[@"https://baijiahao.baidu.com/s?id=1674113437711834373&wfr=spider&for=pc",@"http://futures.eastmoney.com/a/202008061584630776.html",@"http://futures.eastmoney.com/a/202008061584161598.html"];
+    self.bannerUrlArr = @[@"64605",@"64601",@"64602"];
+    self.cycleUrlArr = @[@"64598",@"64597",@"64595"];
     
    
 }
@@ -131,7 +131,7 @@
     NSDictionary *dic  = noti.userInfo;
     NSInteger index = [dic[@"index"] integerValue];
     NewDetailsViewController *news = [[NewDetailsViewController alloc]init];
-    news.url = self.cycleUrlArr[index];
+    news.tid = self.cycleUrlArr[index];
     [self.navigationController pushViewController:news animated:YES];
     
 }
@@ -141,7 +141,8 @@
     NSInteger index = [dic[@"index"] integerValue];
     
     NewDetailsViewController *news = [[NewDetailsViewController alloc]init];
-    news.url = self.bannerUrlArr [index];
+    //news.url = self.bannerUrlArr [index];
+    news.tid = self.bannerUrlArr[index];
     [self.navigationController pushViewController:news animated:YES];
 }
 

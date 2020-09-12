@@ -35,6 +35,7 @@
 - (SDCycleScrollView *)sdcycleScView
 {
     //@[@"https://www.jdpz888.com/h5/",@"https://www.jdpz888.com/h5/",@"https://tva1.sinaimg.cn/large/007S8ZIlly1gha68zmweij31i20kitfs.jpg"]
+    
     if(!_sdcycleScView){
         _sdcycleScView = [SDCycleScrollView  cycleScrollViewWithFrame:CGRectMake(10, 5, Scr_w-20, CGRectGetHeight(self.contentView.bounds)-10) imageURLStringsGroup:@[@"https://tva1.sinaimg.cn/large/007S8ZIlly1ghh2zx3e34j30rs0h6wo0.jpg",@"https://tva1.sinaimg.cn/large/007S8ZIlly1ghh31cu1r8j30ku0astaz.jpg",@"https://tva1.sinaimg.cn/large/007S8ZIlly1ghh33aqfkqj30m40b0dkv.jpg"]];
         _sdcycleScView.placeholderImage = [UIImage imageNamed:@"stock_home_banner1"];

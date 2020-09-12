@@ -47,20 +47,20 @@
 
 - (void)setControllers{
     HomeViewController *home  = [[HomeViewController alloc]init];
-    [self addChildViewController:home title:@"首页" image:@"homeUSNew" selectImg:@"shouyeNew"];//
+    [self addChildViewController:home title:@"首页" image:@"newhomeTabiconUn" selectImg:@"newhomeTabicon"];//
     
   
     
     MarketViewController *markt = [[MarketViewController alloc]init];
-      [self addChildViewController:markt title:@"行情" image:@"marketedUs" selectImg:@"marketed"];
+      [self addChildViewController:markt title:@"行情" image:@"marketiconun" selectImg:@"marketIconnew"];
       
       CommunityVC *newlist = [[CommunityVC alloc]init];
 
     
-    [self addChildViewController:newlist title:@"社区" image:@"CommityTabIconU" selectImg:@"CommitTabIconS"];
+    [self addChildViewController:newlist title:@"社区" image:@"commitSelectUns" selectImg:@"commitySeleNew"];
     
     UserViewController *user  = [[UserViewController alloc]init];
-    [self addChildViewController:user title:@"我的" image:@"mainUS" selectImg:@"mainSNew"];
+    [self addChildViewController:user title:@"我的" image:@"newmainiconUn" selectImg:@"newminwIconse"];
 }
 
 - (void)dealloc

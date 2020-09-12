@@ -20,7 +20,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     [self.view addSubview:self.webView];
+    
     self.navigationItem.title = @"详情";
     if(self.model){
         NSString *nurl = @"https://api.tzch9.com/Index/NewsDetailListA";
@@ -31,7 +33,13 @@
             
         }];
     }else{
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
+       NSString *nurl = @"https://api.tzch9.com/Index/NewsDetailListA";
+        [[PSRequestManager shareInstance] netRequestWithUrl:nurl method:HttpRequestMethodPOST param:@{@"tid":[NSString stringWithFormat:@"%@",self.tid]} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+            NSString *contens = responseObject[@"data"][@"content"];
+            [self.webView loadHTMLString:contens baseURL:nil];
+        } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+            
+        }];
     }
     
     self.webView.allowsBackForwardNavigationGestures = YES;
@@ -145,7 +153,7 @@
 - (WKWebView *)webView{
     if(!_webView){
         
-        _webView = [[WKWebView alloc]initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, Scr_w, Scr_h - naviH - statusH)];
         _webView.UIDelegate = self;
         _webView.navigationDelegate = self;
         

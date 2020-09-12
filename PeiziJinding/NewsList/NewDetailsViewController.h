@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NewDetailsViewController : UIViewController
 @property (nonatomic,copy)NSString *url;
 @property (nonatomic,strong)NewsRItemModel *model;
+@property (nonatomic,copy)NSString *tid;
 
 - (void)loadHtmlWithUrl:(NSString *)url;
 

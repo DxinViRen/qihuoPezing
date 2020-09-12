@@ -26,7 +26,7 @@
     self.tabbarH  = self.tabBarController.tabBar.frame.origin.y;
     self.navigHs  = self.navigationController.navigationBar.frame.size.height + statusH;
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    // self.view.backgroundColor = [UIColor colorWithHexString:@"#F4F5F6"];
+     self.view.backgroundColor = [UIColor colorWithHexString:@"#E2E2E2"];
      [self dx_layoutSubView];
 }
 
@@ -48,9 +48,6 @@
     [self addChildViewController:commiHotC];
     [self addChildViewController:commSay];
     [self addChildViewController:attenV];
-//
-    
-
 }
 
 - (void)dxConfigData{
@@ -65,6 +62,7 @@
 - (MarketTabView *)tabView{
     if(!_tabView){
         _tabView = [[MarketTabView alloc]initWithDataArr:@[@"热点",@"说说",@"关注"]];
+        _tabView.backgroundColor = [UIColor colorWithHexString:@"#E7E8E8"];
         _tabView.delegate = self;
     }
     return _tabView;

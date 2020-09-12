@@ -49,7 +49,7 @@
     UserSecModel  *celectModel  = [[UserSecModel alloc]init];
     celectModel.cellHeight = 60;
     celectModel.cellWight = Scr_w;
-    celectModel.extra = [@{@"title":@"我的收藏",@"img":@"myCollectIconUSer"} mutableCopy];
+    celectModel.extra = [@{@"title":@"我的收藏",@"img":@"mycollectNew"} mutableCopy];
     celectModel.cellName  =  NSStringFromClass([UserItemCell class]);
     celectModel.cellInderfier = NSStringFromClass([UserItemCell class]);
     
@@ -62,7 +62,7 @@
     UserSecModel  *aboutModel  = [[UserSecModel alloc]init];
     aboutModel.cellHeight = 60;
     aboutModel.cellWight = Scr_w;
-    aboutModel.extra = [@{@"title":@"关于我们",@"img":@"userpageAboutUS"} mutableCopy];
+    aboutModel.extra = [@{@"title":@"关于我们",@"img":@"aboutUSNew"} mutableCopy];
     aboutModel.cellName  =  NSStringFromClass([UserItemCell class]);
     aboutModel.cellInderfier = NSStringFromClass([UserItemCell class]);
     
@@ -76,7 +76,7 @@
     UserSecModel  *fankuiM  = [[UserSecModel alloc]init];
     fankuiM.cellHeight = 60;
     fankuiM.cellWight = Scr_w;
-    fankuiM.extra = [@{@"title":@"给我反馈",@"img":@"userhomepageFB"} mutableCopy];
+    fankuiM.extra = [@{@"title":@"给我反馈",@"img":@"mainFeedBackNew"} mutableCopy];
     fankuiM.cellName  =  NSStringFromClass([UserItemCell class]);
     fankuiM.cellInderfier = NSStringFromClass([UserItemCell class]);
     

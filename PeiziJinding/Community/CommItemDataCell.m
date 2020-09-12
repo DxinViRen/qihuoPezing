@@ -31,6 +31,7 @@
 @property(nonatomic,strong)UIView *bView;
 @property(nonatomic,strong)CommDataModel *dataModel;
 @property(nonatomic,strong)MBProgressHUD *hub;
+@property(nonatomic,strong)UIView *mbgview;
 //追述
 @end
 
@@ -46,40 +47,46 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self dx_layoutSubview];
-        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = [UIColor colorWithHexString:@"#E7E8E8"];
     }
     return self;
 }
 
 - (void)dx_layoutSubview{
-    [self.contentView addSubview:self.headImageView];
-    [self.contentView addSubview:self.userNameLabel];
-    [self.contentView addSubview:self.timeLabel];
-    [self.contentView addSubview:self.attentionBtn];
-    [self.contentView addSubview:self.tagLabel];
-    [self.contentView addSubview:self.contentLabel];
-    [self.contentView addSubview:self.contenImgView];
-    [self.contentView addSubview:self.shareBtn];
-    [self.contentView addSubview:self.shareTextLabel];
-    [self.contentView addSubview:self.reviewIcon];
-    [self.contentView addSubview:self.reviewLabel];
-    [self.contentView addSubview:self.spotImgView];
-    [self.contentView addSubview:self.spotLabel];
-    [self.contentView addSubview:self.lineView];
-    [self.contentView addSubview:self.usrNameLabel];
-    [self.contentView addSubview:self.reContentLabel];
-    [self.contentView addSubview:self.bView];
+     [self.contentView addSubview:self.mbgview];
+    [self.mbgview addSubview:self.headImageView];
+    [self.mbgview addSubview:self.userNameLabel];
+    [self.mbgview addSubview:self.timeLabel];
+    [self.mbgview addSubview:self.attentionBtn];
+    [self.mbgview addSubview:self.tagLabel];
+    [self.mbgview addSubview:self.contentLabel];
+    [self.mbgview addSubview:self.contenImgView];
+    [self.mbgview addSubview:self.shareBtn];
+    [self.mbgview addSubview:self.shareTextLabel];
+    [self.mbgview addSubview:self.reviewIcon];
+    [self.mbgview addSubview:self.reviewLabel];
+    [self.mbgview addSubview:self.spotImgView];
+    [self.mbgview addSubview:self.spotLabel];
+    [self.mbgview addSubview:self.lineView];
+    [self.mbgview addSubview:self.usrNameLabel];
+    [self.mbgview addSubview:self.reContentLabel];
+    [self.mbgview addSubview:self.bView];
+   
     //[self.contentView addSubview:self.blanView];
+    [self.mbgview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.right.equalTo(self.contentView).inset(15);
+        make.top.and.bottom.equalTo(self.contentView).inset(10);
+    }];
     
     
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).inset(10);
+        make.left.equalTo(self.mbgview).inset(10);
         make.size.mas_equalTo(CGSizeMake(40, 40));
-        make.top.equalTo(self.contentView).inset(7);
+        make.top.equalTo(self.mbgview).inset(17);
     }];
     
     [self.userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView).inset(11);
+        make.top.equalTo(self.mbgview).inset(21);
         make.left.equalTo(self.headImageView.mas_right).offset(10);
        
     }];
@@ -91,8 +98,8 @@
     
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).offset(10);
-        make.centerX.equalTo(self.contentView);
+        make.left.equalTo(self.mbgview).offset(10);
+        make.centerX.equalTo(self.mbgview);
         make.top.equalTo(self.timeLabel.mas_bottom).offset(10);
     }];
     
@@ -104,21 +111,21 @@
     
     [self.attentionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.headImageView);
-        make.right.equalTo(self.contentView).inset(10);
-        make.size.mas_equalTo(CGSizeMake(71, 24));
+        make.right.equalTo(self.mbgview).inset(10);
+        make.size.mas_equalTo(CGSizeMake(90, 34));
 
     }];
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).inset(10);
-        make.right.equalTo(self.contentView).inset(10);
-        make.bottom.equalTo(self.contentView).inset(45);
+        make.left.equalTo(self.mbgview).inset(10);
+        make.right.equalTo(self.mbgview).inset(10);
+        make.bottom.equalTo(self.mbgview).inset(25);
         make.height.mas_equalTo(0.8);
     }];
 
     
   [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).inset(Scr_w*(200.0/375));
+        make.left.equalTo(self.mbgview).inset(Scr_w*(200.0/375));
         make.bottom.equalTo(self.lineView.mas_top).offset(-5);
         make.size.mas_equalTo(CGSizeMake(20, 20));
     }];
@@ -154,11 +161,6 @@
    
     
 
-//
-//    [self.blanView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.and.right.and.bottom.equalTo(self.contentView);
-//        make.top.equalTo(self.lineView.mas_bottom);
-//    }];
 }
 
 - (void)setModel:(id<MainCellModelProtocol>)model{
@@ -170,8 +172,8 @@
                      getStringHeightWithText:self.dataModel.say.content font:[UIFont systemFontOfSize:15] viewWidth:Scr_w-20];
     
     [self.contentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView).inset(10);
-        make.centerX.equalTo(self.contentView);
+        make.left.equalTo(self.mbgview).inset(10);
+        make.centerX.equalTo(self.mbgview);
         make.top.equalTo(self.headImageView.mas_bottom).offset(10);
         make.height.mas_equalTo(textH +40);
     }];
@@ -181,7 +183,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.contenImgView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.left.equalTo(self.contentView).inset(10);
+                    make.left.equalTo(self.mbgview).inset(10);
                     make.top.equalTo(self.contentLabel.mas_bottom).offset(15);
                     CGFloat wid = image.size.width;
                     CGFloat hei = image.size.height;
@@ -228,7 +230,7 @@
     if(self.dataModel.pre_isSopt){
            [self.spotImgView setImage:[UIImage imageNamed:@"have_sport"] forState:UIControlStateNormal];
        }else{
-           [self.spotImgView setImage:[UIImage imageNamed:@"spotIconNew_new"] forState:UIControlStateNormal];
+           [self.spotImgView setImage:[UIImage imageNamed:@"zaniconnew"] forState:UIControlStateNormal];
        }
     
     if(self.dataModel.pre_isAtten){
@@ -312,10 +314,12 @@
     if(!_attentionBtn){
         
         _attentionBtn = [[UIButton alloc]init];
-        [_attentionBtn setTitle:@"关注" forState:UIControlStateNormal];
+        [_attentionBtn setTitle:@"＋ 关注" forState:UIControlStateNormal];
         [_attentionBtn setTitleColor:MainColor forState:UIControlStateNormal];
         //_attentionBtn.backgroundColor = [UIColor redColor];
-        _attentionBtn.layer.cornerRadius = 3;
+        _attentionBtn.layer.cornerRadius = 12;
+        _attentionBtn.clipsToBounds = YES;
+        _attentionBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         _attentionBtn.layer.borderWidth = 0.8;
         _attentionBtn.layer.borderColor = MainColor.CGColor
         ;        [_attentionBtn addTarget:self
@@ -349,7 +353,7 @@
     if(!_shareBtn){
         
         _shareBtn = [[UIButton alloc]init];
-        [_shareBtn setImage:[UIImage imageNamed:@"share_btn"] forState:UIControlStateNormal];
+        [_shareBtn setImage:[UIImage imageNamed:@"shareMain"] forState:UIControlStateNormal];
         [_shareBtn addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _shareBtn;
@@ -358,7 +362,7 @@
 - (UILabel *)shareTextLabel{
     if(!_shareTextLabel){
         _shareTextLabel = [[UILabel alloc]init];
-        _shareTextLabel.text = @"分享";
+        _shareTextLabel.text = @"";
         _shareTextLabel.textColor = MainColor;
         _shareTextLabel.font = [UIFont systemFontOfSize:15];
         //_shareTextLabel.backgroundColor = [UIColor redColor];
@@ -378,7 +382,7 @@
 - (UIButton *)reviewIcon{
     if(!_reviewIcon){
         _reviewIcon = [[UIButton alloc]init];
-        [_reviewIcon setImage:[UIImage imageNamed:@"review_newNewIcon"] forState:UIControlStateNormal];
+        [_reviewIcon setImage:[UIImage imageNamed:@"reviewIcon"] forState:UIControlStateNormal];
         [_reviewIcon addTarget:self action:@selector(reviewACtion:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _reviewIcon;
@@ -407,7 +411,7 @@
     if(!_spotImgView){
         
         _spotImgView = [[UIButton alloc]init];
-        [_spotImgView setImage:[UIImage imageNamed:@"spotIconNew_new"] forState:UIControlStateNormal];
+        [_spotImgView setImage:[UIImage imageNamed:@"zaniconnew"] forState:UIControlStateNormal];
         [_spotImgView addTarget:self action:@selector(spotAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _spotImgView;
@@ -416,7 +420,7 @@
 - (UILabel *)spotLabel{
     if(!_spotLabel){
         _spotLabel = [[UILabel alloc]init];
-        _spotLabel.text = @"点赞";
+        _spotLabel.text = @"";
         _spotLabel.font = [UIFont systemFontOfSize:15];
         _spotLabel.textColor = MainColor;
     }
@@ -428,10 +432,10 @@
     [[LoginManager shareInsetance] checkLogin:^{
         NSInteger  spotin  = [self.dataModel.say.countOfAgree  intValue];
            if(self.dataModel.pre_isSopt){
-               [self.spotImgView setImage:[UIImage imageNamed:@"spotIconNew_new"] forState:UIControlStateNormal];
+               [self.spotImgView setImage:[UIImage imageNamed:@"zaniconnew"] forState:UIControlStateNormal];
                spotin--;
            }else{
-               [self.spotImgView setImage:[UIImage imageNamed:@"have_sport"] forState:UIControlStateNormal];
+               [self.spotImgView setImage:[UIImage imageNamed:@"zaniconnew"] forState:UIControlStateNormal];
                spotin++;
            }
            self.dataModel.pre_isSopt = !self.dataModel.pre_isSopt;
@@ -445,7 +449,7 @@
     if(!_lineView){
         
         _lineView = [[UIView alloc]init];
-        _lineView.backgroundColor = MainColor;
+        //_lineView.backgroundColor = MainColor;
     }
     return _lineView;
 }
@@ -489,6 +493,25 @@
         _bView.backgroundColor = [UIColor greenColor];
     }
     return _bView;
+}
+
+- (UIView *)mbgview{
+    if(!_mbgview){
+        
+        _mbgview = [[UIView alloc]init];
+        _mbgview.layer.cornerRadius = 12;
+     _mbgview.layer.masksToBounds = NO;
+        // 阴影颜色
+        _mbgview.layer.shadowColor = [UIColor colorWithHexString:@"#DBDCDD"].CGColor;
+        // 阴影偏移，默认(0, -3)
+        _mbgview.layer.shadowOffset = CGSizeMake(0,0);
+        // 阴影透明度，默认0
+        _mbgview.layer.shadowOpacity = 0.5;
+        // 阴影半径，默认3
+        _mbgview.layer.shadowRadius = 7;
+        _mbgview.backgroundColor = [UIColor colorWithHexString:@"#ffffff"];
+    }
+    return _mbgview;
 }
 
 @end

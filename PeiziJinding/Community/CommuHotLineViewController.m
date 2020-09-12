@@ -27,9 +27,9 @@
     self.dataArray = [@[] mutableCopy];
     [self configData];
     [self loadData];
-    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#E2E2E2"];
    // [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(shareAction:) name:@"share" object:nil];
-    
+  
     self.mainCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self loadData];
     }];
