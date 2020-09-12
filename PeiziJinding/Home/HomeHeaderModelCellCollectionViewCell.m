@@ -41,7 +41,7 @@
         _sdcycleScView.placeholderImage = [UIImage imageNamed:@"stock_home_banner1"];
          //HomeModel *homeHModel =  (HomeModel *)self.model;
         //@[@"中俄天然气管道投入生产，我国取消澳大利亚大量天然气订单",,@"黄金价格到底会涨到什么位置？每盎司能涨到3000美元吗",@"湖北创新“四种模式” 深耕水稻全产业链"]
-        _sdcycleScView.titlesGroup = @[@"中俄天然气管道投入生产，我国取消澳大利亚大量天然气订单",@"黄金价格到底会涨到什么位置？每盎司能涨到3000美元吗",@"湖北创新“四种模式” 深耕水稻全产业链"];
+        _sdcycleScView.titlesGroup = @[@"软银据悉考虑调整期权交易策略",@"一周热榜精选 | 本周市场最值得关注的N件大事",@"油市波动加剧，投资者早已提前布局"];
         //_sdcycleScView.imageURLStringsGroup = [homeHModel.imgUrlArr copy];
         _sdcycleScView.autoScrollTimeInterval = 2;
         _sdcycleScView.layer.cornerRadius = 10;
