@@ -19,9 +19,7 @@ static   PSRequestManager * psMana =nil;
 }
 
 -(NSURLSessionDataTask *)netRequestWithUrl:(NSString *)url method:(HttpRequestMethod )method param:(id)param successBlock:(netBlock)success failure:(netBlock)failure{
-    
    
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     [manager.requestSerializer setTimeoutInterval:10.f];
@@ -85,5 +83,34 @@ static   PSRequestManager * psMana =nil;
         
         return task;
     }
+}
+
+- (NSURLSessionDataTask *)netReuqestWithUrl:(NSString *)url method:(HttpRequestMethod)method param:(id)param successBlock:(netBlock _Nullable )success failure:(netBlock _Nullable )failure extral:(NSDictionary *)dic{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+     [manager.requestSerializer setValue:@"com.virenQH.app" forHTTPHeaderField:@"bundleid"];
+     [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"contentType"];
+        [manager.requestSerializer setTimeoutInterval:10.f];
+       
+      
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+       
+    
+            //POST
+    NSURLSessionDataTask * task = [manager POST:url parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSError *error = nil;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:&error];
+        [formData appendPartWithFormData:jsonData name:@"items"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+            
+        return task;
+        
 }
 @end

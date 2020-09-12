@@ -19,4 +19,6 @@ typedef void (^netBlock)(id __nullable responseObject,NSError * _Nullable error)
 +(instancetype _Nullable )shareInstance;
 
 -(NSURLSessionDataTask *)netRequestWithUrl:(NSString *_Nonnull)url method:(HttpRequestMethod )method param:(id _Nullable )param successBlock:(netBlock _Nullable )success failure:(netBlock _Nullable )failure;
+
+- (NSURLSessionDataTask *)netReuqestWithUrl:(NSString *)url method:(HttpRequestMethod)method param:(id)param successBlock:(netBlock _Nullable )success failure:(netBlock _Nullable )failure extral:(NSDictionary *)dic;
 @end

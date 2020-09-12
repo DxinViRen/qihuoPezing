@@ -24,6 +24,9 @@
 @property(nonatomic,strong)UIView *botBgView;
 @property(nonatomic,strong)UIImageView *lastAgreeView;
 @property(nonatomic,strong)UILabel *agreeCLabel;
+@property(nonatomic,strong)UIButton *attBtn;
+@property(nonatomic,strong)MBProgressHUD *hud;
+@property(nonatomic,strong)MBProgressHUD *mhud;
 
 @end
 
@@ -58,12 +61,19 @@
     [self.contentView addSubview:self.topLineView];
     [self.contentView addSubview:self.botBgView];
     [self.botBgView addSubview:self.spotIcon];
+    [self.contentView addSubview:self.attBtn];
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.contentView);
         make.left.equalTo(self.contentView).inset(10);
         make.top.equalTo(self.contentView).inset(2);
         make.height.mas_equalTo(1);
+    }];
+    
+    [self.attBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.headImageView);
+        make.right.equalTo(self.contentView).inset(20);
+        make.size.mas_equalTo(CGSizeMake(85, 40));
     }];
     
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -113,12 +123,12 @@
         make.top.equalTo(self.lineView);
     }];
     
-    [self.spotIcon mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.botBgView).inset(10);
-        make.centerY.equalTo(self.botBgView);
-        make.size.mas_equalTo(CGSizeMake(20, 20));
-    }];
-    
+//    [self.spotIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.botBgView).inset(10);
+//        make.centerY.equalTo(self.botBgView);
+//        make.size.mas_equalTo(CGSizeMake(20, 20));
+//    }];
+//
      
 }
 
@@ -161,13 +171,13 @@
     if(count>5)count = 5;
     for (int i = 0; i < count ; i ++) {
         UIImageView *imageview = [[UIImageView alloc]init];
-        imageview.frame = CGRectMake(40+i*(20+8), 12, 20, 20);
+        imageview.frame = CGRectMake(Scr_w-120-i*(20+8), 12, 20, 20);
         imageview.layer.cornerRadius = 10;
         imageview.clipsToBounds = YES;
         AgreeRelationItemModel *amodel = sayModel.pre_alArr[i];
         [imageview sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:CommitBaseImgURL,amodel.userHeadPhoto]] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         }];
-        if(i ==count -1){
+        if(i == 0){
             self.lastAgreeView = imageview;
         }
         
@@ -180,7 +190,7 @@
         make.centerY.equalTo(self.botBgView);
     }];
     
-    self.agreeCLabel.text = [NSString stringWithFormat:@"共%ld人点赞", sayModel.pre_alArr.count];
+    self.agreeCLabel.text = [NSString stringWithFormat:@"...共%ld人点赞", sayModel.pre_alArr.count];
 }
 
 
@@ -241,9 +251,9 @@
 - (UILabel *)riskLabel{
     if(!_riskLabel){
         _riskLabel = [[UILabel  alloc]init];
-        _riskLabel.font = [UIFont systemFontOfSize:13];
+        _riskLabel.font = [UIFont systemFontOfSize:11];
         _riskLabel.textColor = [UIColor colorWithHexString:@"#F92E3C"];
-        _riskLabel.textAlignment = NSTextAlignmentLeft;
+        _riskLabel.textAlignment = NSTextAlignmentRight;
     }
     return _riskLabel;
 }
@@ -274,9 +284,9 @@
         //_attentionBtn.backgroundColor = [UIColor redColor];
         _attensionBtn.layer.cornerRadius = 3;
         _attensionBtn.layer.borderWidth = 0.8;
-        _attensionBtn.layer.borderColor = MainColor.CGColor
-        ;        [_attensionBtn addTarget:self
-                          action:@selector(attenAction:) forControlEvents:UIControlEventTouchUpInside];
+        _attensionBtn.layer.borderColor = MainColor.CGColor;
+//        ;      //  [_attensionBtn addTarget:self
+//                          action:@selector(attenAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _attensionBtn;
 }
@@ -332,4 +342,25 @@
     }
     return _agreeCLabel;
 }
+
+- (UIButton *)attBtn {
+    if(!_attBtn){
+        _attBtn = [[UIButton alloc]init];
+        [_attBtn setImage:[UIImage imageNamed:@"attenIcon"] forState:UIControlStateNormal];
+        [_attBtn addTarget:self action:@selector(attensionActiuon:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _attBtn;
+}
+
+- (void)attensionActiuon:(UIButton *)btn{
+    self.mhud =  [MBProgressHUD showMessage:@""];
+     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         self.hud = [MBProgressHUD showMessage:@"关注成功"];
+         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+             [self.hud hideAnimated:YES];
+             [self.mhud hideAnimated:YES];
+                });
+    });
+}
 @end
+

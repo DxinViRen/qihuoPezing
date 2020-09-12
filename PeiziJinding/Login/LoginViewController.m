@@ -10,6 +10,7 @@
 #import "SignViewVCViewController.h"
 #import "AppDelegate.h"
 #import "StockRootViewController.h"
+#import<CommonCrypto/CommonDigest.h>
 @interface LoginViewController ()
 @property (strong, nonatomic)  UIImageView *loginBanner;
 @property (strong, nonatomic)  UITextField *userNameTF;
@@ -60,21 +61,15 @@
     
 }
 
-
-
-
-
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
 
-
 - (void)loginbtn:(id)sender {
     if(self.vfCodeTf.text.length == 0 || self.userNameTF.text.length == 0){
         
-        UIAlertController  *alerc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"Login information error" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController  *alerc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"登录信息有误" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *alertion = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
         }];
@@ -86,27 +81,35 @@
     }
     
     NSDictionary *param = @{@"name":self.userNameTF.text,
-                            @"password":self.vfCodeTf.text
+                            @"password":[self md5:self.vfCodeTf.text]
                            
     };
     
     self.hud = [MBProgressHUD showMessage:@"请稍等"];
     
-    [[PSRequestManager shareInstance] netRequestWithUrl:@"http://bijiu.jtarget.cn/public/index.php?s=/index/User/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
-        [self.hud hideAnimated:YES];
-
+    [[PSRequestManager shareInstance] netReuqestWithUrl:@"https://aa65e6a5388f0fc3.phiclouds.com/api/user/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+        
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
-        [self.hud hideAnimated:YES];
-    }];
+        
+        NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
+        NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    } extral:@{}];
     
-    [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
-                        [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
-                        [self dismissViewControllerAnimated:YES completion:nil];
-    
-        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
-        UIWindow *win  = delegate.window;
-        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
-        [root setSelectedIndex:0];
+//    [[PSRequestManager shareInstance] netRequestWithUrl:@"http://bijiu.jtarget.cn/public/index.php?s=/index/User/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+//        [self.hud hideAnimated:YES];
+//
+//    } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+//        [self.hud hideAnimated:YES];
+//    }];
+//
+//    [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
+//                        [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
+//                        [self dismissViewControllerAnimated:YES completion:nil];
+//
+//        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+//        UIWindow *win  = delegate.window;
+//        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+//        [root setSelectedIndex:0];
 
 }
 - (void)cancelBtn:(id)sender {
@@ -114,15 +117,31 @@
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"login"];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"logincancel" object:nil];
 }
+- (NSString *) md5:(NSString *) input {
 
-/*
-#pragma mark - Navigation
+    const char *cStr = [input UTF8String];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+
+    CC_MD5( cStr, strlen(cStr), digest ); // This is the md5 call
+
+    
+
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+
+    
+
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+
+        [output appendFormat:@"%02x", digest[i]];
+
+    
+
+    return  output;
+
 }
-*/
+
+
+
 
 @end
