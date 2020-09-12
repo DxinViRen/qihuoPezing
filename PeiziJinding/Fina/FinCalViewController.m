@@ -87,35 +87,30 @@
 }
 
 - (void)loadDataWithDate:(NSString *)str{
-    NSString  * urlstr = [NSString stringWithFormat:CladanUrl,str];
+    NSString *years = [str substringWithRange:NSMakeRange(0, 4)];
+    NSString *months = [str substringWithRange:NSMakeRange(4, 4)];
+   // NSString  * urlstr = [NSString stringWithFormat:CladanUrl,years,months]; ?&years=%@&MonthDay=%@
     self.hud = [MBProgressHUD showMessage:@"请稍等"];
-    [[PSRequestManager shareInstance] netRequestWithUrl:urlstr  method:HttpRequestMethodGET param:@{} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+    [[PSRequestManager shareInstance] netRequestWithUrl:CladanUrl  method:HttpRequestMethodPOST param:@{@"years":years,@"MonthDay":months} successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
-        CalResponseModel *responsModel = [CalResponseModel mj_objectWithKeyValues:responseObject];
-        NSMutableArray *sec2CellArr = [@[] mutableCopy];
-        if([responsModel.code isEqualToString:@"200"]){
-            for (CalNewsModel *newModel in responsModel.news.newsData) {
+        NSMutableArray *sec2CellArr = [CalNewsModel mj_objectArrayWithKeyValuesArray:responseObject];
+
+        for (CalNewsModel *newModel in sec2CellArr) {
                    newModel.cellName = NSStringFromClass([CalNewsCell class]);
                    newModel.cellHeight = Scr_w * (100/375.0);
                    newModel.cellWight = Scr_w;
                    newModel.cellInderfier = NSStringFromClass([CalNewsCell class]);
-                   [sec2CellArr addObject:newModel];
             }
-            if(sec2CellArr.count == 0){
-               // [self nodataViewShow];
-            }else{
-                StorkSectionModel *sec2 = [[StorkSectionModel alloc]initWithArray:sec2CellArr];
-                [self.dataArray addObject:sec2];
-               //[self nodataViewHid];
-            }
+            StorkSectionModel *sec2 = [[StorkSectionModel alloc]initWithArray:sec2CellArr];
+                           [self.dataArray addObject:sec2];
             [self.adapter reloadDataWithCompletion:nil];
-        }
-        else{
-            
-            //加载失败
-                           [MBProgressHUD showMessage:@"数据异常" toView:self.mainCollectionView];
-                          // [self nodataViewShow];
-        }
+        //}
+//        else{
+//
+//            //加载失败
+//                           [MBProgressHUD showMessage:@"数据异常" toView:self.mainCollectionView];
+//                          // [self nodataViewShow];
+//        }
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
         [self.hud hideAnimated:YES];
         //[self nodataViewShow];
