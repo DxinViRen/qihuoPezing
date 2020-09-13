@@ -67,21 +67,21 @@
 
 
 - (void)loginbtn:(id)sender {
-    if(self.vfCodeTf.text.length == 0 || self.userNameTF.text.length == 0){
-        
-        UIAlertController  *alerc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"登录信息有误" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *alertion = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        [alerc addAction:alertion];
-        [self presentViewController:alerc animated:YES completion:nil];
-        
-        
-        return;
-    }
+//    if(self.vfCodeTf.text.length == 0 || self.userNameTF.text.length == 0){
+//
+//        UIAlertController  *alerc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"登录信息有误" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *alertion = [UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//        }];
+//        [alerc addAction:alertion];
+//        [self presentViewController:alerc animated:YES completion:nil];
+//
+//
+//        return;
+//    }
     
-    NSDictionary *param = @{@"name":self.userNameTF.text,
-                            @"password":[self md5:self.vfCodeTf.text]
+    NSDictionary *param = @{@"name":@"18263776286",
+                            @"password":@"123456"
                            
     };
     

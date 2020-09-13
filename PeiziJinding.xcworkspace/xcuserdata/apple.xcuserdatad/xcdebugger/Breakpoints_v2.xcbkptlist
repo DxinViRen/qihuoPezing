@@ -48,11 +48,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DC5F0D00-5F25-4852-895A-24B5014C98FB - e6928672597a3e4"
+                  uuid = "DC5F0D00-5F25-4852-895A-24B5014C98FB - f370304991f9e389"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__32-[LoginViewController loginbtn:]_block_invoke_2"
+                  symbolName = "__32-[LoginViewController loginbtn:]_block_invoke"
                   moduleName = "PeiziJinding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/Login/LoginViewController.m"
@@ -63,11 +63,11 @@
                   offsetFromSymbolStart = "81">
                </Location>
                <Location
-                  uuid = "DC5F0D00-5F25-4852-895A-24B5014C98FB - e692867259fa3e5"
+                  uuid = "DC5F0D00-5F25-4852-895A-24B5014C98FB - e6928672597a3e4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__32-[LoginViewController loginbtn:]_block_invoke_3"
+                  symbolName = "__32-[LoginViewController loginbtn:]_block_invoke_2"
                   moduleName = "PeiziJinding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/Login/LoginViewController.m"
@@ -99,63 +99,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B3C8DC5F-C004-4E82-9FF9-4494B27D8932"
+            uuid = "5BCBA748-9EEC-433F-BF85-E78877F8A7E8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeiziJinding/PSRequestManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-netReuqestWithUrl:method:param:successBlock:failure:extral:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B3C8DC5F-C004-4E82-9FF9-4494B27D8932 - f34da45b8375a80e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__79-[PSRequestManager netReuqestWithUrl:method:param:successBlock:failure:extral:]_block_invoke_2"
-                  moduleName = "PeiziJinding"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/PSRequestManager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "73">
-               </Location>
-               <Location
-                  uuid = "B3C8DC5F-C004-4E82-9FF9-4494B27D8932 - f34da45b8375a833"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__79-[PSRequestManager netReuqestWithUrl:method:param:successBlock:failure:extral:]_block_invoke_3"
-                  moduleName = "PeiziJinding"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/PSRequestManager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "81">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "316BCB1B-D468-4B60-843E-B37108AA6B72"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PeiziJinding/PSRequestManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-netReuqestWithUrl:method:param:successBlock:failure:extral:"
             landmarkType = "7">
          </BreakpointContent>
@@ -163,20 +115,36 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E71CB6C2-3D82-4208-80B6-8D76197452E3"
+            uuid = "50CFC29B-7D8C-48E7-A219-A4B5EFB08F17"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeiziJinding/PSRequestManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-netReuqestWithUrl:method:param:successBlock:failure:extral:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B290AD12-E12C-47AA-AFAF-EEFE36B16D1F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeiziJinding/PSRequestManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-netReuqestWithUrl:method:param:successBlock:failure:extral:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E71CB6C2-3D82-4208-80B6-8D76197452E3 - 6953cd85938c4a36"
+                  uuid = "B290AD12-E12C-47AA-AFAF-EEFE36B16D1F - 6953cd85938c4a36"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -186,12 +154,12 @@
                   urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/PSRequestManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "810">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "502">
                </Location>
                <Location
-                  uuid = "E71CB6C2-3D82-4208-80B6-8D76197452E3 - 399eed3db8576922"
+                  uuid = "B290AD12-E12C-47AA-AFAF-EEFE36B16D1F - 399eed3db8576922"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -201,9 +169,9 @@
                   urlString = "file:///Users/apple/Desktop/PeiziJinding/PeiziJinding/PSRequestManager.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "76">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -211,15 +179,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D029925D-342E-4A98-ABCB-C51A215DA3E8"
+            uuid = "A77C4C9F-4B3C-4649-97E1-6191CFB25E14"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PeiziJinding/PSRequestManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-netReuqestWithUrl:method:param:successBlock:failure:extral:"
             landmarkType = "7">
          </BreakpointContent>

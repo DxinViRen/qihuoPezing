@@ -86,29 +86,48 @@ static   PSRequestManager * psMana =nil;
 }
 
 - (NSURLSessionDataTask *)netReuqestWithUrl:(NSString *)url method:(HttpRequestMethod)method param:(id)param successBlock:(netBlock _Nullable )success failure:(netBlock _Nullable )failure extral:(NSDictionary *)dic{
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//     [manager.requestSerializer setValue:@"com.virenQH.app" forHTTPHeaderField:@"bundleid"];
+//     [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"contentType"];
+//        [manager.requestSerializer setTimeoutInterval:10.f];
+//        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-     [manager.requestSerializer setValue:@"com.virenQH.app" forHTTPHeaderField:@"bundleid"];
-     [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"contentType"];
-        [manager.requestSerializer setTimeoutInterval:10.f];
-       
-      
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
-       
-    
-            //POST
-    NSURLSessionDataTask * task = [manager POST:url parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        NSError *error = nil;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:param options:NSJSONWritingPrettyPrinted error:&error];
-        [formData appendPartWithFormData:jsonData name:@"items"];
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"com.virenQH.app" forHTTPHeaderField:@"bundleid"];
+   
+
+  NSURLSessionDataTask * task =  [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"%@",error);
     }];
+            //POST
+//   NSURLSessionDataTask * task =  [manager POST :url parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+////                //弹出登录页面
+////                [[UserManager shareInstance]deleteUserData];
+////                [[LoginController shareInstance]login:^{
+//                    if(success)
+//                    {
+//                        success(responseObject,nil);
+//                        //                [HUD performSelector:@selector(removeFromSuperview)  withObject:nil afterDelay:0.0];
+//                    }
+//                //}];
+//
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//
+//            if(failure)
+//            {
+//                failure(nil,error);
+//
+//
+//            }
+//        }];
             
         return task;
         
