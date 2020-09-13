@@ -80,19 +80,24 @@
 //        return;
 //    }
     
-    NSDictionary *param = @{@"name":@"18263776286",
-                            @"password":@"123456"
+    NSDictionary *param = @{@"username":self.userNameTF.text,
+                            @"password":self.vfCodeTf.text
                            
     };
-    
     self.hud = [MBProgressHUD showMessage:@"请稍等"];
-    
     [[PSRequestManager shareInstance] netReuqestWithUrl:@"https://aa65e6a5388f0fc3.phiclouds.com/api/user/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
+         [self.hud hideAnimated:YES];
+         [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
+                                [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
+                                [self dismissViewControllerAnimated:YES completion:nil];
         
+                AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
+                UIWindow *win  = delegate.window;
+                StockRootViewController *root = (StockRootViewController *)win.rootViewController;
+                [root setSelectedIndex:0];
     } failure:^(id  _Nullable responseObject, NSError * _Nullable error) {
+         [self.hud hideAnimated:YES];
         
-        NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
-        NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     } extral:@{}];
     
 //    [[PSRequestManager shareInstance] netRequestWithUrl:@"http://bijiu.jtarget.cn/public/index.php?s=/index/User/login" method:HttpRequestMethodPOST param:param successBlock:^(id  _Nullable responseObject, NSError * _Nullable error) {
@@ -102,14 +107,7 @@
 //        [self.hud hideAnimated:YES];
 //    }];
 //
-//    [[NSUserDefaults standardUserDefaults]setObject:self.vfCodeTf.text forKey:self.userNameTF.text];
-//                        [[NSUserDefaults standardUserDefaults] setObject:self.userNameTF.text forKey:@"login"];
-//                        [self dismissViewControllerAnimated:YES completion:nil];
 //
-//        AppDelegate *delegate =(AppDelegate *) [UIApplication sharedApplication].delegate;
-//        UIWindow *win  = delegate.window;
-//        StockRootViewController *root = (StockRootViewController *)win.rootViewController;
-//        [root setSelectedIndex:0];
 
 }
 - (void)cancelBtn:(id)sender {

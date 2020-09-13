@@ -101,8 +101,18 @@ static   PSRequestManager * psMana =nil;
 
   NSURLSessionDataTask * task =  [manager POST:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+                          if(success)
+                          {
+                              success(responseObject,nil);
+                              //                [HUD performSelector:@selector(removeFromSuperview)  withObject:nil afterDelay:0.0];
+                          }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+         if(failure)
+                    {
+                        failure(nil,error);
+        
+        
+                    }
     }];
             //POST
 //   NSURLSessionDataTask * task =  [manager POST :url parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
